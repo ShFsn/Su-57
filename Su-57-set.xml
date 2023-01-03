@@ -1,0 +1,9 @@
+<PropertyList>
+  <sim>
+    <description>Sukhoi Su-57</description>
+    <model>
+      <path>Aircraft/Su-57/Model/Su-57-model.xml</path>
+    </model>
+    <flight-model>ufo</flight-model>
+  </sim>
+</PropertyList>
