@@ -1,6 +1,10 @@
 <PropertyList>
 
   <path>Su-57.ac</path>
+    <model>
+        <name>cockpit</name>
+        <path>Aircraft/Su-57/Model/Su-57-cockpit.xml</path>
+    </model>
 
   <animation>
     <type>rotate</type>

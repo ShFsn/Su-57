@@ -1,5 +1,5 @@
 <PropertyList>
-  <sim>
+	<sim include="Systems/views.xml">
     <description>Sukhoi Su-57</description>
     <model>
       <path>Aircraft/Su-57/Model/Su-57-model.xml</path>
