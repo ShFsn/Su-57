@@ -6,4 +6,15 @@
     </model>
     <flight-model>ufo</flight-model>
   </sim>
+	<nasal>
+		<mfd>
+			<file>Aircraft/Su-57/Nasal/MFD/Framework.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/pfd.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/engine.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/gear.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/refueling.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/overlay.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/MFD.nas</file>
+		</mfd>
+	</nasal>
 </PropertyList>
