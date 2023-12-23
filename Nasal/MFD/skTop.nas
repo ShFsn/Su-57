@@ -1,7 +1,7 @@
-var canvas_overlay = {
+var canvas_skTop = {
 	new: func(canvasGroup)
 	{
-		var m = { parents: [canvas_overlay] };
+		var m = { parents: [canvas_skTop] };
 		
 		var font_mapper = func(family, weight)
 		{
@@ -10,7 +10,7 @@ var canvas_overlay = {
 			}
 		};
 		
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/overlay.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/skTop.svg", {'font-mapper': font_mapper});
 
 		var svg_keys = ["sk0","sk1","sk2","sk3","sk4","sk5","sk6"];
 		foreach(var key; svg_keys) {

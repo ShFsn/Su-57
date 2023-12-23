@@ -14,37 +14,43 @@ var MFD = {
 
 		# create pages
 		m.PFD = canvas_pfd.new(group.createChild('group'));
-		
-		m.Engine = canvas_engine.new(group.createChild('group'));
-		#append(m.Pages, canvas_engine.new(group.createChild('group')));
-		append(m.Pages, canvas_gear.new(group.createChild('group')));
-		append(m.Pages, canvas_refueling.new(group.createChild('group')));
 
-		m.SkInstance = canvas_overlay.new(group.createChild('group'));
+		append(m.Pages, canvas_map.new(group.createChild('group')));
+		append(m.Pages, canvas_engine.new(group.createChild('group')));
+
+		m.SkInstance = canvas_skTop.new(group.createChild('group'));
 
 		# create menus
 		append(m.Menus, SkMenu.new(0, m, ""));
 
 		# create softkeys
-		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(0, m, "ДВИГ")); # engines
-		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(1, m, "ТОПЛ")); # fuel
-		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(2, m, "ППС", 0, 0));  # fire protection
-		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(3, m, "ГПС"));  # hydraulic and pneumatic systems
-		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(4, m, "СЖО"));  # life supporting system
-		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(5, m, "ДЗП", 0, 1));  # aerial refueling
-		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(6, m, "С\nЗ\nС"));  # voltage
+		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(0, m, "ПИЛ"));
+		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(1, m, "ТО", 0, 0));
+		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(2, m, "КИС", 0, 1));
+		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(3, m, "ОПС"));
+		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(5, m, "<=>"));
+		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(6, m, "О\nЧ\nР"));
 
-		m.ActivatePage(0);
+		m.ActivatePage(1);
 		m.ActivateMenu(MenuEnum.ENGINE);
 		return m;
+	},
+	SubBtClick: func(input)
+	{
+		me.Pages[1].BtClick(input);
 	}
 };
 
 var mfdBtClick = func(index = 0, location = 0, input = -1) {
-	#print(index, location, input);
+	input -= 6;
 	
-	if (input > 6) {
-		MfdInstances[index].BtClick(input-6);
+	if(location == 0) {
+		if (input > 0) {
+			MfdInstances[index].BtClick(input);
+		}
+	}
+	else {
+		MfdInstances[index].SubBtClick(input);
 	}
 }
 
