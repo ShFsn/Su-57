@@ -1,9 +1,9 @@
 ##########################################################################################################
 # EFIS Framework
-# Daniel Overbeck - 2020
+# Daniel Overbeck - 2018
 ##########################################################################################################
 
-var NUM_SOFTKEYS = 10;
+var NUM_SOFTKEYS = 12;
 
 # base class
 var SkItem = {
@@ -57,29 +57,6 @@ var SkMenuPageActivateItem = {
 	}
 };
 
-# item which changes menu
-var SkScratchpadActivateItem = {
-	new: func(id, device, title, index) {
-		var m = {parents: [SkScratchpadActivateItem, SkItem.new(id, device, title)]};
-		m.Index = index;
-		return m;
-	},
-	Activate: func {
-		me.Device.ActivateScratchpad(me.Index, me.Id);
-	}
-};
-
-# item which returns a character
-var SkCharItem = {
-	new: func(id, device, title) {
-		var m = {parents: [SkCharItem, SkItem.new(id, device, title)]};
-		return m;
-	},
-	Activate: func {
-		me.Device.SetCharacter(me.Title);
-	}
-};
-
 # item with dynamic content
 var SkMutableItem = {
 	new: func(id, device, path, format="%s", decoration=0) {
@@ -128,6 +105,62 @@ var SkSwitchItem = {
 	}
 };
 
+# advanced switch item with manual frame coordinates
+var SkAdvSwitchItem = {
+	new: func(id, device, title, path, coordinates1, coordinates2) {
+		var m = {parents: [SkAdvSwitchItem, SkItem.new(id, device, title)]};
+		m.Coordinates1 = coordinates1;
+		m.Coordinates2 = coordinates2;
+		m.Node = props.globals.initNode(path, 0, "BOOL");
+		m.Active = 0;
+		return m;
+	},
+	Activate: func {
+		if(me.Active) {
+			me.Active = 0;
+		}
+		else {
+			me.Active = 1;
+		}
+		me.Node.setValue(me.Active);
+		me.Device.UpdateMenu();
+	},
+	GetDecoration: func {
+		return -1;
+	},
+	GetFrameCoordinates: func {
+		if(me.Active) {
+			return me.Coordinates1;
+		}
+		return me.Coordinates2;
+	}
+};
+
+# item which is active for a limited time
+var SkTimerItem = {
+	new: func(id, device, title, path, timeout) {
+		var m = {parents: [SkTimerItem, SkItem.new(id, device, title)]};
+		m.Node = props.globals.initNode(path, 0, "BOOL");
+		m.Active = 0;
+		m.Timeout = timeout;
+		return m;
+	},
+	Activate: func {
+		me.Node.setValue(1);
+		me.Decoration = 1;
+		me.Device.UpdateMenu();
+		me.Device.SetLock(1);
+
+		# use listener to remove frame if button released
+		settimer(func () {
+			me.Node.setValue(0);
+			me.Decoration = 0;
+			me.Device.UpdateMenu();
+			me.Device.SetLock(0);
+		}, me.Timeout);
+	}
+};
+
 var SkMenu = {
 	new: func(id, device, title) {
 		var m = { parents: [SkMenu],
@@ -141,7 +174,7 @@ var SkMenu = {
 	},
 	ActivateItem: func(index) {
 		if(me.Items[index] != nil) {
-			return me.Items[index].Activate();
+			me.Items[index].Activate();
 		}
 	},
 	GetItem: func(index) {
@@ -188,6 +221,8 @@ var Device = {
 			ActiveMenu: 0, # to know where button clicks must go
 			SkFrameMenu: 0,
 			InstanceId: instance,
+			KnobMode: 1, # knob can have different functionalities
+			Lock: 0, # ignore button click
 			Tmp: 0,
 			};
 
@@ -195,6 +230,7 @@ var Device = {
 			append(m.Softkeys, "");
 			append(m.SoftkeyFrames, 0);
 		}
+
 		return m;
 	},
 	ActivateMenu: func(id) {
@@ -202,9 +238,10 @@ var Device = {
 		me.Softkeys[0] = me.Menus[id].GetTitle();
 		me.UpdateMenu();
 	},
-	ActivatePage: func(page) {
+	ActivatePage: func(page, softkey) {
 		me.Menus[me.SkFrameMenu].ResetDecoration();
 		me.SkFrameMenu = me.ActiveMenu;
+		me.Menus[me.SkFrameMenu].SetDecoration(softkey);
 
 		me.UpdateMenu();
 
@@ -217,41 +254,37 @@ var Device = {
 			}
 		}
 	},
-	ActivateScratchpad: func(input, softkey) {
-		me.Menus[me.SkFrameMenu].ResetDecoration();
-		me.SkFrameMenu = me.ActiveMenu;
-		me.Menus[me.SkFrameMenu].SetDecoration(softkey);
-
-		me.SkInstance.setScratchpad(input);
-		me.UpdateMenu();
-	},
-	GetActiveMenu: func {
-		return me.ActiveMenu;
-	},
-	# input:
+	# input: 0=back, 1=sk1...5=sk5
 	BtClick: func(input = -1) {
-		me.Menus[me.ActiveMenu].ActivateItem(input);
+		if(!me.Lock) {
+			me.Menus[me.ActiveMenu].ActivateItem(input);
+		}
 	},
-	SetCharacter: func(input = -1) {
-		me.SkInstance.setCharacter(input);
+	GetKnobMode: func()
+	{
+		return me.KnobMode;
 	},
 	UpdateMenu: func() {
+		me.SkInstance.resetFrames();
+
 		# copy sk names to array
 		for(me.i = 0; me.i < NUM_SOFTKEYS; me.i+=1) {
 			me.Tmp = me.Menus[me.ActiveMenu].GetItem(me.i);
 			if(me.Tmp != nil) {
 				me.Softkeys[me.i] = me.Tmp.GetTitle();
-				if(me.i < 10) {
-					me.SoftkeyFrames[me.i] = me.Tmp.GetDecoration();
-				}
-			}
-			else {
-				me.Softkeys[me.i] = "";
-				if(me.i < 10) {
-					me.SoftkeyFrames[me.i] = 0;
-				}
+					if(me.Tmp.GetDecoration() >= 0) {
+						me.SoftkeyFrames[me.i] = me.Tmp.GetDecoration();
+					}
+					else {
+						me.SoftkeyFrames[me.i] = 0;
+						me.SkInstance.drawRect(me.Tmp.GetFrameCoordinates());
+					}
 			}
 		}
 		me.SkInstance.setSoftkeys(me.Softkeys, me.SoftkeyFrames);
+	},
+	SetLock: func(lock)
+	{
+		me.Lock = lock;
 	}
 };

@@ -21,7 +21,7 @@ var canvas_engine = {
 		append(m.Menus, SkMenu.new(0, m, ""));
 
 		# create softkeys
-		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(0, m, "ДВИГ")); # engines
+		m.Menus[MenuEnum.ENGINE].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "instrumentation/mfd/engine")); # engines
 		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(1, m, "ТОПЛ", 0, 2)); # fuel
 		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(2, m, "ППС", 0, 0));  # fire protection
 		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(3, m, "ГПС", 0, 2));  # hydraulic and pneumatic systems
@@ -29,7 +29,7 @@ var canvas_engine = {
 		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(5, m, "ДЗП", 0, 1));  # aerial refueling
 		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(6, m, "С\nЗ\nС"));  # voltage
 
-		m.ActivatePage(0);
+		m.ActivatePage(0, 2);
 
 		m.group = canvasGroup;
 		return m;

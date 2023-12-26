@@ -31,7 +31,7 @@ var MFD = {
 		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(5, m, "<=>"));
 		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(6, m, "О\nЧ\nР"));
 
-		m.ActivatePage(1);
+		m.ActivatePage(1, 2);
 		m.ActivateMenu(MenuEnum.ENGINE);
 		return m;
 	},
