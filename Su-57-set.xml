@@ -6,8 +6,14 @@
 			<path>Aircraft/Su-57/Model/Su-57-model.xml</path>
 		</model>
 		<flight-model>jsb</flight-model>
-		<aero>T-50</aero>
+		<aero>Su-57</aero>
 	</sim>
+	<controls>
+		<ejected>0</ejected>
+		<gear>
+			<brake-parking>1</brake-parking>
+		</gear>
+	</controls>
 	<engines>
 		<engine n="0">
 			<running>true</running>
