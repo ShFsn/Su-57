@@ -49,7 +49,7 @@ var mfdBtClick = func(index = 0, location = 0, input = -1) {
 			MfdInstances[index].BtClick(input);
 		}
 	}
-	else {
+	else if(location == 1) {
 		MfdInstances[index].SubBtClick(input);
 	}
 }

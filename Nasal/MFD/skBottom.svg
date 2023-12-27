@@ -7,7 +7,7 @@
    width="1024"
    height="768"
    viewBox="0 0 1024 768.00001"
-   sodipodi:docname="overlay.svg"
+   sodipodi:docname="skBottom.svg"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -31,9 +31,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.95234998"
-     inkscape:cx="675.17196"
-     inkscape:cy="441.01434"
+     inkscape:zoom="1.0207229"
+     inkscape:cx="708.32152"
+     inkscape:cy="256.68083"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -162,13 +162,60 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16px;line-height:1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00ff00;fill-opacity:1;stroke:none"
-       x="980.81329"
-       y="661.06134"
+       x="1003.1875"
+       y="639.3374"
        id="sk6"><tspan
          sodipodi:role="line"
          id="tspan10179"
-         x="980.81329"
-         y="661.06134"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';fill:#00ff00;fill-opacity:1">S</tspan></text>
+         x="1003.1875"
+         y="639.3374"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';fill:#00ff00;fill-opacity:1">6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00ff00;fill-opacity:1;stroke:none"
+       x="1003.1797"
+       y="351.00781"
+       id="sk7"><tspan
+         sodipodi:role="line"
+         id="tspan10179-6"
+         x="1003.1797"
+         y="351.00781"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';fill:#00ff00;fill-opacity:1">7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00ff00;fill-opacity:1;stroke:none"
+       x="1003.3047"
+       y="211.17188"
+       id="sk8"><tspan
+         sodipodi:role="line"
+         id="tspan10179-5"
+         x="1003.3047"
+         y="211.17188"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';fill:#00ff00;fill-opacity:1">8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00ff00;fill-opacity:1;stroke:none"
+       x="1003.25"
+       y="134.44847"
+       id="sk9"><tspan
+         sodipodi:role="line"
+         id="tspan10179-62"
+         x="1003.25"
+         y="134.44847"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';fill:#00ff00;fill-opacity:1">9</tspan></text>
+    <g
+       id="g4323"
+       transform="translate(-2,60)">
+      <path
+         style="fill:none;stroke:#00ff00;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 1010,230 v 12"
+         id="path3501"
+         sodipodi:nodetypes="cc" />
+      <path
+         id="rect3697"
+         style="fill:#00ff00;fill-opacity:1;stroke-width:2.98803;stroke-linecap:round;stroke-linejoin:round"
+         d="m 1005,240 h 10 l -4.8793,7 z"
+         sodipodi:nodetypes="cccc" />
+    </g>
   </g>
 </svg>

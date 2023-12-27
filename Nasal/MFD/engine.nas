@@ -28,6 +28,9 @@ var canvas_engine = {
 		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(4, m, "СЖО", 0, 2));  # life supporting system
 		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(5, m, "ДЗП", 0, 1));  # aerial refueling
 		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(6, m, "С\nЗ\nС"));  # voltage
+		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(7, m, "П\nМ\nТ"));
+		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(8, m, "М\nН\nВ\nР"));  # maneuver
+		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(9, m, "С\nИ\nС"));  # notifications
 
 		m.ActivatePage(0, 2);
 
