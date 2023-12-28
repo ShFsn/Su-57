@@ -2,7 +2,8 @@ var PageEnum = {
 	GEAR:	    0,
 	HYDRAULICS:	1,
 	REFUELING:	2,
-	EMPTY:	    3,
+	ELECTRICAL:	3,
+	EMPTY:	    4,
 };
 
 var canvas_kis = {
@@ -22,6 +23,7 @@ var canvas_kis = {
 		append(m.Pages, canvas_gear.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_hydraulics.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_refueling.new(canvasGroup.createChild('group')));
+		append(m.Pages, canvas_elec.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_empty.new(canvasGroup.createChild('group')));
 
 		m.SkInstance = canvas_skBottom.new(canvasGroup.createChild('group'));
@@ -34,7 +36,7 @@ var canvas_kis = {
 		m.Menus[0].AddItem(SkMenuPageActivateItem.new(1, m, "ТОПЛ", 0, PageEnum.EMPTY)); # fuel
 		m.Menus[0].AddItem(SkMenuPageActivateItem.new(2, m, "ППС", 0, PageEnum.GEAR));  # fire protection
 		m.Menus[0].AddItem(SkMenuPageActivateItem.new(3, m, "ГПС", 0, PageEnum.HYDRAULICS));  # hydraulic and pneumatic systems
-		m.Menus[0].AddItem(SkMenuPageActivateItem.new(4, m, "СЖО", 0, PageEnum.EMPTY));  # life supporting system
+		m.Menus[0].AddItem(SkMenuPageActivateItem.new(4, m, "СЖО", 0, PageEnum.ELECTRICAL));  # life supporting system
 		m.Menus[0].AddItem(SkMenuPageActivateItem.new(5, m, "ДЗП", 0, PageEnum.REFUELING));  # aerial refueling
 		m.Menus[0].AddItem(SkItem.new(6, m, "С\nЗ\nС"));  # voltage
 		m.Menus[0].AddItem(SkItem.new(7, m, "П\nМ\nТ"));
