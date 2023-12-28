@@ -5,10 +5,10 @@ var PageEnum = {
 	EMPTY:	    3,
 };
 
-var canvas_engine = {
+var canvas_kis = {
 	new: func(canvasGroup)
 	{
-		var m = { parents: [canvas_engine, Device.new(0)] };
+		var m = { parents: [canvas_kis, Device.new(0)] };
 		
 		var font_mapper = func(family, weight)
 		{
@@ -16,6 +16,7 @@ var canvas_engine = {
 				return "LiberationFonts/LiberationSans-Regular.ttf";
 			}
 		};
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/kis.svg", {'font-mapper': font_mapper});
 		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/engine.svg", {'font-mapper': font_mapper});
 
 		append(m.Pages, canvas_gear.new(canvasGroup.createChild('group')));

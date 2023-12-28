@@ -2,10 +2,10 @@ var ndlayers = [{name:'APT',style:{scale_factor:0.3,label_font_color:[0,1,0],col
 		{name:'WPT',style:{scale_factor:0.3,color:[0,1,0]}},
 		{name:'RTE',style:{scale_factor:0.3,color:[0,1,0],line_width:1}}];
 
-var canvas_map = {
+var canvas_to = {
 	new: func(canvasGroup)
 	{
-		var m = { parents: [canvas_map] };
+		var m = { parents: [canvas_to] };
 		m.map = canvasGroup.createChild('map');
 
 		var font_mapper = func(family, weight)
@@ -14,7 +14,7 @@ var canvas_map = {
 				return "LiberationFonts/LiberationSans-Regular.ttf";
 			}
 		};
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/map.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/to.svg", {'font-mapper': font_mapper});
 
 		var ctrl_ns = canvas.Map.Controller.get("Aircraft position");
 		var source = ctrl_ns.SOURCES["to-map"];
@@ -28,7 +28,7 @@ var canvas_map = {
 		}
 
 		m.map.setRange(50);
-		m.map.setTranslation(512, 256);
+		m.map.setTranslation(768, 256);
 		m.map.setController("Aircraft position");
 
 		foreach(var layer; ndlayers) {
