@@ -24,9 +24,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.63220826"
-     inkscape:cx="346.40484"
-     inkscape:cy="476.10893"
+     inkscape:zoom="0.58170165"
+     inkscape:cx="691.07591"
+     inkscape:cy="484.7846"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -42,13 +42,8 @@
        transform="matrix(1.3333333,0,0,1.3333333,0.03230671,-0.02796707)">
       <path
          style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 768,324 H 364"
+         d="M 767.97579,322.52098 H 383.97578"
          id="path3330"
-         sodipodi:nodetypes="cc" />
-      <path
-         style="fill:none;stroke:#00fe00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 768,70 H 364"
-         id="path3505"
          sodipodi:nodetypes="cc" />
     </g>
     <path
@@ -306,6 +301,20 @@
          style="fill:none;stroke:#00fe00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="M 683.5,156 V 295"
          id="path22135-6"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       id="g1045"
+       transform="translate(0,-1.333335)">
+      <path
+         style="fill:none;stroke:#00ff00;stroke-width:2.66667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 512,100 h 512"
+         id="path1156"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#00ff00;stroke-width:2.66667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 890,1.333335 V 100"
+         id="path1042"
          sodipodi:nodetypes="cc" />
     </g>
   </g>

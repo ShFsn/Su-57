@@ -1,3 +1,10 @@
+var PageEnum = {
+	GEAR:	    0,
+	HYDRAULICS:	1,
+	REFUELING:	2,
+	EMPTY:	    3,
+};
+
 var canvas_engine = {
 	new: func(canvasGroup)
 	{
@@ -12,6 +19,7 @@ var canvas_engine = {
 		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/engine.svg", {'font-mapper': font_mapper});
 
 		append(m.Pages, canvas_gear.new(canvasGroup.createChild('group')));
+		append(m.Pages, canvas_hydraulics.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_refueling.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_empty.new(canvasGroup.createChild('group')));
 
@@ -21,16 +29,16 @@ var canvas_engine = {
 		append(m.Menus, SkMenu.new(0, m, ""));
 
 		# create softkeys
-		m.Menus[MenuEnum.ENGINE].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "instrumentation/mfd/engine")); # engines
-		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(1, m, "ТОПЛ", 0, 2)); # fuel
-		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(2, m, "ППС", 0, 0));  # fire protection
-		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(3, m, "ГПС", 0, 2));  # hydraulic and pneumatic systems
-		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(4, m, "СЖО", 0, 2));  # life supporting system
-		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(5, m, "ДЗП", 0, 1));  # aerial refueling
-		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(6, m, "С\nЗ\nС"));  # voltage
-		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(7, m, "П\nМ\nТ"));
-		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(8, m, "М\nН\nВ\nР"));  # maneuver
-		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(9, m, "С\nИ\nС"));  # notifications
+		m.Menus[0].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "instrumentation/mfd/engine")); # engines
+		m.Menus[0].AddItem(SkMenuPageActivateItem.new(1, m, "ТОПЛ", 0, PageEnum.EMPTY)); # fuel
+		m.Menus[0].AddItem(SkMenuPageActivateItem.new(2, m, "ППС", 0, PageEnum.GEAR));  # fire protection
+		m.Menus[0].AddItem(SkMenuPageActivateItem.new(3, m, "ГПС", 0, PageEnum.HYDRAULICS));  # hydraulic and pneumatic systems
+		m.Menus[0].AddItem(SkMenuPageActivateItem.new(4, m, "СЖО", 0, PageEnum.EMPTY));  # life supporting system
+		m.Menus[0].AddItem(SkMenuPageActivateItem.new(5, m, "ДЗП", 0, PageEnum.REFUELING));  # aerial refueling
+		m.Menus[0].AddItem(SkItem.new(6, m, "С\nЗ\nС"));  # voltage
+		m.Menus[0].AddItem(SkItem.new(7, m, "П\nМ\nТ"));
+		m.Menus[0].AddItem(SkItem.new(8, m, "М\nН\nВ\nР"));  # maneuver
+		m.Menus[0].AddItem(SkItem.new(9, m, "С\nИ\nС"));  # notifications
 
 		m.ActivatePage(0, 2);
 

@@ -3,8 +3,8 @@ var MfdInstances = [{}, {}];
 var mfdListener = 0;
 
 var MenuEnum = {
-	ENGINE:	0,
-	MAP:	1,
+	MAP:	0,
+	ENGINE:	1,
 };
 
 var MFD = {
@@ -21,9 +21,17 @@ var MFD = {
 		m.SkInstance = canvas_skTop.new(group.createChild('group'));
 
 		# create menus
-		append(m.Menus, SkMenu.new(0, m, ""));
+		append(m.Menus, SkMenu.new(MenuEnum.MAP, m, ""));
+		append(m.Menus, SkMenu.new(MenuEnum.ENGINE, m, ""));
 
 		# create softkeys
+		m.Menus[MenuEnum.MAP].AddItem(SkItem.new(0, m, "ПИЛ"));
+		m.Menus[MenuEnum.MAP].AddItem(SkMenuPageActivateItem.new(1, m, "ТО", MenuEnum.MAP, MenuEnum.MAP));
+		m.Menus[MenuEnum.MAP].AddItem(SkMenuPageActivateItem.new(2, m, "КИС", MenuEnum.ENGINE, MenuEnum.ENGINE));
+		m.Menus[MenuEnum.MAP].AddItem(SkItem.new(3, m, "ОПС"));
+		m.Menus[MenuEnum.MAP].AddItem(SkItem.new(5, m, "<=>"));
+		m.Menus[MenuEnum.MAP].AddItem(SkItem.new(6, m, ""));
+
 		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(0, m, "ПИЛ"));
 		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(1, m, "ТО", 0, 0));
 		m.Menus[MenuEnum.ENGINE].AddItem(SkMenuPageActivateItem.new(2, m, "КИС", 0, 1));
@@ -31,8 +39,7 @@ var MFD = {
 		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(5, m, "<=>"));
 		m.Menus[MenuEnum.ENGINE].AddItem(SkItem.new(6, m, "О\nЧ\nР"));
 
-		m.ActivatePage(1, 2);
-		m.ActivateMenu(MenuEnum.ENGINE);
+		m.ActivatePage(MenuEnum.ENGINE, 2);
 		return m;
 	},
 	SubBtClick: func(input)
