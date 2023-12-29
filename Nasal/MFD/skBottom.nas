@@ -12,7 +12,7 @@ var canvas_skBottom = {
 		
 		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/skBottom.svg", {'font-mapper': font_mapper});
 
-		var svg_keys = ["sk0","sk1","sk2","sk3","sk4","sk5","sk6","sk7","sk8","sk9"];
+		var svg_keys = ["sk0","sk1","sk2","sk3","sk4","sk5","sk6","sk7","sk8","sk9","sk10","sk11","sk12"];
 		foreach(var key; svg_keys) {
 			m[key] = canvasGroup.getElementById(key);
 		}
@@ -33,7 +33,7 @@ var canvas_skBottom = {
 	},
 	setSoftkeys: func(softkeys, selectedSoftkeys)
 	{
-		for(me.i = 0; me.i < 10; me.i+=1) {
+		for(me.i = 0; me.i < 13; me.i+=1) {
 			me["sk"~(me.i)].setText(softkeys[me.i]);
 
 			if(selectedSoftkeys[me.i] == 1) {

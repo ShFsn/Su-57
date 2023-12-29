@@ -33,12 +33,13 @@ var MFD = {
 		m.Menus[MenuEnum.TO].AddItem(SkItem.new(6, m, ""));
 
 		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(0, m, "ПИЛ"));
-		m.Menus[MenuEnum.KIS].AddItem(SkMenuPageActivateItem.new(1, m, "ТО", 0, 0));
-		m.Menus[MenuEnum.KIS].AddItem(SkMenuPageActivateItem.new(2, m, "КИС", 0, 1));
+		m.Menus[MenuEnum.KIS].AddItem(SkMenuPageActivateItem.new(1, m, "ТО", MenuEnum.TO, MenuEnum.TO));
+		m.Menus[MenuEnum.KIS].AddItem(SkMenuPageActivateItem.new(2, m, "КИС", MenuEnum.KIS, MenuEnum.KIS));
 		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(3, m, "ОПС"));
 		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(5, m, "<=>"));
 		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(6, m, "О\nЧ\nР"));
 
+		m.ActivateMenu(MenuEnum.KIS);
 		m.ActivatePage(MenuEnum.KIS, 2);
 		return m;
 	},
@@ -49,15 +50,21 @@ var MFD = {
 };
 
 var mfdBtClick = func(index = 0, location = 0, input = -1) {
-	input -= 6;
 	
 	if(location == 0) {
-		if (input > 0) {
-			MfdInstances[index].BtClick(input);
+		if (input > 5) {
+			MfdInstances[index].BtClick(input-6);
 		}
 	}
 	else if(location == 1) {
-		MfdInstances[index].SubBtClick(input);
+		if (input > 5) {
+			MfdInstances[index].SubBtClick(input-6);
+		}
+	}
+	else if(location == 3) {
+		if (input > 1) {
+			MfdInstances[index].SubBtClick(13-input);
+		}
 	}
 }
 
