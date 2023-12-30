@@ -28,7 +28,7 @@ var canvas_to = {
 		}
 
 		m.map.setRange(25);
-		m.map.setTranslation(768, 256);
+		m.map.setTranslation(768, 393);
 		m.map.setController("Aircraft position");
 
 		foreach(var layer; ndlayers) {

@@ -30,8 +30,9 @@ var init = func {
 		.setScale(me.style.scale_factor);
 
 	me.center = me.element.createChild("path")
-		.setColorFill(1,1,0)
-		.circle(5,0,0);
+		.circle(5,0,0)
+		.close()
+		.setColorFill(1,1,0);
 
 	if(me.model.idx > 57) {
 		me.text = me.newText("X", me.style.font_color)
