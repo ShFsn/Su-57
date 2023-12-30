@@ -1,0 +1,58 @@
+# See: http://wiki.flightgear.org/MapStructure
+# Class things:
+var name = 'WPT_su';
+var parents = [DotSym];
+var __self__ = caller(0)[0];
+DotSym.makeinstance( name, __self__ );
+
+SymbolLayer.get(name).df_style = { # style to use by default
+	line_width: 3,
+	scale_factor: 1,
+	font: "Helvetica.txf",
+	font_size: 48,
+	font_color: [0,1,0],
+	active_color: [0,1,0],
+	inactive_color: [0,1,0]
+};
+
+var element_type = "group"; # we want a group, becomes "me.element"
+var active = nil;
+
+var init = func {
+
+	me.ring = me.element.createChild("path")
+		.moveTo(-25,0)
+		.arcSmallCW(25,25,0,50,0)
+		.arcSmallCW(25,25,0,-50,0)
+		.close()
+		.setColorFill(0,1,0)
+		.setStrokeLineWidth(1)
+		.setScale(me.style.scale_factor);
+
+	me.center = me.element.createChild("path")
+		.setColorFill(1,1,0)
+		.circle(5,0,0);
+
+	if(me.model.idx > 57) {
+		me.text = me.newText("X", me.style.font_color)
+			.setTranslation(7, 10)
+			.setScale(me.style.scale_factor);
+	}
+	else {
+		me.text = me.newText("A" ~ chr(me.model.idx+48), me.style.font_color)
+			.setTranslation(7, 10)
+			.setScale(me.style.scale_factor);
+	}
+	me.draw();
+};
+var draw = func {
+	var active = (getprop(me.options.current_wp_node) == me.model.idx);
+	if (me.active != active) {
+		me.center.setColorFill(
+			active ?
+			[1,1,0] :
+			[0,0,0]
+		);
+		me.active = active;
+	}
+};

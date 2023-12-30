@@ -1,6 +1,6 @@
 var ndlayers = [{name:'APT',style:{scale_factor:0.3,label_font_color:[0,1,0],color_default:[0,1,0],line_width:3}},
-		{name:'WPT',style:{scale_factor:0.3,color:[0,1,0]}},
-		{name:'RTE',style:{scale_factor:0.3,color:[0,1,0],line_width:1}}];
+		{name:'WPT_su',style:{scale_factor:0.3,color:[0,1,0],line_width:2}},
+		{name:'RTE',style:{scale_factor:0.3,color:[0,1,0],line_width:2}}];
 
 var canvas_map = {
 	new: func(canvasGroup)
@@ -27,7 +27,7 @@ var canvas_map = {
 			};
 		}
 
-		m.map.setRange(50);
+		m.map.setRange(25);
 		m.map.setTranslation(512, 256);
 		m.map.setController("Aircraft position");
 

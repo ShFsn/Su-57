@@ -18,7 +18,8 @@ var canvas_kis = {
 			}
 		};
 		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/kis.svg", {'font-mapper': font_mapper});
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/engine.svg", {'font-mapper': font_mapper});
+		#canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/panel.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/nozzle.svg", {'font-mapper': font_mapper});
 
 		append(m.Pages, canvas_gear.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_hydraulics.new(canvasGroup.createChild('group')));

@@ -26,6 +26,7 @@
 	</engines>
 	<nasal>
 		<mfd>
+			<file>Aircraft/Su-57/Nasal/MFD/maps/loader.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/Framework.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/empty.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/pfd.nas</file>
