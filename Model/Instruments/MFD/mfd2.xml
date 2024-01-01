@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>mfd2.ac</path>
+	<animation>
+		<type>select</type>
+		<object-name>mfd2_screen2</object-name>
+		<condition>
+			<greater-than>
+				<property>instrumentation/mfd/swap</property>
+				<value>0</value>
+			</greater-than>
+		</condition>
+	</animation>
+
 	<!-- top -->
 	<animation>
 		<type>pick</type>

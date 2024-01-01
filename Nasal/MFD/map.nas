@@ -43,12 +43,10 @@ var canvas_map = {
 		m.group = canvasGroup;
 		return m;
 	},
-	show: func()
+	BtClick: func()
 	{
-		me.group.show();
 	},
-	hide: func()
+	SubBtClick: func()
 	{
-		me.group.hide();
 	}
 };

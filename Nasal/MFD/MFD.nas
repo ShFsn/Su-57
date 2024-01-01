@@ -51,6 +51,24 @@ var MFD = {
 
 var mfdBtClick = func(index = 0, location = 0, input = -1) {
 	
+	if(getprop("instrumentation/mfd/swap") or 0) {
+		if(location == 0 and input == 11) {
+			setprop("instrumentation/mfd/swap", 0);
+		}
+		
+		if(index) {
+			index = 0;
+		}
+		else {
+			index = 1;
+		}
+	}
+	else {
+		if(location == 0 and input == 11) {
+			setprop("instrumentation/mfd/swap", 1);
+		}
+	}
+	
 	if(location == 0) {
 		if (input > 5) {
 			MfdInstances[index].BtClick(input-6);
@@ -83,8 +101,10 @@ mfdListener = setlistener("/sim/signals/fdm-initialized", func () {
 		"mipmapping": 1
 	});
 
-	mfd1Canvas.addPlacement({"node": "mfd1_screen"});
-	mfd2Canvas.addPlacement({"node": "mfd2_screen"});
+	mfd1Canvas.addPlacement({"node": "mfd1_screen1"});
+	mfd1Canvas.addPlacement({"node": "mfd2_screen2"});
+	mfd2Canvas.addPlacement({"node": "mfd2_screen1"});
+	mfd2Canvas.addPlacement({"node": "mfd1_screen2"});
 	MfdInstances[0] = canvas_map.new(mfd1Canvas.createGroup(), 0);
 	MfdInstances[1] = MFD.new(mfd2Canvas.createGroup(), 0);
 
