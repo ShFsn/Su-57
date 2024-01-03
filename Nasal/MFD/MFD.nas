@@ -50,7 +50,7 @@ var MFD = {
 };
 
 var mfdBtClick = func(index = 0, location = 0, input = -1) {
-	
+
 	if(getprop("instrumentation/mfd/swap") or 0) {
 		if(location == 0 and input == 11) {
 			setprop("instrumentation/mfd/swap", 0);
@@ -80,7 +80,7 @@ var mfdBtClick = func(index = 0, location = 0, input = -1) {
 		}
 	}
 	else if(location == 3) {
-		if (input > 1) {
+		if (input > 0) {
 			MfdInstances[index].SubBtClick(13-input);
 		}
 	}

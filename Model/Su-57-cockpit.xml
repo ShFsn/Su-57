@@ -14,9 +14,9 @@
 		<name>mfd1</name>
 		<path>Aircraft/Su-57/Model/Instruments/MFD/mfd1.xml</path>
 		<offsets>
-			<x-m>-6.255</x-m>
+			<x-m>-6.210</x-m>
 			<y-m>-0.174</y-m>
-			<z-m> 0.714</z-m>
+			<z-m> 0.740</z-m>
 			<pitch-deg>-14</pitch-deg>
 		</offsets>
 	</model>
@@ -24,9 +24,9 @@
 		<name>mfd2</name>
 		<path>Aircraft/Su-57/Model/Instruments/MFD/mfd2.xml</path>
 		<offsets>
-			<x-m>-6.255</x-m>
+			<x-m>-6.210</x-m>
 			<y-m> 0.174</y-m>
-			<z-m> 0.714</z-m>
+			<z-m> 0.740</z-m>
 			<pitch-deg>-14</pitch-deg>
 		</offsets>
 	</model>
