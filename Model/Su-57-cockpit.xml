@@ -4,9 +4,9 @@
 		<name>mfd1</name>
 		<path>Aircraft/Su-57/Model/Instruments/HUD/hud.ac</path>
 		<offsets>
-			<x-m>-6.200</x-m>
+			<x-m>-6.150</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 1.000</z-m>
+			<z-m> 0.950</z-m>
 			<pitch-deg>-12</pitch-deg>
 		</offsets>
 	</model>
