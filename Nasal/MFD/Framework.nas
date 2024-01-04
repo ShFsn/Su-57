@@ -4,7 +4,6 @@
 ##########################################################################################################
 
 var NUM_SOFTKEYS = 14;
-var ActivePage = 0; # used for softkey decoration
 
 # base class
 var SkItem = {
@@ -65,8 +64,8 @@ var SkPageActivateItem = {
 		m.Page = page;
 		return m;
 	},
-	GetDecoration: func {
-		return me.Page == ActivePage;
+	GetDecoration: func(activePage) {
+		return me.Page == activePage;
 	},
 	Activate: func {
 		me.Device.ActivatePage(me.Page, me.Id);
@@ -155,6 +154,7 @@ var Device = {
 			Softkeys: [],
 			SoftkeyFrames: [],
 			ActiveMenu: 0, # to know where button clicks must go
+			ActivePage: 0, # used for softkey decoration
 			SkFrameMenu: 0,
 			InstanceId: instance,
 			KnobMode: 1, # knob can have different functionalities
@@ -177,7 +177,7 @@ var Device = {
 		me.Menus[me.SkFrameMenu].ResetDecoration();
 		me.SkFrameMenu = me.ActiveMenu;
 		me.Menus[me.SkFrameMenu].SetDecoration(softkey);
-		ActivePage = page;
+		me.ActivePage = page;
 
 		me.UpdateMenu();
 
@@ -206,7 +206,7 @@ var Device = {
 			me.Tmp = me.Menus[me.ActiveMenu].GetItem(me.i);
 			if(me.Tmp != nil) {
 				me.Softkeys[me.i] = me.Tmp.GetTitle();
-				me.SoftkeyFrames[me.i] = me.Tmp.GetDecoration();
+				me.SoftkeyFrames[me.i] = me.Tmp.GetDecoration(me.ActivePage);
 			}
 		}
 		me.SkInstance.setSoftkeys(me.Softkeys, me.SoftkeyFrames);

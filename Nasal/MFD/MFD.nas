@@ -45,7 +45,12 @@ var MFD = {
 	},
 	SubBtClick: func(input)
 	{
-		me.Pages[1].BtClick(input);
+		if(input == 9) {
+			me.Pages[MenuEnum.KIS].pmt();
+		}
+		else {
+			me.Pages[MenuEnum.KIS].BtClick(input);
+		}
 	}
 };
 

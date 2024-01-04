@@ -9,7 +9,7 @@ var PageEnum = {
 var canvas_kis = {
 	new: func(canvasGroup)
 	{
-		var m = { parents: [canvas_kis, Device.new(0)] };
+		var m = { parents: [canvas_kis, Device.new(0)], SubPages: [] };
 		
 		var font_mapper = func(family, weight)
 		{
@@ -18,8 +18,12 @@ var canvas_kis = {
 			}
 		};
 		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/kis.svg", {'font-mapper': font_mapper});
-		#canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/panel.svg", {'font-mapper': font_mapper});
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/nozzle.svg", {'font-mapper': font_mapper});
+		
+		append(m.SubPages, canvasGroup.createChild('group'));
+		append(m.SubPages, canvasGroup.createChild('group'));
+		canvas.parsesvg(m.SubPages[0], "Aircraft/Su-57/Nasal/MFD/panel.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(m.SubPages[1], "Aircraft/Su-57/Nasal/MFD/nozzle.svg", {'font-mapper': font_mapper});
+		m.ActiveSubPage = 0;
 
 		append(m.Pages, canvas_gear.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_hydraulics.new(canvasGroup.createChild('group')));
@@ -73,6 +77,7 @@ var canvas_kis = {
 
 		m.ActivateMenu(0);
 		m.ActivatePage(0, 2);
+		m.pmt();
 
 		m.update();
 		m.Timer = maketimer(0.1, m, m.update);
@@ -80,6 +85,24 @@ var canvas_kis = {
 
 		m.group = canvasGroup;
 		return m;
+	},
+	pmt: func()
+	{
+		me.ActiveSubPage += 1;
+		
+		if(me.ActiveSubPage > 2) {
+			me.ActiveSubPage = 0;
+		}
+		
+		me.SubPages[0].hide();
+		me.SubPages[1].hide();
+		
+		if(me.ActiveSubPage == 1) {
+			me.SubPages[0].show();
+		}
+		if(me.ActiveSubPage == 2) {
+			me.SubPages[1].show();
+		}
 	},
 	update: func()
 	{
