@@ -15,7 +15,7 @@ var canvas_pfd = {
 		foreach(var key; svg_keys) {
 			m[key] = canvasGroup.getElementById(key);
 		}
-		m.horizon.set("clip", "rect(52, 365, 351, 96)");# top,right,bottom,left
+		m.horizon.set("clip", "rect(80, 419, 410, 121)");# top,right,bottom,left
 		m.group = canvasGroup;
 		return m;
 	},
