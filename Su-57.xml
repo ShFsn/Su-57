@@ -21,14 +21,14 @@
    <vtailarea unit="M2">   14.1 </vtailarea>
    <vtailarm  unit="M" >    6.0 </vtailarm>
    <location name="AERORP" unit="M">
-     <x>  0.00 </x>
-     <y>  0.00 </y>
-     <z>  0.00 </z>
+     <x>  0.3 </x>
+     <y>  0.0 </y>
+     <z>  0.0 </z>
    </location>
    <location name="EYEPOINT" unit="M">
-     <x> -5.70 </x>
-     <y>  0.00 </y>
-     <z>  1.00 </z>
+     <x> -5.7 </x>
+     <y>  0.0 </y>
+     <z>  1.0 </z>
    </location>
    <location name="VRP" unit="M">
      <x>0</x>
