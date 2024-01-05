@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<sim include="Systems/views.xml">
+		<flight-model>jsb</flight-model>
+		<aero>Su-57</aero>
+	</sim>
+	<controls>
+		<ejected>0</ejected>
+		<gear>
+			<brake-parking>1</brake-parking>
+		</gear>
+	</controls>
+	<engines>
+		<engine n="0">
+			<running>true</running>
+			<reverser-pos-norm type="double">0</reverser-pos-norm>
+		</engine>
+		<engine n="1">
+			<running>true</running>
+			<reverser-pos-norm type="double">0</reverser-pos-norm>
+		</engine>
+	</engines>
+	<nasal>
+		<mfd>
+			<file>Aircraft/Su-57/Nasal/MFD/maps/loader.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/Framework.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/empty.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/pfd.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/gear.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/hydraulics.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/refueling.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/elec.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/skTop.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/skBottom.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/to.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/kis.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/map.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/MFD.nas</file>
+		</mfd>
+	</nasal>
+</PropertyList>

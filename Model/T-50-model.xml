@@ -1,0 +1,64 @@
+<PropertyList>
+
+  <path>Su-57.ac</path>
+    <model>
+        <name>cockpit</name>
+        <path>Aircraft/Su-57/Model/T-50-cockpit.xml</path>
+    </model>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Gear_Front</object-name>
+    <property>test/gear</property>
+    <factor>100</factor>
+    <center>
+      <x-m>-3.54755</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.200277</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Gear_Left</object-name>
+    <property>test/gear</property>
+    <factor>90</factor>
+    <center>
+      <x-m>2.81364</x-m>
+      <y-m>-2.1205</y-m>
+      <z-m>0.134582</z-m>
+    </center>
+    <axis>
+      <x>0.2</x>
+      <y>-1</y>
+      <z>0.5</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Gear_Left</object-name>
+    <property>test/gear</property>
+    <interpolation>
+      <entry><ind>0.0</ind><dep> 0</dep></entry>
+      <entry><ind>0.333</ind><dep>43</dep></entry>
+      <entry><ind>1.0</ind><dep>43</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>2.81364</x-m>
+      <y-m>-2.1205</y-m>
+      <z-m>0.134582</z-m>
+    </center>
+    <axis>
+      <x>1.76964</x>
+      <y>-0.2963</y>
+      <z>0.31898</z>
+    </axis>
+  </animation>
+
+</PropertyList>
