@@ -79,10 +79,6 @@ var canvas_kis = {
 		m.ActivatePage(0, 2);
 		m.pmt();
 
-		m.update();
-		m.Timer = maketimer(0.1, m, m.update);
-		#m.Timer.start();
-
 		m.group = canvasGroup;
 		return m;
 	},

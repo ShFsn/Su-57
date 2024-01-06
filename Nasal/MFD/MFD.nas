@@ -39,9 +39,16 @@ var MFD = {
 		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(5, m, "<=>"));
 		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(6, m, "О\nЧ\nР"));
 
+		m.Timer = maketimer(0.1, m, m.Update);
+		m.Timer.start();
+		m.Update();
 		m.ActivateMenu(MenuEnum.KIS);
 		m.ActivatePage(MenuEnum.KIS, 2);
 		return m;
+	},
+	Update: func()
+	{
+		me.PFD.update();
 	},
 	SubBtClick: func(input)
 	{
