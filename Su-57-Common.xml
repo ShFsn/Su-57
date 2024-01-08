@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<sim include="Systems/views.xml">
+		<expected-aircraft-dir-name>Su-57</expected-aircraft-dir-name>
 		<flight-model>jsb</flight-model>
 		<aero>Su-57</aero>
 		<submodels>
