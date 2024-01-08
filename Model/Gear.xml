@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>Gear.ac</path>
+	
+<!-- Front Gear -->
+
+	<animation>
+		<type>select</type>
+        <type>rotate</type>
+        <object-name>front-strut</object-name>
+        <object-name>front-post</object-name>
+        <object-name>front-wheel</object-name>
+        <object-name>front-tyre</object-name>
+		<condition>
+		<greater-than>
+		<property>gear/gear[0]/position-norm</property>
+		<value>0</value>
+		</greater-than>
+		</condition>
+	</animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>front-strut</object-name>
+        <object-name>front-wheel</object-name>
+        <object-name>front-tyre</object-name>
+        <property>gear/gear[0]/position-norm</property>
+		<interpolation>
+		<entry>
+        <ind>0.0</ind>
+        <dep>100</dep>
+		</entry>
+		<entry>
+        <ind>0.5</ind>
+        <dep>100</dep>
+		</entry>
+		<entry>
+        <ind>0.6</ind>
+        <dep>100</dep>
+		</entry>
+		<entry>
+        <ind>1.0</ind>
+        <dep>0</dep>
+		</entry>
+		</interpolation>
+        <center>
+            <x-m> 6.94</x-m>
+            <y-m> 0.00</y-m>
+            <z-m>-0.24</z-m>
+        </center>
+        <axis>
+            <x> 0</x>
+            <y> 1</y>
+            <z> 0</z>
+        </axis>
+    </animation>
+    
+<!-- Right Gear -->
+    
+    <animation>
+		<type>select</type>
+        <type>rotate</type>
+        <object-name>right-strut</object-name>
+        <object-name>right-wheel</object-name>
+        <object-name>right-tyre</object-name>
+		<condition>
+		<greater-than>
+		<property>gear/gear[2]/position-norm</property>
+		<value>0</value>
+		</greater-than>
+		</condition>
+	</animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>right-strut</object-name>
+        <object-name>right-wheel</object-name>
+        <object-name>right-tyre</object-name>
+        <property>gear/gear[2]/position-norm</property>
+		<interpolation>
+		<entry>
+        <ind>0.0</ind>
+        <dep>75</dep>
+		</entry>
+		<entry>
+        <ind>0.5</ind>
+        <dep>75</dep>
+		</entry>
+		<entry>
+        <ind>0.6</ind>
+        <dep>0</dep>
+		</entry>
+		<entry>
+        <ind>1.0</ind>
+        <dep>0</dep>
+		</entry>
+		</interpolation>
+        <axis>
+            <x1-m>13.5115</x1-m>
+            <y1-m> 1.2927</y1-m>
+            <z1-m>-0.1653</z1-m>
+            <x2-m>13.3084</x2-m>
+            <y2-m> 2.4448</y2-m>
+            <z2-m>-0.1653</z2-m>
+		</axis>
+    </animation>
+    
+<!-- Left Gear -->
+
+    <animation>
+		<type>select</type>
+        <type>rotate</type>
+        <object-name>left-strut</object-name>
+        <object-name>left-wheel</object-name>
+        <object-name>left-tyre</object-name>
+		<condition>
+		<greater-than>
+		<property>gear/gear[1]/position-norm</property>
+		<value>0</value>
+		</greater-than>
+		</condition>
+	</animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>left-strut</object-name>
+        <object-name>left-wheel</object-name>
+        <object-name>left-tyre</object-name>
+        <property>gear/gear[1]/position-norm</property>
+		<interpolation>
+		<entry>
+        <ind>0.0</ind>
+        <dep>-75</dep>
+		</entry>
+		<entry>
+        <ind>0.5</ind>
+        <dep>-75</dep>
+		</entry>
+		<entry>
+        <ind>0.6</ind>
+        <dep>0</dep>
+		</entry>
+		<entry>
+        <ind>1.0</ind>
+        <dep>0</dep>
+		</entry>
+		</interpolation>
+        <axis>
+            <x1-m>13.5115</x1-m>
+            <y1-m>-1.2927</y1-m>
+            <z1-m>-0.1653</z1-m>
+            <x2-m>13.3084</x2-m>
+            <y2-m>-2.4448</y2-m>
+            <z2-m>-0.1653</z2-m>
+		</axis>
+    </animation>
+	
+</PropertyList>

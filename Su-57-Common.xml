@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<sim include="Systems/views.xml">
+		<expected-aircraft-dir-name>Su-57</expected-aircraft-dir-name>
 		<flight-model>jsb</flight-model>
 		<aero>Su-57</aero>
+		<submodels>
+			<serviceable type="bool">true</serviceable>
+			<path>Aircraft/Su-57/Systems/submodels.xml</path>
+		</submodels>
 	</sim>
+	<input>
+		<keyboard include="Systems/keyboard.xml" />
+	</input>
+	<payload include="Systems/payload.xml"/>
 	<controls>
 		<ejected>0</ejected>
 		<gear>
@@ -37,5 +46,48 @@
 			<file>Aircraft/Su-57/Nasal/MFD/map.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/MFD.nas</file>
 		</mfd>
+		<vector>
+			<file>Aircraft/Su-57/Nasal/weapons/vector.nas</file>
+		</vector>
+		<notifications>
+			<file>Aircraft/Su-57/Nasal/weapons/ArmamentNotification.nas</file>
+			<file>Aircraft/Su-57/Nasal/weapons/GeoBridgedTransmitter.nas</file>
+		</notifications>
+		<radardist>
+			<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+		</radardist>
+		<rcs>
+			<file>Aircraft/Su-57/Nasal/radar/rcs.nas</file>
+			<file>Aircraft/Su-57/Nasal/radar/rcs_mand.nas</file>
+		</rcs>
+		<radar_system>
+			<file>Aircraft/Su-57/Nasal/radar/radar-system-database.nas</file>
+			<file>Aircraft/Su-57/Nasal/radar/radar-system.nas</file>
+			<file>Aircraft/Su-57/Nasal/radar/apg-68.nas</file>
+		</radar_system>
+		<rwr>
+			<file>Aircraft/Su-57/Nasal/radar/rwr.nas</file>
+		</rwr>
+		<damage>
+			<file>Aircraft/Su-57/Nasal/weapons/damage.nas</file>
+		</damage>
+		<ai>
+			<file>Aircraft/Su-57/Nasal/weapons/AI_list.nas</file>
+		</ai>
+		<view>
+			<file>Aircraft/Su-57/Nasal/weapons/MissileView.nas</file>
+		</view>
+		<armament>
+			<file>Aircraft/Su-57/Nasal/weapons/missile-code.nas</file><!-- must be before station-manager -->
+		</armament>
+		<stations>
+			<file>Aircraft/Su-57/Nasal/weapons/station-manager.nas</file><!-- must be before fire-control and pylons -->
+		</stations>
+		<fc>
+			<file>Aircraft/Su-57/Nasal/weapons/fire-control.nas</file><!-- must be before pylons -->
+		</fc>
+		<pylons>
+			<file>Aircraft/Su-57/Nasal/weapons/pylons.nas</file>
+		</pylons>
 	</nasal>
 </PropertyList>
