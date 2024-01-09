@@ -7,11 +7,12 @@ var NUM_SOFTKEYS = 14;
 
 # base class
 var SkItem = {
-	new: func(id, device, title, decoration=0) {
+	new: func(id, device, title, translation, decoration=0) {
 		var m = {parents: [SkItem]};
 		m.Id = id;
 		m.Device = device;
 		m.Title = title;
+		m.Translation = translation;
 		m.Decoration = decoration;
 		return m;
 	},
@@ -26,6 +27,9 @@ var SkItem = {
 	GetTitle: func {
 		return me.Title;
 	},
+	GetTranslation: func {
+		return me.Translation;
+	},
 	SetDecoration: func(decoration) {
 		me.Decoration = decoration;
 	}
@@ -33,8 +37,8 @@ var SkItem = {
 
 # item which changes menu
 var SkMenuActivateItem = {
-	new: func(id, device, title, menu) {
-		var m = {parents: [SkMenuActivateItem, SkItem.new(id, device, title)]};
+	new: func(id, device, title, translation, menu) {
+		var m = {parents: [SkMenuActivateItem, SkItem.new(id, device, title, translation)]};
 		m.Menu = menu;
 		return m;
 	},
@@ -45,8 +49,8 @@ var SkMenuActivateItem = {
 
 # item which changes menu and page
 var SkMenuPageActivateItem = {
-	new: func(id, device, title, menu, page) {
-		var m = {parents: [SkMenuPageActivateItem, SkItem.new(id, device, title)]};
+	new: func(id, device, title, translation, menu, page) {
+		var m = {parents: [SkMenuPageActivateItem, SkItem.new(id, device, title, translation)]};
 		m.Menu = menu;
 		m.Page = page;
 		return m;
@@ -59,8 +63,8 @@ var SkMenuPageActivateItem = {
 
 # item which changes page
 var SkPageActivateItem = {
-	new: func(id, device, title, page) {
-		var m = {parents: [SkPageActivateItem, SkItem.new(id, device, title)]};
+	new: func(id, device, title, translation, page) {
+		var m = {parents: [SkPageActivateItem, SkItem.new(id, device, title, translation)]};
 		m.Page = page;
 		return m;
 	},
@@ -74,8 +78,8 @@ var SkPageActivateItem = {
 
 # item which acts like a switch
 var SkSwitchItem = {
-	new: func(id, device, title, path) {
-		var m = {parents: [SkSwitchItem, SkItem.new(id, device, title)]};
+	new: func(id, device, title, translation, path) {
+		var m = {parents: [SkSwitchItem, SkItem.new(id, device, title, translation)]};
 		m.Node = props.globals.initNode(path, 0, "BOOL");
 		m.Active = 0;
 		return m;
@@ -96,13 +100,12 @@ var SkSwitchItem = {
 };
 
 var SkMenu = {
-	new: func(id, device, title) {
+	new: func(id, device) {
 		var m = { parents: [SkMenu],
 			Items: []};
 		setsize(m.Items, NUM_SOFTKEYS);
 		m.Id = id;
 		m.Device = device;
-		m.Title = title;
 		m.Tmp = 0;
 		return m;
 	},
@@ -113,9 +116,6 @@ var SkMenu = {
 	},
 	GetItem: func(index) {
 		return me.Items[index];
-	},
-	GetTitle: func {
-		return me.Title;
 	},
 	ResetDecoration: func {
 		for(me.Tmp = 0; me.Tmp < NUM_SOFTKEYS; me.Tmp+=1) {
@@ -170,7 +170,6 @@ var Device = {
 	},
 	ActivateMenu: func(id) {
 		me.ActiveMenu = id;
-		me.Softkeys[0] = me.Menus[id].GetTitle();
 		me.UpdateMenu();
 	},
 	ActivatePage: func(page, softkey) {
@@ -206,6 +205,7 @@ var Device = {
 			me.Tmp = me.Menus[me.ActiveMenu].GetItem(me.i);
 			if(me.Tmp != nil) {
 				me.Softkeys[me.i] = me.Tmp.GetTitle();
+				setprop("instrumentation/mfd/sk"~me.InstanceId~"_"~me.i, me.Tmp.GetTranslation() or "");
 				me.SoftkeyFrames[me.i] = me.Tmp.GetDecoration(me.ActivePage);
 			}
 		}

@@ -25,19 +25,19 @@ var MFD = {
 		append(m.Menus, SkMenu.new(MenuEnum.KIS, m, ""));
 
 		# create softkeys
-		m.Menus[MenuEnum.TO].AddItem(SkItem.new(0, m, "ПИЛ"));
-		m.Menus[MenuEnum.TO].AddItem(SkMenuPageActivateItem.new(1, m, "ТО", MenuEnum.TO, MenuEnum.TO));
-		m.Menus[MenuEnum.TO].AddItem(SkMenuPageActivateItem.new(2, m, "КИС", MenuEnum.KIS, MenuEnum.KIS));
-		m.Menus[MenuEnum.TO].AddItem(SkItem.new(3, m, "ОПС"));
-		m.Menus[MenuEnum.TO].AddItem(SkItem.new(5, m, "<=>"));
-		m.Menus[MenuEnum.TO].AddItem(SkItem.new(6, m, ""));
+		m.Menus[MenuEnum.TO].AddItem(SkItem.new(0, m, "ПИЛ", ""));
+		m.Menus[MenuEnum.TO].AddItem(SkMenuPageActivateItem.new(1, m, "ТО", "tactical situation", MenuEnum.TO, MenuEnum.TO));
+		m.Menus[MenuEnum.TO].AddItem(SkMenuPageActivateItem.new(2, m, "КИС", "controlling and informational system", MenuEnum.KIS, MenuEnum.KIS));
+		m.Menus[MenuEnum.TO].AddItem(SkItem.new(3, m, "ОПС", ""));
+		m.Menus[MenuEnum.TO].AddItem(SkItem.new(5, m, "<=>", ""));
+		m.Menus[MenuEnum.TO].AddItem(SkItem.new(6, m, "", ""));
 
-		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(0, m, "ПИЛ"));
-		m.Menus[MenuEnum.KIS].AddItem(SkMenuPageActivateItem.new(1, m, "ТО", MenuEnum.TO, MenuEnum.TO));
-		m.Menus[MenuEnum.KIS].AddItem(SkMenuPageActivateItem.new(2, m, "КИС", MenuEnum.KIS, MenuEnum.KIS));
-		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(3, m, "ОПС"));
-		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(5, m, "<=>"));
-		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(6, m, "О\nЧ\nР"));
+		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(0, m, "ПИЛ", ""));
+		m.Menus[MenuEnum.KIS].AddItem(SkMenuPageActivateItem.new(1, m, "ТО", "tactical situation", MenuEnum.TO, MenuEnum.TO));
+		m.Menus[MenuEnum.KIS].AddItem(SkMenuPageActivateItem.new(2, m, "КИС", "controlling and informational system", MenuEnum.KIS, MenuEnum.KIS));
+		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(3, m, "ОПС", ""));
+		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(5, m, "<=>", ""));
+		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(6, m, "О\nЧ\nР", "next message"));
 
 		m.Timer = maketimer(0.1, m, m.Update);
 		m.Timer.start();

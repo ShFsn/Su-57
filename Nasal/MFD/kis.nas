@@ -9,7 +9,7 @@ var PageEnum = {
 var canvas_kis = {
 	new: func(canvasGroup)
 	{
-		var m = { parents: [canvas_kis, Device.new(0)], SubPages: [] };
+		var m = { parents: [canvas_kis, Device.new(1)], SubPages: [] };
 		
 		var font_mapper = func(family, weight)
 		{
@@ -39,41 +39,41 @@ var canvas_kis = {
 		append(m.Menus, SkMenu.new(2, m, ""));
 
 		# create softkeys
-		m.Menus[0].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "instrumentation/mfd/engine")); # engines
-		m.Menus[0].AddItem(SkItem.new(1, m, "ТОПЛ")); # fuel
-		m.Menus[0].AddItem(SkPageActivateItem.new(2, m, "ППС", PageEnum.GEAR));  # fire protection
-		m.Menus[0].AddItem(SkPageActivateItem.new(3, m, "ГПС", PageEnum.HYDRAULICS));  # hydraulic and pneumatic systems
-		m.Menus[0].AddItem(SkItem.new(4, m, "СЖО"));  # life supporting system
-		m.Menus[0].AddItem(SkPageActivateItem.new(5, m, "ДЗП", PageEnum.REFUELING));  # aerial refueling
-		m.Menus[0].AddItem(SkPageActivateItem.new(6, m, "С\nЭ\nС", PageEnum.ELECTRICAL));  # voltage
-		m.Menus[0].AddItem(SkItem.new(9, m, "П\nМ\nТ"));
-		m.Menus[0].AddItem(SkMenuActivateItem.new(10, m, "", 1));
-		m.Menus[0].AddItem(SkItem.new(11, m, "М\nН\nВ\nР"));  # maneuver
-		m.Menus[0].AddItem(SkPageActivateItem.new(12, m, "С\nИ\nС", PageEnum.EMPTY));  # notifications
+		m.Menus[0].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "engines", "instrumentation/mfd/engine"));
+		m.Menus[0].AddItem(SkItem.new(1, m, "ТОПЛ", "fuel"));
+		m.Menus[0].AddItem(SkPageActivateItem.new(2, m, "ППС", "gear and flap indicator", PageEnum.GEAR));
+		m.Menus[0].AddItem(SkPageActivateItem.new(3, m, "ГПС", "hydraulic and pneumatic systems", PageEnum.HYDRAULICS));
+		m.Menus[0].AddItem(SkItem.new(4, m, "СЖО", "life supporting system"));
+		m.Menus[0].AddItem(SkPageActivateItem.new(5, m, "ДЗП", "aerial refueling", PageEnum.REFUELING));
+		m.Menus[0].AddItem(SkPageActivateItem.new(6, m, "С\nЭ\nС", "electrical supply system", PageEnum.ELECTRICAL));
+		m.Menus[0].AddItem(SkItem.new(9, m, "П\nМ\nТ", "Parameters of Maneuver Technique"));
+		m.Menus[0].AddItem(SkMenuActivateItem.new(10, m, "", "move down", 1));
+		m.Menus[0].AddItem(SkItem.new(11, m, "М\nН\nВ\nР", "maneuver"));
+		m.Menus[0].AddItem(SkPageActivateItem.new(12, m, "С\nИ\nС", "system notifications", PageEnum.EMPTY));
 
-		m.Menus[1].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "instrumentation/mfd/engine")); # engines
-		m.Menus[1].AddItem(SkItem.new(1, m, "ТОПЛ")); # fuel
-		m.Menus[1].AddItem(SkPageActivateItem.new(2, m, "ППС", PageEnum.GEAR));  # fire protection
-		m.Menus[1].AddItem(SkPageActivateItem.new(3, m, "ГПС", PageEnum.HYDRAULICS));  # hydraulic and pneumatic systems
-		m.Menus[1].AddItem(SkItem.new(4, m, "СЖО"));  # life supporting system
-		m.Menus[1].AddItem(SkPageActivateItem.new(5, m, "ДЗП", PageEnum.REFUELING));  # aerial refueling
-		m.Menus[1].AddItem(SkPageActivateItem.new(6, m, "С\nЭ\nС", PageEnum.ELECTRICAL));  # voltage
-		m.Menus[1].AddItem(SkItem.new(9, m, "П\nМ\nТ"));
-		m.Menus[1].AddItem(SkMenuActivateItem.new(10, m, "", 2));
-		m.Menus[1].AddItem(SkPageActivateItem.new(11, m, "С\nИ\nС", PageEnum.EMPTY));  # notifications
-		m.Menus[1].AddItem(SkItem.new(12, m, "С\nТ\nР")); # page
+		m.Menus[1].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "engines", "instrumentation/mfd/engine"));
+		m.Menus[1].AddItem(SkItem.new(1, m, "ТОПЛ", "fuel"));
+		m.Menus[1].AddItem(SkPageActivateItem.new(2, m, "ППС", "gear and flap indicator", PageEnum.GEAR));
+		m.Menus[1].AddItem(SkPageActivateItem.new(3, m, "ГПС", "hydraulic and pneumatic systems", PageEnum.HYDRAULICS));
+		m.Menus[1].AddItem(SkItem.new(4, m, "СЖО", "life supporting system"));
+		m.Menus[1].AddItem(SkPageActivateItem.new(5, m, "ДЗП", "aerial refueling", PageEnum.REFUELING));
+		m.Menus[1].AddItem(SkPageActivateItem.new(6, m, "С\nЭ\nС", "electrical supply system", PageEnum.ELECTRICAL));
+		m.Menus[1].AddItem(SkItem.new(9, m, "П\nМ\nТ", "Parameters of Maneuver Technique"));
+		m.Menus[1].AddItem(SkMenuActivateItem.new(10, m, "", "move down", 2));
+		m.Menus[1].AddItem(SkPageActivateItem.new(11, m, "С\nИ\nС", "system notifications", PageEnum.EMPTY));
+		m.Menus[1].AddItem(SkItem.new(12, m, "С\nТ\nР", "page"));
 
-		m.Menus[2].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "instrumentation/mfd/engine")); # engines
-		m.Menus[2].AddItem(SkItem.new(1, m, "ТОПЛ")); # fuel
-		m.Menus[2].AddItem(SkPageActivateItem.new(2, m, "ППС", PageEnum.GEAR));  # fire protection
-		m.Menus[2].AddItem(SkPageActivateItem.new(3, m, "ГПС", PageEnum.HYDRAULICS));  # hydraulic and pneumatic systems
-		m.Menus[2].AddItem(SkItem.new(4, m, "СЖО"));  # life supporting system
-		m.Menus[2].AddItem(SkPageActivateItem.new(5, m, "ДЗП", PageEnum.REFUELING));  # aerial refueling
-		m.Menus[2].AddItem(SkPageActivateItem.new(6, m, "С\nЭ\nС", PageEnum.ELECTRICAL));  # voltage
-		m.Menus[2].AddItem(SkItem.new(9, m, "П\nМ\nТ"));
-		m.Menus[2].AddItem(SkMenuActivateItem.new(10, m, "", 0));
-		m.Menus[2].AddItem(SkItem.new(11, m, "С\nТ\nР")); # page
-		m.Menus[2].AddItem(SkItem.new(12, m, "М\nН\nВ\nР"));  # maneuver
+		m.Menus[2].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "engines", "instrumentation/mfd/engine"));
+		m.Menus[2].AddItem(SkItem.new(1, m, "ТОПЛ", "fuel"));
+		m.Menus[2].AddItem(SkPageActivateItem.new(2, m, "ППС", "gear and flap indicator", PageEnum.GEAR));
+		m.Menus[2].AddItem(SkPageActivateItem.new(3, m, "ГПС", "hydraulic and pneumatic systems", PageEnum.HYDRAULICS));
+		m.Menus[2].AddItem(SkItem.new(4, m, "СЖО", "life supporting system"));
+		m.Menus[2].AddItem(SkPageActivateItem.new(5, m, "ДЗП", "aerial refueling", PageEnum.REFUELING));
+		m.Menus[2].AddItem(SkPageActivateItem.new(6, m, "С\nЭ\nС", "electrical supply system", PageEnum.ELECTRICAL));
+		m.Menus[2].AddItem(SkItem.new(9, m, "П\nМ\nТ", "Parameters of Maneuver Technique"));
+		m.Menus[2].AddItem(SkMenuActivateItem.new(10, m, "", "move down", 0));
+		m.Menus[2].AddItem(SkItem.new(11, m, "С\nТ\nР", "page"));
+		m.Menus[2].AddItem(SkItem.new(12, m, "М\nН\nВ\nР", "maneuver"));
 
 		m.ActivateMenu(0);
 		m.ActivatePage(0, 2);

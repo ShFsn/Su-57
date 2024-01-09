@@ -260,6 +260,14 @@
 				<script>mfd.mfdBtClick(1, 1, 6)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_0</tooltip-id>
+				<property>instrumentation/mfd/sk1_0</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -273,6 +281,14 @@
 				<script>mfd.mfdBtClick(1, 1, 7)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_1</tooltip-id>
+				<property>instrumentation/mfd/sk1_1</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -286,6 +302,14 @@
 				<script>mfd.mfdBtClick(1, 1, 8)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_2</tooltip-id>
+				<property>instrumentation/mfd/sk1_2</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -299,6 +323,14 @@
 				<script>mfd.mfdBtClick(1, 1, 9)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_3</tooltip-id>
+				<property>instrumentation/mfd/sk1_3</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -312,6 +344,14 @@
 				<script>mfd.mfdBtClick(1, 1, 10)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_4</tooltip-id>
+				<property>instrumentation/mfd/sk1_4</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -325,6 +365,14 @@
 				<script>mfd.mfdBtClick(1, 1, 11)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_5</tooltip-id>
+				<property>instrumentation/mfd/sk1_5</property>
+			</binding>
+		</hovered>
 	</animation>
 	<!-- left -->
 	<animation>
@@ -444,6 +492,14 @@
 				<script>mfd.mfdBtClick(1, 3, 0)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk0_6</tooltip-id>
+				<property>instrumentation/mfd/sk0_6</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -457,6 +513,14 @@
 				<script>mfd.mfdBtClick(1, 3, 1)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_12</tooltip-id>
+				<property>instrumentation/mfd/sk1_12</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -470,6 +534,14 @@
 				<script>mfd.mfdBtClick(1, 3, 2)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_11</tooltip-id>
+				<property>instrumentation/mfd/sk1_11</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -483,6 +555,14 @@
 				<script>mfd.mfdBtClick(1, 3, 3)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_10</tooltip-id>
+				<property>instrumentation/mfd/sk1_10</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -496,6 +576,14 @@
 				<script>mfd.mfdBtClick(1, 3, 4)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_9</tooltip-id>
+				<property>instrumentation/mfd/sk1_9</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -509,6 +597,14 @@
 				<script>mfd.mfdBtClick(1, 3, 5)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_8</tooltip-id>
+				<property>instrumentation/mfd/sk1_8</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -522,6 +618,14 @@
 				<script>mfd.mfdBtClick(1, 3, 6)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_7</tooltip-id>
+				<property>instrumentation/mfd/sk1_7</property>
+			</binding>
+		</hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -535,5 +639,13 @@
 				<script>mfd.mfdBtClick(1, 3, 7)</script>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>%s</label>
+				<tooltip-id>sk1_6</tooltip-id>
+				<property>instrumentation/mfd/sk1_6</property>
+			</binding>
+		</hovered>
 	</animation>
 </PropertyList>
