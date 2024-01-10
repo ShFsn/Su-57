@@ -1,9 +1,10 @@
 var PageEnum = {
 	GEAR:	    0,
 	HYDRAULICS:	1,
-	REFUELING:	2,
-	ELECTRICAL:	3,
-	EMPTY:	    4,
+	OXY:		2,
+	REFUELING:	3,
+	ELECTRICAL:	4,
+	EMPTY:	    5,
 };
 
 var canvas_kis = {
@@ -27,6 +28,7 @@ var canvas_kis = {
 
 		append(m.Pages, canvas_gear.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_hydraulics.new(canvasGroup.createChild('group')));
+		append(m.Pages, canvas_oxy.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_refueling.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_elec.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_empty.new(canvasGroup.createChild('group')));
@@ -43,7 +45,7 @@ var canvas_kis = {
 		m.Menus[0].AddItem(SkItem.new(1, m, "ТОПЛ", "fuel"));
 		m.Menus[0].AddItem(SkPageActivateItem.new(2, m, "ППС", "gear and flap indicator", PageEnum.GEAR));
 		m.Menus[0].AddItem(SkPageActivateItem.new(3, m, "ГПС", "hydraulic and pneumatic systems", PageEnum.HYDRAULICS));
-		m.Menus[0].AddItem(SkItem.new(4, m, "СЖО", "life supporting system"));
+		m.Menus[0].AddItem(SkPageActivateItem.new(4, m, "СЖО", "life supporting system", PageEnum.OXY));
 		m.Menus[0].AddItem(SkPageActivateItem.new(5, m, "ДЗП", "aerial refueling", PageEnum.REFUELING));
 		m.Menus[0].AddItem(SkPageActivateItem.new(6, m, "С\nЭ\nС", "electrical supply system", PageEnum.ELECTRICAL));
 		m.Menus[0].AddItem(SkItem.new(9, m, "П\nМ\nТ", "Parameters of Maneuver Technique"));
@@ -55,7 +57,7 @@ var canvas_kis = {
 		m.Menus[1].AddItem(SkItem.new(1, m, "ТОПЛ", "fuel"));
 		m.Menus[1].AddItem(SkPageActivateItem.new(2, m, "ППС", "gear and flap indicator", PageEnum.GEAR));
 		m.Menus[1].AddItem(SkPageActivateItem.new(3, m, "ГПС", "hydraulic and pneumatic systems", PageEnum.HYDRAULICS));
-		m.Menus[1].AddItem(SkItem.new(4, m, "СЖО", "life supporting system"));
+		m.Menus[1].AddItem(SkPageActivateItem.new(4, m, "СЖО", "life supporting system", PageEnum.OXY));
 		m.Menus[1].AddItem(SkPageActivateItem.new(5, m, "ДЗП", "aerial refueling", PageEnum.REFUELING));
 		m.Menus[1].AddItem(SkPageActivateItem.new(6, m, "С\nЭ\nС", "electrical supply system", PageEnum.ELECTRICAL));
 		m.Menus[1].AddItem(SkItem.new(9, m, "П\nМ\nТ", "Parameters of Maneuver Technique"));
@@ -67,7 +69,7 @@ var canvas_kis = {
 		m.Menus[2].AddItem(SkItem.new(1, m, "ТОПЛ", "fuel"));
 		m.Menus[2].AddItem(SkPageActivateItem.new(2, m, "ППС", "gear and flap indicator", PageEnum.GEAR));
 		m.Menus[2].AddItem(SkPageActivateItem.new(3, m, "ГПС", "hydraulic and pneumatic systems", PageEnum.HYDRAULICS));
-		m.Menus[2].AddItem(SkItem.new(4, m, "СЖО", "life supporting system"));
+		m.Menus[2].AddItem(SkPageActivateItem.new(4, m, "СЖО", "life supporting system", PageEnum.OXY));
 		m.Menus[2].AddItem(SkPageActivateItem.new(5, m, "ДЗП", "aerial refueling", PageEnum.REFUELING));
 		m.Menus[2].AddItem(SkPageActivateItem.new(6, m, "С\nЭ\nС", "electrical supply system", PageEnum.ELECTRICAL));
 		m.Menus[2].AddItem(SkItem.new(9, m, "П\nМ\nТ", "Parameters of Maneuver Technique"));
