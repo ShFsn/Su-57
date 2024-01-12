@@ -19,7 +19,17 @@ var canvas_kis = {
 			}
 		};
 		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/kis.svg", {'font-mapper': font_mapper});
-		
+		var svg_keys = ["arrowL", "arrowR", "n2L", "n2R",
+						"tempL", "tempR"];
+		foreach(var key; svg_keys) {
+			m[key] = canvasGroup.getElementById(key);
+		}
+
+		m.tempLn = props.globals.getNode("engines/engine[0]/egt-degf");
+		m.tempRn = props.globals.getNode("engines/engine[1]/egt-degf");
+		m.n2Ln = props.globals.getNode("engines/engine[0]/n2");
+		m.n2Rn = props.globals.getNode("engines/engine[0]/n2");
+
 		append(m.SubPages, canvasGroup.createChild('group'));
 		append(m.SubPages, canvasGroup.createChild('group'));
 		canvas.parsesvg(m.SubPages[0], "Aircraft/Su-57/Nasal/MFD/panel.svg", {'font-mapper': font_mapper});
@@ -102,9 +112,31 @@ var canvas_kis = {
 			me.SubPages[1].show();
 		}
 	},
+	calcRotation: func(value)
+	{
+		if(value > 60) {
+			if(value > 105) {
+				return 0;
+			}
+			else {
+				# 60-105
+				return 19-((value-60)*19)/45;
+			}
+		}
+		else {
+			# 0-60
+			return 32-(value*13)/60;
+		}
+		return 0;
+	},
 	update: func()
 	{
-		print("update");
+		me.arrowL.setRotation(me.calcRotation(me.n2Ln.getValue())*D2R);
+		me.arrowR.setRotation(-me.calcRotation(me.n2Rn.getValue())*D2R);
+		me.n2L.setText(sprintf("%.1f", me.n2Ln.getValue()));
+		me.n2R.setText(sprintf("%.1f", me.n2Rn.getValue()));
+		me.tempL.setText(sprintf("%.0f", (me.tempLn.getValue()-32)/1.8));
+		me.tempR.setText(sprintf("%.0f", (me.tempRn.getValue()-32)/1.8));
 	},
 	show: func()
 	{
