@@ -1,7 +1,7 @@
 var canvas_skTop = {
 	new: func(canvasGroup)
 	{
-		var m = { parents: [canvas_skTop] };
+		var m = { parents: [canvas_skTop], softkeys: []};
 		
 		var font_mapper = func(family, weight)
 		{
@@ -9,13 +9,33 @@ var canvas_skTop = {
 				return "LiberationFonts/LiberationSans-Regular.ttf";
 			}
 		};
-		
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/skTop.svg", {'font-mapper': font_mapper});
 
-		var svg_keys = ["sk0","sk1","sk2","sk3","sk4","sk5","sk6"];
-		foreach(var key; svg_keys) {
-			m[key] = canvasGroup.getElementById(key);
-		}
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/softkeys.svg", {'font-mapper': font_mapper});
+
+		canvasGroup.getElementById("SKL").hide();
+		canvasGroup.getElementById("SKB").hide();
+		canvasGroup.getElementById("SKT0").hide();
+		canvasGroup.getElementById("SKT1").hide();
+		canvasGroup.getElementById("SKT2").hide();
+		canvasGroup.getElementById("SKT3").hide();
+		canvasGroup.getElementById("SKT4").hide();
+		canvasGroup.getElementById("SKT5").hide();
+		canvasGroup.getElementById("SKR1").hide();
+		canvasGroup.getElementById("SKR2").hide();
+		canvasGroup.getElementById("SKR3").hide();
+		canvasGroup.getElementById("SKR4").hide();
+		canvasGroup.getElementById("SKR5").hide();
+		canvasGroup.getElementById("SKR6").hide();
+		canvasGroup.getElementById("SKR7").hide();
+
+		append(m.softkeys, canvasGroup.getElementById("SKT6"));
+		append(m.softkeys, canvasGroup.getElementById("SKT7"));
+		append(m.softkeys, canvasGroup.getElementById("SKT8"));
+		append(m.softkeys, canvasGroup.getElementById("SKT9"));
+		append(m.softkeys, canvasGroup.getElementById("SKT10"));
+		append(m.softkeys, canvasGroup.getElementById("SKT11"));
+		append(m.softkeys, canvasGroup.getElementById("SKR0"));
+
 		m.path = canvasGroup.createChild("path").setStrokeLineWidth(3).set("stroke", "rgba(0,255,0,1)");
 		return m;
 	},
@@ -34,11 +54,11 @@ var canvas_skTop = {
 	setSoftkeys: func(softkeys, selectedSoftkeys)
 	{
 		for(me.i = 0; me.i < 7; me.i+=1) {
-			me["sk"~(me.i)].setText(softkeys[me.i]);
-
+			me.softkeys[me.i].setText(softkeys[me.i]);
+			
 			if(selectedSoftkeys[me.i] == 1) {
-				me.center = me["sk"~(me.i)].getCenter();
-				me.bbox = me["sk"~(me.i)].getBoundingBox();
+				me.center = me.softkeys[me.i].getCenter();
+				me.bbox = me.softkeys[me.i].getBoundingBox();
 
 				me.drawRect([me.center[0]+me.bbox[0], me.center[1]+me.bbox[1],
 							 me.center[0]+me.bbox[2], me.center[1]+me.bbox[3]], 5);
