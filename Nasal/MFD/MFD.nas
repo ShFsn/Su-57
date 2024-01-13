@@ -18,7 +18,7 @@ var MFD = {
 		append(m.Pages, canvas_to.new(group.createChild('group')));
 		append(m.Pages, canvas_kis.new(group.createChild('group')));
 
-		m.SkInstance = canvas_skTop.new(group.createChild('group'));
+		m.SkInstance = canvas_skMFD.new(group.createChild('group'));
 
 		# create menus
 		append(m.Menus, SkMenu.new(MenuEnum.TO, m, ""));

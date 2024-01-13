@@ -1,7 +1,7 @@
-var canvas_skTop = {
+var canvas_skMFD = {
 	new: func(canvasGroup)
 	{
-		var m = { parents: [canvas_skTop], softkeys: []};
+		var m = { parents: [canvas_skMFD], softkeys: []};
 		
 		var font_mapper = func(family, weight)
 		{
@@ -51,8 +51,10 @@ var canvas_skTop = {
 			.lineTo(coordinates[0]-padding,coordinates[3]+padding+10)
 			.lineTo(coordinates[0]-padding,coordinates[1]);
 	},
-	setSoftkeys: func(softkeys, selectedSoftkeys)
+	setSoftkeys: func(softkeys, translations, selectedSoftkeys)
 	{
+		#setprop("instrumentation/mfd/sk"~me.InstanceId~"_"~me.i, me.Tmp.GetTranslation() or "");
+
 		for(me.i = 0; me.i < 7; me.i+=1) {
 			me.softkeys[me.i].setText(softkeys[me.i]);
 			

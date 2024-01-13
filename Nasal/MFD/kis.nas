@@ -43,7 +43,7 @@ var canvas_kis = {
 		append(m.Pages, canvas_elec.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_empty.new(canvasGroup.createChild('group')));
 
-		m.SkInstance = canvas_skBottom.new(canvasGroup.createChild('group'));
+		m.SkInstance = canvas_skKIS.new(canvasGroup.createChild('group'));
 
 		# create menus
 		append(m.Menus, SkMenu.new(0, m, ""));

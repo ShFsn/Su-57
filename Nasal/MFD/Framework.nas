@@ -152,6 +152,7 @@ var Device = {
 			Pages: [],
 			Menus: [],
 			Softkeys: [],
+			Translations: [],
 			SoftkeyFrames: [],
 			ActiveMenu: 0, # to know where button clicks must go
 			ActivePage: 0, # used for softkey decoration
@@ -163,6 +164,7 @@ var Device = {
 
 		for(m.i=0; m.i < NUM_SOFTKEYS; m.i+=1) {
 			append(m.Softkeys, "");
+			append(m.Translations, "");
 			append(m.SoftkeyFrames, 0);
 		}
 
@@ -205,10 +207,10 @@ var Device = {
 			me.Tmp = me.Menus[me.ActiveMenu].GetItem(me.i);
 			if(me.Tmp != nil) {
 				me.Softkeys[me.i] = me.Tmp.GetTitle();
-				setprop("instrumentation/mfd/sk"~me.InstanceId~"_"~me.i, me.Tmp.GetTranslation() or "");
+				me.Translations[me.i] = me.Tmp.GetTranslation();
 				me.SoftkeyFrames[me.i] = me.Tmp.GetDecoration(me.ActivePage);
 			}
 		}
-		me.SkInstance.setSoftkeys(me.Softkeys, me.SoftkeyFrames);
+		me.SkInstance.setSoftkeys(me.Softkeys, me.Translations, me.SoftkeyFrames);
 	}
 };

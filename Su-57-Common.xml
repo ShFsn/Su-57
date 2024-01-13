@@ -40,8 +40,9 @@
 			<file>Aircraft/Su-57/Nasal/MFD/oxy.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/refueling.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/elec.nas</file>
-			<file>Aircraft/Su-57/Nasal/MFD/skTop.nas</file>
-			<file>Aircraft/Su-57/Nasal/MFD/skBottom.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/skPFD.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/skMFD.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/skKIS.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/to.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/kis.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/map.nas</file>

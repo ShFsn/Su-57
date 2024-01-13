@@ -1,7 +1,7 @@
 var canvas_pfd = {
 	new: func(canvasGroup)
 	{
-		var m = { parents: [canvas_pfd] };
+		var m = { parents: [canvas_pfd, Device.new(1)] };
 		
 		var font_mapper = func(family, weight)
 		{
@@ -21,6 +21,14 @@ var canvas_pfd = {
 		m.h_trans = m.horizon.createTransform();
 		m.horizon.set("clip", "rect(80, 419, 410, 121)");# top,right,bottom,left
 
+		m.SkInstance = canvas_skPFD.new(canvasGroup.createChild('group'));
+
+		# create menus
+		append(m.Menus, SkMenu.new(0, m, ""));
+
+		# create softkeys
+		m.Menus[0].AddItem(SkItem.new(0, m, "ПУСК", "start"));
+
 		m.ias = props.globals.getNode("instrumentation/airspeed-indicator/indicated-speed-kt");
 		m.alt = props.globals.getNode("instrumentation/altimeter/indicated-altitude-ft");
 		m.pitch = props.globals.getNode("orientation/pitch-deg");
@@ -29,6 +37,7 @@ var canvas_pfd = {
 		m.vSpd = props.globals.getNode("velocities/vertical-speed-fps");
 		m.heading = 0;
 		
+		m.ActivateMenu(0);
 		m.group = canvasGroup;
 		return m;
 	},
