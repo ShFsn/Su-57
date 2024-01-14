@@ -27,7 +27,11 @@ var canvas_pfd = {
 		append(m.Menus, SkMenu.new(0, m, ""));
 
 		# create softkeys
-		m.Menus[0].AddItem(SkItem.new(0, m, "ПУСК", "start"));
+		m.Menus[0].AddItem(SkItem.new(0, m, "А\nР\nК", "nav source", 1));
+		m.Menus[0].AddItem(SkItem.new(1, m, "ПУСК", "start timer"));
+		m.Menus[0].AddItem(SkItem.new(2, m, "Hоп", "set target altitude"));
+		m.Menus[0].AddItem(SkItem.new(3, m, "Р760", "local barometer"));
+		m.Menus[0].AddItem(SkItem.new(4, m, "Раэр", "standard pressure"));
 
 		m.ias = props.globals.getNode("instrumentation/airspeed-indicator/indicated-speed-kt");
 		m.alt = props.globals.getNode("instrumentation/altimeter/indicated-altitude-ft");

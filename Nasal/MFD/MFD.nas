@@ -29,14 +29,14 @@ var MFD = {
 		m.Menus[MenuEnum.TO].AddItem(SkMenuPageActivateItem.new(1, m, "ТО", "tactical situation", MenuEnum.TO, MenuEnum.TO));
 		m.Menus[MenuEnum.TO].AddItem(SkMenuPageActivateItem.new(2, m, "КИС", "controlling and informational system", MenuEnum.KIS, MenuEnum.KIS));
 		m.Menus[MenuEnum.TO].AddItem(SkItem.new(3, m, "ОПС", ""));
-		m.Menus[MenuEnum.TO].AddItem(SkItem.new(5, m, "<=>", ""));
+		m.Menus[MenuEnum.TO].AddItem(SkItem.new(5, m, "<=>", "swap screens"));
 		m.Menus[MenuEnum.TO].AddItem(SkItem.new(6, m, "", ""));
 
 		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(0, m, "ПИЛ", ""));
 		m.Menus[MenuEnum.KIS].AddItem(SkMenuPageActivateItem.new(1, m, "ТО", "tactical situation", MenuEnum.TO, MenuEnum.TO));
 		m.Menus[MenuEnum.KIS].AddItem(SkMenuPageActivateItem.new(2, m, "КИС", "controlling and informational system", MenuEnum.KIS, MenuEnum.KIS));
 		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(3, m, "ОПС", ""));
-		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(5, m, "<=>", ""));
+		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(5, m, "<=>", "swap screens"));
 		m.Menus[MenuEnum.KIS].AddItem(SkItem.new(6, m, "О\nЧ\nР", "next message"));
 
 		m.ActivateMenu(MenuEnum.KIS);
@@ -118,7 +118,7 @@ mfdListener = setlistener("/sim/signals/fdm-initialized", func () {
 	mfd1Canvas.addPlacement({"node": "mfd2_screen2"});
 	mfd2Canvas.addPlacement({"node": "mfd2_screen1"});
 	mfd2Canvas.addPlacement({"node": "mfd1_screen2"});
-	MfdInstances[0] = canvas_map.new(mfd1Canvas.createGroup(), 0);
+	MfdInstances[0] = canvas_nd.new(mfd1Canvas.createGroup(), 0);
 	MfdInstances[1] = MFD.new(mfd2Canvas.createGroup(), 0);
 
 	removelistener(mfdListener);

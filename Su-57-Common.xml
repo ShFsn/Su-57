@@ -34,18 +34,20 @@
 			<file>Aircraft/Su-57/Nasal/MFD/maps/loader.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/Framework.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/empty.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/map.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/pfd.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/gear.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/hydraulics.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/oxy.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/refueling.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/elec.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/to.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/skND.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/skPFD.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/skMFD.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/skKIS.nas</file>
-			<file>Aircraft/Su-57/Nasal/MFD/to.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/kis.nas</file>
-			<file>Aircraft/Su-57/Nasal/MFD/map.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/nd.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/MFD.nas</file>
 		</mfd>
 		<vector>

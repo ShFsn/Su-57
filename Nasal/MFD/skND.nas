@@ -1,7 +1,7 @@
-var canvas_skPFD = {
+var canvas_skND = {
 	new: func(canvasGroup)
 	{
-		var m = { parents: [canvas_skPFD], softkeys: []};
+		var m = { parents: [canvas_skND], softkeys: []};
 		
 		var font_mapper = func(family, weight)
 		{
@@ -12,29 +12,13 @@ var canvas_skPFD = {
 
 		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/softkeys.svg", {'font-mapper': font_mapper});
 
-		canvasGroup.getElementById("SKT").hide();
+		canvasGroup.getElementById("SKL").hide();
 		canvasGroup.getElementById("SKR").hide();
-		canvasGroup.getElementById("SKL0").hide();
-		canvasGroup.getElementById("SKL1").hide();
-		canvasGroup.getElementById("SKL2").hide();
-		canvasGroup.getElementById("SKL3").hide();
-		canvasGroup.getElementById("SKL4").hide();
-		canvasGroup.getElementById("SKL5").hide();
-		canvasGroup.getElementById("SKL7").hide();
-		canvasGroup.getElementById("SKB2").hide();
-		canvasGroup.getElementById("SKB3").hide();
-		canvasGroup.getElementById("SKB6").hide();
-		canvasGroup.getElementById("SKB7").hide();
-		canvasGroup.getElementById("SKB8").hide();
-		canvasGroup.getElementById("SKB9").hide();
-		canvasGroup.getElementById("SKB10").hide();
-		canvasGroup.getElementById("SKB11").hide();
-
-		append(m.softkeys, canvasGroup.getElementById("SKL6"));
-		append(m.softkeys, canvasGroup.getElementById("SKB0"));
-		append(m.softkeys, canvasGroup.getElementById("SKB1"));
-		append(m.softkeys, canvasGroup.getElementById("SKB4"));
-		append(m.softkeys, canvasGroup.getElementById("SKB5"));
+		canvasGroup.getElementById("SKB").hide();
+		
+		for(m.i=0; m.i<12; m.i+=1) {
+			append(m.softkeys, canvasGroup.getElementById("SKT"~m.i));
+		}
 
 		m.path = canvasGroup.createChild("path").setStrokeLineWidth(3).set("stroke", "rgba(0,255,0,1)");
 		return m;
@@ -55,7 +39,7 @@ var canvas_skPFD = {
 	{
 		#setprop("instrumentation/mfd/sk"~me.InstanceId~"_"~me.i, me.Tmp.GetTranslation() or "");
 
-		for(me.i = 0; me.i < 5; me.i+=1) {
+		for(me.i = 0; me.i < 12; me.i+=1) {
 			me.softkeys[me.i].setText(softkeys[me.i]);
 			
 			if(selectedSoftkeys[me.i] == 1) {
