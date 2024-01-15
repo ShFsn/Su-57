@@ -9,8 +9,8 @@ SymbolLayer.get(name).df_style = { # style to use by default
 	line_width: 1.0,
 	scale_factor: 1.0,
 	font: "Helvetica.txf",
-	font_size: 48,
-	font_color: [0,1,0],
+	font_size: 32,
+	font_color: [1,1,1],
 	active_color: [0,1,0],
 	inactive_color: [0,1,0]
 };
@@ -21,26 +21,21 @@ var active = nil;
 var init = func {
 
 	me.ring = me.element.createChild("path")
-		.moveTo(-25,0)
-		.arcSmallCW(25,25,0,50,0)
-		.arcSmallCW(25,25,0,-50,0)
+		.moveTo(-20,0)
+		.arcSmallCW(20,20,0,40,0)
+		.arcSmallCW(20,20,0,-40,0)
 		.close()
 		.setColorFill(0,1,0)
 		.setStrokeLineWidth(0.1);
 
 	me.center = me.element.createChild("path")
-		.circle(20,0,0)
+		.circle(17,0,0)
 		.close()
 		.setColorFill(1,1,0);
 
-	if(me.model.idx > 57) {
-		me.text = me.newText("X", me.style.font_color)
-			.setTranslation(7, 10);
-	}
-	else {
-		me.text = me.newText("A" ~ chr(me.model.idx+48), me.style.font_color)
-			.setTranslation(7, 10);
-	}
+	me.text = me.newText(sprintf("A%d", me.model.idx), me.style.font_color)
+			.setTranslation(20, 20);
+
 	me.element.setScale(me.style.scale_factor);
 	me.draw();
 };
