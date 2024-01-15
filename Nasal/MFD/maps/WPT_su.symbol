@@ -6,8 +6,8 @@ var __self__ = caller(0)[0];
 DotSym.makeinstance( name, __self__ );
 
 SymbolLayer.get(name).df_style = { # style to use by default
-	line_width: 3,
-	scale_factor: 1,
+	line_width: 1.0,
+	scale_factor: 1.0,
 	font: "Helvetica.txf",
 	font_size: 48,
 	font_color: [0,1,0],
@@ -26,24 +26,22 @@ var init = func {
 		.arcSmallCW(25,25,0,-50,0)
 		.close()
 		.setColorFill(0,1,0)
-		.setStrokeLineWidth(1)
-		.setScale(me.style.scale_factor);
+		.setStrokeLineWidth(0.1);
 
 	me.center = me.element.createChild("path")
-		.circle(5,0,0)
+		.circle(20,0,0)
 		.close()
 		.setColorFill(1,1,0);
 
 	if(me.model.idx > 57) {
 		me.text = me.newText("X", me.style.font_color)
-			.setTranslation(7, 10)
-			.setScale(me.style.scale_factor);
+			.setTranslation(7, 10);
 	}
 	else {
 		me.text = me.newText("A" ~ chr(me.model.idx+48), me.style.font_color)
-			.setTranslation(7, 10)
-			.setScale(me.style.scale_factor);
+			.setTranslation(7, 10);
 	}
+	me.element.setScale(me.style.scale_factor);
 	me.draw();
 };
 var draw = func {
