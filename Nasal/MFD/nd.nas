@@ -1,11 +1,11 @@
 var canvas_nd = {
-	new: func(canvasGroup)
+	new: func(group)
 	{
 		var m = { parents: [canvas_nd, Device.new(0)] };
 
-		append(m.Pages, canvas_map.new(canvasGroup.createChild('group')));
+		append(m.Pages, canvas_map.new(group.createChild('group')));
 
-		m.SkInstance = canvas_skND.new(canvasGroup.createChild('group'));
+		m.SkInstance = canvas_skND.new(group.createChild('group'));
 
 		# create menus
 		append(m.Menus, SkMenu.new(0, m, ""));
@@ -16,18 +16,13 @@ var canvas_nd = {
 		m.ActivateMenu(0);
 		m.ActivatePage(0, 0);
 
-		m.group = canvasGroup;
+		m.Update();
+		m.Timer = maketimer(0.1, m, m.Update);
+		m.Timer.start();
 		return m;
 	},
-	update: func()
+	Update: func()
 	{
-	},
-	show: func()
-	{
-		me.group.show();
-	},
-	hide: func()
-	{
-		me.group.hide();
+		me.Pages[0].update();
 	}
 };

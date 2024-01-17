@@ -20,7 +20,7 @@ var init = func {
 		.setColor(me.layer.style.color_default)
 		.setStrokeLineWidth(me.layer.style.line_width);
 
-	me.text = me.newText(sprintf("A%d", idx), me.style.font_color)
+	me.text = me.newText(sprintf("P%d", idx), me.style.font_color)
 			.setTranslation(20, 20);
 	idx+=1;
 

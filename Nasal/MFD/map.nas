@@ -18,6 +18,13 @@ var canvas_map = {
 		};
 		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/map.svg", {'font-mapper': font_mapper});
 
+		var svg_keys = ["compass", "lb0", "lb3", "lb6", "lb9",
+						"lb12", "lb15", "lb18", "lb21", "lb24",
+						"lb27", "lb30", "lb33"];
+		foreach(var key; svg_keys) {
+			m[key] = canvasGroup.getElementById(key);
+		}
+
 		var ctrl_ns = canvas.Map.Controller.get("Aircraft position");
 		var source = ctrl_ns.SOURCES["to-map"];
 		if (source == nil) {
@@ -42,8 +49,29 @@ var canvas_map = {
 				priority: layer['z-index']
 			);
 		}
+		
+		m.hdg = props.globals.getNode("orientation/heading-deg");
+		m.heading = 0;
+
 		m.group = canvasGroup;
 		return m;
+	},
+	update: func()
+	{
+		me.heading = me.hdg.getValue()*D2R;
+		me.compass.setRotation(-me.heading);
+		me.lb0.setRotation(me.heading);
+		me.lb3.setRotation(me.heading);
+		me.lb6.setRotation(me.heading);
+		me.lb9.setRotation(me.heading);
+		me.lb12.setRotation(me.heading);
+		me.lb15.setRotation(me.heading);
+		me.lb18.setRotation(me.heading);
+		me.lb21.setRotation(me.heading);
+		me.lb24.setRotation(me.heading);
+		me.lb27.setRotation(me.heading);
+		me.lb30.setRotation(me.heading);
+		me.lb33.setRotation(me.heading);
 	},
 	show: func()
 	{

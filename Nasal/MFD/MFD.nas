@@ -13,10 +13,9 @@ var MFD = {
 		var m = { parents: [MFD, Device.new(instance)] };
 
 		# create pages
-		m.PFD = canvas_pfd.new(group.createChild('group'));
-
 		append(m.Pages, canvas_to.new(group.createChild('group')));
 		append(m.Pages, canvas_kis.new(group.createChild('group')));
+		m.PFD = canvas_pfd.new(group.createChild('group'));
 
 		m.SkInstance = canvas_skMFD.new(group.createChild('group'));
 

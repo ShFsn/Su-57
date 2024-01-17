@@ -7,7 +7,7 @@
    width="1024"
    height="768"
    viewBox="0 0 1024 768.00001"
-   sodipodi:docname="map.svg"
+   sodipodi:docname="to.svg"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,7 +25,7 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.48377195"
-     inkscape:cx="299.728"
+     inkscape:cx="300.76155"
      inkscape:cy="359.6736"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
@@ -88,5 +88,9 @@
        d="M 768.00019,50 768,718"
        id="path899-6"
        sodipodi:nodetypes="cc" />
+    <path
+       id="rect986"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.3893;stroke-linecap:square"
+       d="M 0,0 H 512 V 768 H 0 Z" />
   </g>
 </svg>
