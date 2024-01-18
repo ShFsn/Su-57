@@ -47,7 +47,8 @@
 			<file>Aircraft/Su-57/Nasal/MFD/skMFD.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/skKIS.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/kis.nas</file>
-			<file>Aircraft/Su-57/Nasal/MFD/nd.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/mfd1.nas</file>
+			<file>Aircraft/Su-57/Nasal/MFD/mfd2.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/MFD.nas</file>
 		</mfd>
 		<vector>

@@ -1,7 +1,7 @@
-var canvas_nd = {
+var mfd1 = {
 	new: func(group)
 	{
-		var m = { parents: [canvas_nd, Device.new(0)] };
+		var m = { parents: [mfd1, Device.new(0)] };
 
 		append(m.Pages, canvas_map.new(group.createChild('group')));
 
@@ -24,5 +24,8 @@ var canvas_nd = {
 	Update: func()
 	{
 		me.Pages[0].update();
+	},
+	MfdBtClick: func(location = 0, input = -1)
+	{
 	}
 };

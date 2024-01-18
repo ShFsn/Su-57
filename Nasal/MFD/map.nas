@@ -18,9 +18,11 @@ var canvas_map = {
 		};
 		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/map.svg", {'font-mapper': font_mapper});
 
-		var svg_keys = ["compass", "lb0", "lb3", "lb6", "lb9",
-						"lb12", "lb15", "lb18", "lb21", "lb24",
-						"lb27", "lb30", "lb33"];
+		var svg_keys = ["compass1", "compass2",
+						"lb0", "lb3", "lb6", "lb9",
+						"lb12", "lb15", "lb18",
+						"lb21", "lb24", "lb27",
+						"lb30", "lb33"];
 		foreach(var key; svg_keys) {
 			m[key] = canvasGroup.getElementById(key);
 		}
@@ -59,7 +61,8 @@ var canvas_map = {
 	update: func()
 	{
 		me.heading = me.hdg.getValue()*D2R;
-		me.compass.setRotation(-me.heading);
+		me.compass1.setRotation(-me.heading);
+		me.compass2.setRotation(-me.heading);
 		me.lb0.setRotation(me.heading);
 		me.lb3.setRotation(me.heading);
 		me.lb6.setRotation(me.heading);
