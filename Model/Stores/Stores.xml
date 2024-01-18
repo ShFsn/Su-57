@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<!-- R-77 -->
+	<model>
+		<name>R-77 Missile 1</name>
+		<path>Aircraft/Su-57/Model/Stores/R-77/R-77.ac</path>
+		<offsets>
+			<x-m> 1.00</x-m>
+			<y-m>-1.20</y-m>
+			<z-m>-1.20</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>R-77 Missile 1</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>R-77</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-3-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>R-77 Missile 2</name>
+		<path>Aircraft/Su-57/Model/Stores/R-77/R-77.ac</path>
+		<offsets>
+			<x-m> 1.00</x-m>
+			<y-m> 1.20</y-m>
+			<z-m>-1.20</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>R-77 Missile 2</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-4-type</property>
+					<value>R-77</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-4-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+</PropertyList>
