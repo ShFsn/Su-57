@@ -1,10 +1,11 @@
 var PageEnum = {
-	GEAR:	    0,
-	HYDRAULICS:	1,
-	OXY:		2,
-	REFUELING:	3,
-	ELECTRICAL:	4,
-	EMPTY:	    5,
+	FUEL:	    0,
+	GEAR:	    1,
+	HYDRAULICS:	2,
+	OXY:		3,
+	REFUELING:	4,
+	ELECTRICAL:	5,
+	EMPTY:	    6,
 };
 
 var canvas_kis = {
@@ -36,6 +37,7 @@ var canvas_kis = {
 		canvas.parsesvg(m.SubPages[1], "Aircraft/Su-57/Nasal/MFD/nozzle.svg", {'font-mapper': font_mapper});
 		m.ActiveSubPage = 0;
 
+		append(m.Pages, canvas_fuel.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_gear.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_hydraulics.new(canvasGroup.createChild('group')));
 		append(m.Pages, canvas_oxy.new(canvasGroup.createChild('group')));
@@ -52,7 +54,7 @@ var canvas_kis = {
 
 		# create softkeys
 		m.Menus[0].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "engines", "instrumentation/mfd/engine"));
-		m.Menus[0].AddItem(SkItem.new(1, m, "ТОПЛ", "fuel"));
+		m.Menus[0].AddItem(SkPageActivateItem.new(1, m, "ТОПЛ", "fuel", PageEnum.FUEL));
 		m.Menus[0].AddItem(SkPageActivateItem.new(2, m, "ППС", "gear and flap indicator", PageEnum.GEAR));
 		m.Menus[0].AddItem(SkPageActivateItem.new(3, m, "ГПС", "hydraulic and pneumatic systems", PageEnum.HYDRAULICS));
 		m.Menus[0].AddItem(SkPageActivateItem.new(4, m, "СЖО", "life supporting system", PageEnum.OXY));
@@ -64,7 +66,7 @@ var canvas_kis = {
 		m.Menus[0].AddItem(SkPageActivateItem.new(12, m, "С\nИ\nС", "system notifications", PageEnum.EMPTY));
 
 		m.Menus[1].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "engines", "instrumentation/mfd/engine"));
-		m.Menus[1].AddItem(SkItem.new(1, m, "ТОПЛ", "fuel"));
+		m.Menus[1].AddItem(SkPageActivateItem.new(1, m, "ТОПЛ", "fuel", PageEnum.FUEL));
 		m.Menus[1].AddItem(SkPageActivateItem.new(2, m, "ППС", "gear and flap indicator", PageEnum.GEAR));
 		m.Menus[1].AddItem(SkPageActivateItem.new(3, m, "ГПС", "hydraulic and pneumatic systems", PageEnum.HYDRAULICS));
 		m.Menus[1].AddItem(SkPageActivateItem.new(4, m, "СЖО", "life supporting system", PageEnum.OXY));
@@ -76,7 +78,7 @@ var canvas_kis = {
 		m.Menus[1].AddItem(SkItem.new(12, m, "С\nТ\nР", "page"));
 
 		m.Menus[2].AddItem(SkSwitchItem.new(0, m, "ДВИГ", "engines", "instrumentation/mfd/engine"));
-		m.Menus[2].AddItem(SkItem.new(1, m, "ТОПЛ", "fuel"));
+		m.Menus[2].AddItem(SkPageActivateItem.new(1, m, "ТОПЛ", "fuel", PageEnum.FUEL));
 		m.Menus[2].AddItem(SkPageActivateItem.new(2, m, "ППС", "gear and flap indicator", PageEnum.GEAR));
 		m.Menus[2].AddItem(SkPageActivateItem.new(3, m, "ГПС", "hydraulic and pneumatic systems", PageEnum.HYDRAULICS));
 		m.Menus[2].AddItem(SkPageActivateItem.new(4, m, "СЖО", "life supporting system", PageEnum.OXY));
