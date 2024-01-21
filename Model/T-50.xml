@@ -17,19 +17,7 @@
 		<name>REngine</name>
 		<path>Aircraft/Su-57/Model/REngine.xml</path>
 	</model>
-	
-	<!-- Parts invisible from internally -->
 
-	<animation>
-		<type>select</type>
-		<object-name>Pilot</object-name>
-		<condition>
-			<not>
-				<property>sim/current-view/internal</property>
-			</not>
-		</condition>
-	</animation>
-	
 	<animation>
 		<type>translate</type>
 		<object-name>glass</object-name>

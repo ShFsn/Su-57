@@ -1,0 +1,16 @@
+<PropertyList>
+	<model>
+		<name>Su-57</name>
+		<path>Aircraft/Su-57/Model/T-50.xml</path>
+		<offsets>
+			<x-m>-10.386</x-m>
+			<y-m>  0.000</y-m>
+			<z-m>  0.882</z-m>
+			<pitch-deg>3.2</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>cockpit</name>
+		<path>Aircraft/Su-57/Model/T-50-cockpit.xml</path>
+	</model>
+</PropertyList>
