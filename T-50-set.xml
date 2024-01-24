@@ -6,7 +6,7 @@
 		<variant-of>Su-57</variant-of>
 		<variant-id type="int">0</variant-id>
 		<model>
-			<path>Aircraft/Su-57/Model/T-50-model.xml</path>
+			<path>Aircraft/Su-57/Models/T-50-model.xml</path>
 		</model>
 	</sim>
 </PropertyList>

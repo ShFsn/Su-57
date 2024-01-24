@@ -1,7 +1,7 @@
 <PropertyList>
 	<path>cockpit.ac</path>
 	<model>
-		<name>mfd1</name>
+		<name>hud</name>
 		<path>Aircraft/Su-57/Models/Instruments/HUD/hud.ac</path>
 		<offsets>
 			<x-m>-6.150</x-m>
