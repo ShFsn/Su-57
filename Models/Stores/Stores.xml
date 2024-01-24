@@ -3,7 +3,7 @@
 	<!-- R-77 -->
 	<model>
 		<name>R-77 Missile 1</name>
-		<path>Aircraft/Su-57/Model/Stores/R-77/R-77.ac</path>
+		<path>Aircraft/Su-57/Models/Stores/R-77/R-77.ac</path>
 		<offsets>
 			<x-m> 1.00</x-m>
 			<y-m>-1.20</y-m>
@@ -28,7 +28,7 @@
 	</animation>
 	<model>
 		<name>R-77 Missile 2</name>
-		<path>Aircraft/Su-57/Model/Stores/R-77/R-77.ac</path>
+		<path>Aircraft/Su-57/Models/Stores/R-77/R-77.ac</path>
 		<offsets>
 			<x-m> 1.00</x-m>
 			<y-m> 1.20</y-m>

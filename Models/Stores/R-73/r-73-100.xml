@@ -9,7 +9,7 @@
         </condition>
     </animation>
     <model>
-        <path>Aircraft/Su-57/Model/Stores/R-73/motor-smoke-1.xml</path>
+        <path>Aircraft/Su-57/Models/Stores/R-73/motor-smoke-1.xml</path>
         <offsets>
             <x-m>1.44</x-m>
             <y-m>0</y-m>
@@ -18,7 +18,7 @@
     </model>
     <model>
         <name>explosion</name>
-        <path>Aircraft/Su-57/Model/Stores/R-73/explosion-1.xml</path>
+        <path>Aircraft/Su-57/Models/Stores/R-73/explosion-1.xml</path>
         <offsets>
             <x-m>0</x-m>
             <y-m>0</y-m>

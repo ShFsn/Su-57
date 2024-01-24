@@ -1,7 +1,7 @@
 <PropertyList>
 	<model>
 		<name>Su-57</name>
-		<path>Aircraft/Su-57/Model/T-50.xml</path>
+		<path>Aircraft/Su-57/Models/T-50.xml</path>
 		<offsets>
 			<x-m>-10.386</x-m>
 			<y-m>  0.000</y-m>
@@ -11,10 +11,10 @@
 	</model>
 	<model>
 		<name>cockpit</name>
-		<path>Aircraft/Su-57/Model/Su-57-cockpit.xml</path>
+		<path>Aircraft/Su-57/Models/Su-57-cockpit.xml</path>
 	</model>
 	<model>
 		<name>Stores</name>
-		<path>Aircraft/Su-57/Model/Stores/Stores.xml</path>
+		<path>Aircraft/Su-57/Models/Stores/Stores.xml</path>
 	</model>
 </PropertyList>

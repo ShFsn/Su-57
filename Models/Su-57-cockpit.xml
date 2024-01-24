@@ -2,41 +2,42 @@
 	<path>cockpit.ac</path>
 	<model>
 		<name>mfd1</name>
-		<path>Aircraft/Su-57/Model/Instruments/HUD/hud.ac</path>
+		<path>Aircraft/Su-57/Models/Instruments/HUD/hud.ac</path>
 		<offsets>
 			<x-m>-6.150</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.975</z-m>
+			<z-m> 1.000</z-m>
 			<pitch-deg>-12</pitch-deg>
 		</offsets>
 	</model>
 	<model>
 		<name>mfd1</name>
-		<path>Aircraft/Su-57/Model/Instruments/MFD/mfd1.xml</path>
+		<path>Aircraft/Su-57/Models/Instruments/MFD/mfd1.xml</path>
 		<offsets>
 			<x-m>-6.210</x-m>
 			<y-m>-0.174</y-m>
-			<z-m> 0.740</z-m>
+			<z-m> 0.775</z-m>
 			<pitch-deg>-14</pitch-deg>
 		</offsets>
 	</model>
 	<model>
 		<name>mfd2</name>
-		<path>Aircraft/Su-57/Model/Instruments/MFD/mfd2.xml</path>
+		<path>Aircraft/Su-57/Models/Instruments/MFD/mfd2.xml</path>
 		<offsets>
 			<x-m>-6.210</x-m>
 			<y-m> 0.174</y-m>
-			<z-m> 0.740</z-m>
+			<z-m> 0.775</z-m>
 			<pitch-deg>-14</pitch-deg>
 		</offsets>
 	</model>
 	<model>
 		<name>seat</name>
-		<path>Aircraft/Su-57/Model/Stores/K-36DM/K-36DM.ac</path>
+		<path>Aircraft/Su-57/Models/Stores/K-36DM/K-36DM.ac</path>
 		<offsets>
-			<x-m>-5.150</x-m>
+			<x-m>-5.450</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.090</z-m>
+			<z-m> 0.200</z-m>
+			<pitch-deg>3</pitch-deg>
 		</offsets>
 	</model>
 </PropertyList>

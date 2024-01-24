@@ -4,7 +4,7 @@
 		<description>Sukhoi Su-57</description>
 		<long-description>production aircraft</long-description>
 		<model>
-			<path>Aircraft/Su-57/Model/Su-57-model.xml</path>
+			<path>Aircraft/Su-57/Models/Su-57-model.xml</path>
 		</model>
 	</sim>
 </PropertyList>
