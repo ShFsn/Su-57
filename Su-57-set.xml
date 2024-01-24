@@ -5,7 +5,7 @@
 		<long-description>production aircraft</long-description>
 		<variant-id type="int">1</variant-id>
 		<model>
-			<path>Aircraft/Su-57/Model/Su-57-model.xml</path>
+			<path>Aircraft/Su-57/Models/Su-57-model.xml</path>
 		</model>
 	</sim>
 </PropertyList>

@@ -13,7 +13,7 @@
     <!-- 0 -->
     <submodel>
         <name>flaresL</name>
-        <model>Aircraft/Su-57/Model/Stores/flare.xml</model>
+        <model>Aircraft/Su-57/Models/Stores/flare.xml</model>
         <trigger>fdm/jsbsim/fcs/boz-1</trigger>
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
@@ -36,7 +36,7 @@
     <!-- 1 -->
     <submodel>
         <name>flaresR</name>
-        <model>Aircraft/Su-57/Model/Stores/flare.xml</model>
+        <model>Aircraft/Su-57/Models/Stores/flare.xml</model>
         <trigger>fdm/jsbsim/fcs/boz-2</trigger>
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
@@ -59,7 +59,7 @@
     <!-- 2 -->
     <submodel>
         <name>chaffL</name>
-        <model>Aircraft/MiG-21bis/Model/Effects/Chaff/chaff.xml</model>
+        <model>Aircraft/MiG-21bis/Models/Effects/Chaff/chaff.xml</model>
         <trigger>fdm/jsbsim/fcs/boz-1</trigger>
         <speed>0.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
@@ -83,7 +83,7 @@
     <!-- 3 -->
     <submodel>
         <name>chaffR</name>
-        <model>Aircraft/MiG-21bis/Model/Effects/Chaff/chaff.xml</model>
+        <model>Aircraft/MiG-21bis/Models/Effects/Chaff/chaff.xml</model>
         <trigger>fdm/jsbsim/fcs/boz-2</trigger>
         <speed>0.0</speed>
         <repeat>true</repeat>
@@ -107,7 +107,7 @@
     <!-- 4 -->
     <submodel>
         <name>GSh-301 Tracer</name>
-        <model>Aircraft/Su-57/Model/Stores/Tracer.xml</model>
+        <model>Aircraft/Su-57/Models/Stores/Tracer.xml</model>
         <trigger>fdm/jsbsim/fcs/guntrigger</trigger>
         <speed>2350</speed>
         <repeat>true</repeat>
@@ -127,7 +127,7 @@
     <!-- 5 -->
     <submodel>
         <name>GSh-301</name>
-        <model>Aircraft/Su-57/Model/Stores/Null.ac</model>
+        <model>Aircraft/Su-57/Models/Stores/Null.ac</model>
         <trigger>fdm/jsbsim/fcs/guntrigger</trigger>
         <speed>2350</speed>
         <repeat>true</repeat>

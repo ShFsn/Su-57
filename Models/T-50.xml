@@ -5,17 +5,17 @@
 
 	<model>
 		<name>Gear</name>
-		<path>Aircraft/Su-57/Model/Gear.xml</path>
+		<path>Aircraft/Su-57/Models/Gear.xml</path>
 	</model>
 
 	<model>
 		<name>LEngine</name>
-		<path>Aircraft/Su-57/Model/LEngine.xml</path>
+		<path>Aircraft/Su-57/Models/LEngine.xml</path>
 	</model>
 	
 	<model>
 		<name>REngine</name>
-		<path>Aircraft/Su-57/Model/REngine.xml</path>
+		<path>Aircraft/Su-57/Models/REngine.xml</path>
 	</model>
 
 	<animation>
