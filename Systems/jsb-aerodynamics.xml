@@ -2,7 +2,7 @@
  <aerodynamics>
    <function name="aero/coefficients/Cla">
       <description>Lift_due_to_alpha</description>
-          <table>
+          <table><!-- refId: 1 -->
             <independentVar lookup="row">aero/alpha-deg</independentVar>
             <tableData>
               -6 -0.1313
@@ -48,6 +48,24 @@
          </tableData>
       </table>
    </function>
+    <function name="aero/coefficients/Clg">
+       <description>Delta Lift due to ground effect</description>
+       <table>
+          <independentVar lookup="row">position/h-agl-ft</independentVar>
+          <tableData>
+              0   0.080
+              3   0.063
+              5   0.053
+              7   0.044
+             10   0.031
+             13   0.021
+             16   0.013
+             20   0.005
+             23   0.002
+             25   0.000
+          </tableData>
+       </table>
+    </function>
 
     <function name="aero/coefficients/Cd0">
        <description>Drag_due_to_mach</description>
@@ -66,7 +84,7 @@
     </function>
     <function name="aero/coefficients/Cda">
        <description>Drag_at_zero_lift</description>
-          <table>
+          <table><!-- refId: 1 -->
             <independentVar lookup="row">aero/alpha-deg</independentVar>
             <tableData>
               -6  0.0373
@@ -213,8 +231,10 @@
                     <property>metrics/Sw-sqft</property>
                     <sum>
                         <property>aero/coefficients/Cla</property>
+                        <property>aero/coefficients/Cle</property>
                         <property>aero/coefficients/Clf</property>
                         <property>aero/coefficients/Clm</property>
+                        <property>aero/coefficients/Clg</property>
                     </sum>
                 </product>
             </function>

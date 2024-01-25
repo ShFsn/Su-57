@@ -9,6 +9,10 @@
   <filecreationdate> 2012-08-18 </filecreationdate>
   <version>$Revision: 2.0 $</version>
   <description> Sukhoi T-50 PAK FA </description>
+  <reference refID="1"
+             author="Cheng Liangliang, Yue Kuizhi, Guo Weigang, Yu Dazhao"
+             title="Integration Analysis of Conceptual Design and Stealth-Aerodynamic Characteristics of Combat Aircraft"
+             date="2016"/>
  </fileheader>
 
  <metrics>
@@ -38,10 +42,10 @@
  </metrics>
 
  <mass_balance>
-   <ixx unit="SLUG*FT2">   67439 </ixx>
-   <iyy unit="SLUG*FT2">  185416 </iyy>
-   <izz unit="SLUG*FT2">  196426 </izz>
-   <emptywt unit="LBS" >   40000 </emptywt>
+   <ixx unit="KG*M2">   91435 </ixx>
+   <iyy unit="KG*M2">  251390 </iyy>
+   <izz unit="KG*M2">  266320 </izz>
+   <emptywt unit="KG">  18500 </emptywt>
    <location name="CG" unit="M">
      <x>  0.00 </x>
      <y>  0.00 </y>
@@ -222,7 +226,7 @@
 
   <tank type="FUEL" number="0">
      <location unit="M">
-       <x> -3.00 </x>
+       <x> -1.00 </x>
        <y>  0.00 </y>
        <z>  0.00 </z>
      </location>
@@ -235,7 +239,7 @@
        <y> -2.40 </y>
        <z>  0.00 </z>
      </location>
-     <capacity unit="KG"> 3000.00 </capacity>
+     <capacity unit="KG"> 2000.00 </capacity>
      <contents unit="KG"> 1500.00 </contents>
   </tank>
   <tank type="FUEL" number="2">
@@ -244,7 +248,7 @@
        <y>  2.40 </y>
        <z>  0.00 </z>
      </location>
-     <capacity unit="KG"> 3000.00 </capacity>
+     <capacity unit="KG"> 2000.00 </capacity>
      <contents unit="KG"> 1500.00 </contents>
   </tank>
  </propulsion>
