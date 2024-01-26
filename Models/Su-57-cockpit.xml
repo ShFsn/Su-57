@@ -30,4 +30,14 @@
 			<pitch-deg>3</pitch-deg>
 		</offsets>
 	</model>
+	<model>
+		<name>panelElec</name>
+		<path>Aircraft/Su-57/Models/Panels/panelElec.xml</path>
+		<offsets>
+			<x-m>-5.800</x-m>
+			<y-m> 0.328</y-m>
+			<z-m> 0.599</z-m>
+			<roll-deg>3</roll-deg>
+		</offsets>
+	</model>
 </PropertyList>

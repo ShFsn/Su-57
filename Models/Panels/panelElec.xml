@@ -1,0 +1,21 @@
+<PropertyList>
+	<path>panelElec.ac</path>
+	<model>
+		<name>switch1</name>
+		<path>Aircraft/Su-57/Models/Panels/switch1.xml</path>
+		<offsets>
+			<x-m> 0.030</x-m>
+			<y-m> 0.030</y-m>
+			<z-m> 0.004</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>switch2</name>
+		<path>Aircraft/Su-57/Models/Panels/switch1.ac</path>
+		<offsets>
+			<x-m> 0.030</x-m>
+			<y-m> 0.060</y-m>
+			<z-m> 0.004</z-m>
+		</offsets>
+	</model>
+</PropertyList>
