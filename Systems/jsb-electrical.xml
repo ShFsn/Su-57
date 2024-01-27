@@ -2,8 +2,10 @@
 
 <system name="electric">
     <property value="0">electric/switches/battery</property>
-    <property value="0">electric/switches/ac-gen</property>
-    <property value="0">electric/switches/dc-gen</property>
+    <property value="0">electric/switches/dc1-gen</property>
+    <property value="0">electric/switches/dc2-gen</property>
+    <property value="0">electric/switches/ac1-gen</property>
+    <property value="0">electric/switches/ac2-gen</property>
     
     <property value="0">electric/switches/floodlight</property>
     <property value="0">electric/switches/instrument-lights</property>
@@ -30,10 +32,10 @@
             </function>
             <output>electric/sources/battery</output>
         </fcs_function>
-        <fcs_function name="electric/sources/dc-gen">
+        <fcs_function name="electric/sources/dc1-gen">
             <function>
                 <product>
-                    <property>electric/switches/dc-gen</property>
+                    <property>electric/switches/dc1-gen</property>
                     <table>
                         <independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
                         <tableData>
@@ -44,12 +46,28 @@
                     </table>
                 </product>
             </function>
-            <output>electric/sources/dc-gen</output>
+            <output>electric/sources/dc1-gen</output>
         </fcs_function>
-        <fcs_function name="electric/sources/output-ac">
+        <fcs_function name="electric/sources/dc2-gen">
             <function>
                 <product>
-                    <property>electric/switches/ac-gen</property>
+                    <property>electric/switches/dc2-gen</property>
+                    <table>
+                        <independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
+                        <tableData>
+                            0.0	 0.0
+                            30.0	24.0
+                            100.0   28.0
+                        </tableData>
+                    </table>
+                </product>
+            </function>
+            <output>electric/sources/dc2-gen</output>
+        </fcs_function>
+        <fcs_function name="electric/sources/ac1-gen">
+            <function>
+                <product>
+                    <property>electric/switches/ac1-gen</property>
                     <table>
                         <independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
                         <tableData>
@@ -60,16 +78,42 @@
                     </table>
                 </product>
             </function>
-            <output>electric/sources/ac-gen</output>
+            <output>electric/sources/ac1-gen</output>
+        </fcs_function>
+        <fcs_function name="electric/sources/ac2-gen">
+            <function>
+                <product>
+                    <property>electric/switches/ac2-gen</property>
+                    <table>
+                        <independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
+                        <tableData>
+                            0.0	 0.0
+                            30.0	112.0
+                            100.0   116.0
+                        </tableData>
+                    </table>
+                </product>
+            </function>
+            <output>electric/sources/ac2-gen</output>
         </fcs_function>
         <fcs_function name="electric/sources/output-dc">
             <function>
                 <max>
-                    <property>electric/sources/dc-gen</property>
+                    <property>electric/sources/dc1-gen</property>
+                    <property>electric/sources/dc2-gen</property>
                     <property>electric/sources/battery</property>
                 </max>
             </function>
             <output>electric/sources/output-dc</output>
+        </fcs_function>
+        <fcs_function name="electric/sources/output-ac">
+            <function>
+                <max>
+                    <property>electric/sources/ac1-gen</property>
+                    <property>electric/sources/ac2-gen</property>
+                </max>
+            </function>
+            <output>electric/sources/output-ac</output>
         </fcs_function>
     </channel>
     

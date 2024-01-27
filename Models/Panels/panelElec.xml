@@ -1,21 +1,57 @@
 <PropertyList>
 	<path>panelElec.ac</path>
 	<model>
-		<name>switch1</name>
-		<path>Aircraft/Su-57/Models/Panels/switch1.xml</path>
+		<name>dc1</name>
+		<path>Aircraft/Su-57/Models/Panels/dc1.xml</path>
 		<offsets>
-			<x-m> 0.030</x-m>
-			<y-m> 0.030</y-m>
-			<z-m> 0.004</z-m>
+			<x-m> 0.020</x-m>
+			<y-m> 0.100</y-m>
+			<z-m> 0.002</z-m>
 		</offsets>
 	</model>
 	<model>
-		<name>switch2</name>
-		<path>Aircraft/Su-57/Models/Panels/switch1.ac</path>
+		<name>dc2</name>
+		<path>Aircraft/Su-57/Models/Panels/dc2.xml</path>
 		<offsets>
-			<x-m> 0.030</x-m>
-			<y-m> 0.060</y-m>
-			<z-m> 0.004</z-m>
+			<x-m> 0.020</x-m>
+			<y-m> 0.115</y-m>
+			<z-m> 0.002</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>battery</name>
+		<path>Aircraft/Su-57/Models/Panels/battery.xml</path>
+		<offsets>
+			<x-m> 0.020</x-m>
+			<y-m> 0.130</y-m>
+			<z-m> 0.002</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>ac1</name>
+		<path>Aircraft/Su-57/Models/Panels/ac1.xml</path>
+		<offsets>
+			<x-m> 0.050</x-m>
+			<y-m> 0.100</y-m>
+			<z-m> 0.002</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>ac2</name>
+		<path>Aircraft/Su-57/Models/Panels/ac2.xml</path>
+		<offsets>
+			<x-m> 0.050</x-m>
+			<y-m> 0.115</y-m>
+			<z-m> 0.002</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>apu</name>
+		<path>Aircraft/Su-57/Models/Panels/apu.xml</path>
+		<offsets>
+			<x-m> 0.050</x-m>
+			<y-m> 0.130</y-m>
+			<z-m> 0.002</z-m>
 		</offsets>
 	</model>
 </PropertyList>
