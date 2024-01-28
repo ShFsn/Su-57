@@ -25,9 +25,9 @@
 		<path>Aircraft/Su-57/Models/Panels/panelLight.xml</path>
 		<offsets>
 			<x-m>-5.760</x-m>
-			<y-m> 0.328</y-m>
-			<z-m> 0.599</z-m>
-			<roll-deg>3</roll-deg>
+			<y-m> 0.335</y-m>
+			<z-m> 0.600</z-m>
+			<roll-deg>4</roll-deg>
 		</offsets>
 	</model>
 	<model>
@@ -35,9 +35,9 @@
 		<path>Aircraft/Su-57/Models/Panels/panelElec.xml</path>
 		<offsets>
 			<x-m>-5.650</x-m>
-			<y-m> 0.328</y-m>
-			<z-m> 0.599</z-m>
-			<roll-deg>3</roll-deg>
+			<y-m> 0.335</y-m>
+			<z-m> 0.600</z-m>
+			<roll-deg>4</roll-deg>
 		</offsets>
 	</model>
 	<model>
