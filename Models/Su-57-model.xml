@@ -11,7 +11,7 @@
 	</model>
 	<model>
 		<name>cockpit</name>
-		<path>Aircraft/Su-57/Models/Su-57-cockpit.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Su-57-cockpit.xml</path>
 	</model>
 	<model>
 		<name>Stores</name>
