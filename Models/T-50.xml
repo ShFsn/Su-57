@@ -1,8 +1,12 @@
 <PropertyList>
 	<path>T-50.ac</path>
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>front-glass</object-name>
+		<object-name>glass</object-name>
+	</effect>
 
 	<!-- Submodels -->
-
 	<model>
 		<name>Gear</name>
 		<path>Aircraft/Su-57/Models/Gear.xml</path>

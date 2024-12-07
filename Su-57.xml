@@ -1,19 +1,8 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
-<fdm_config name="T-50" version="2.0" release="ALPHA"
+<fdm_config name="Su-57" version="2.0" release="ALPHA"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
-
- <fileheader>
-  <author> Ummon Karpe, Petar Jedvaj </author>
-  <filecreationdate> 2012-08-18 </filecreationdate>
-  <version>$Revision: 2.0 $</version>
-  <description> Sukhoi T-50 PAK FA </description>
-  <reference refID="1"
-             author="Cheng Liangliang, Yue Kuizhi, Guo Weigang, Yu Dazhao"
-             title="Integration Analysis of Conceptual Design and Stealth-Aerodynamic Characteristics of Combat Aircraft"
-             date="2016"/>
- </fileheader>
 
  <metrics>
    <wingarea  unit="M2">   78.8 </wingarea>
@@ -42,10 +31,11 @@
  </metrics>
 
  <mass_balance>
-   <ixx unit="KG*M2">   91435 </ixx>
-   <iyy unit="KG*M2">  251390 </iyy>
-   <izz unit="KG*M2">  266320 </izz>
-   <emptywt unit="KG">  18500 </emptywt>
+   <ixx unit="KG*M2">   30000 </ixx>
+   <iyy unit="KG*M2">  318000 </iyy>
+   <izz unit="KG*M2">  348000 </izz>
+   <ixz unit="KG*M2">    6000 </ixz>
+   <emptywt unit="KG" > 18500 </emptywt>
    <location name="CG" unit="M">
      <x>  0.00 </x>
      <y>  0.00 </y>
@@ -226,7 +216,7 @@
 
   <tank type="FUEL" number="0">
      <location unit="M">
-       <x> -1.00 </x>
+       <x> -3.00 </x>
        <y>  0.00 </y>
        <z>  0.00 </z>
      </location>
@@ -239,7 +229,7 @@
        <y> -2.40 </y>
        <z>  0.00 </z>
      </location>
-     <capacity unit="KG"> 2000.00 </capacity>
+     <capacity unit="KG"> 3000.00 </capacity>
      <contents unit="KG"> 1500.00 </contents>
   </tank>
   <tank type="FUEL" number="2">
@@ -248,7 +238,7 @@
        <y>  2.40 </y>
        <z>  0.00 </z>
      </location>
-     <capacity unit="KG"> 2000.00 </capacity>
+     <capacity unit="KG"> 3000.00 </capacity>
      <contents unit="KG"> 1500.00 </contents>
   </tank>
  </propulsion>

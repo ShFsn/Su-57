@@ -2,7 +2,7 @@
 	<path>cockpit.ac</path>
 	<model>
 		<name>hud</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Instruments/HUD/hud.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Instruments/HUD/HUD.xml</path>
 		<offsets>
 			<x-m>-6.150</x-m>
 			<y-m> 0.000</y-m>
