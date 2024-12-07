@@ -2,42 +2,33 @@
 	<path>cockpit.ac</path>
 	<model>
 		<name>hud</name>
-		<path>Aircraft/Su-57/Models/Instruments/HUD/hud.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Instruments/HUD/hud.ac</path>
 		<offsets>
 			<x-m>-6.150</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 1.000</z-m>
+			<z-m> 0.970</z-m>
 			<pitch-deg>-12</pitch-deg>
 		</offsets>
 	</model>
 	<model>
 		<name>mfd</name>
-		<path>Aircraft/Su-57/Models/Instruments/MFD/mfd.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Instruments/MFD/mfd.xml</path>
 		<offsets>
 			<x-m>-6.210</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.775</z-m>
+			<z-m> 0.745</z-m>
 			<pitch-deg>-14</pitch-deg>
 		</offsets>
 	</model>
 	<model>
-		<name>panelLight</name>
-		<path>Aircraft/Su-57/Models/Panels/panelLight.xml</path>
-		<offsets>
-			<x-m>-5.760</x-m>
-			<y-m> 0.328</y-m>
-			<z-m> 0.599</z-m>
-			<roll-deg>3</roll-deg>
-		</offsets>
-	</model>
-	<model>
 		<name>panelElec</name>
-		<path>Aircraft/Su-57/Models/Panels/panelElec.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Engine/panelEngine.xml</path>
 		<offsets>
-			<x-m>-5.650</x-m>
-			<y-m> 0.328</y-m>
-			<z-m> 0.599</z-m>
-			<roll-deg>3</roll-deg>
+			<x-m>-5.600</x-m>
+			<y-m> 0.305</y-m>
+			<z-m> 0.468</z-m>
+			<roll-deg>14.9</roll-deg>
+			<pitch-deg>2.9</pitch-deg>
 		</offsets>
 	</model>
 	<model>
