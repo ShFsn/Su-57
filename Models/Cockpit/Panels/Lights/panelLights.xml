@@ -1,5 +1,6 @@
 <PropertyList>
-	<path>panelLight.ac</path>
+	<path>panelLights.ac</path>
+<!--
 	<model>
 		<name>mfd</name>
 		<path>Aircraft/Su-57/Models/Panels/mfd.xml</path>
@@ -9,4 +10,5 @@
 			<z-m> 0.002</z-m>
 		</offsets>
 	</model>
+-->
 </PropertyList>

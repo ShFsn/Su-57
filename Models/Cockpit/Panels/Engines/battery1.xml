@@ -7,9 +7,9 @@
 		<hovered>
 			<binding>
 				<command>set-tooltip</command>
-				<tooltip-id>battery-bug</tooltip-id>
-				<label>Battery %s</label>
-				<property>fdm/jsbsim/electric/switches/battery</property>
+				<tooltip-id>battery1-bug</tooltip-id>
+				<label>Battery 1 %s</label>
+				<property>fdm/jsbsim/electric/switches/battery1</property>
 				<mapping>nasal</mapping>
 				<script>
 					var modes = ['OFF', 'ON'];
@@ -23,14 +23,14 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>fdm/jsbsim/electric/switches/battery</property>
+				<property>fdm/jsbsim/electric/switches/battery1</property>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>fdm/jsbsim/electric/switches/battery</property>
+		<property>fdm/jsbsim/electric/switches/battery1</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>-25</dep></entry>
 			<entry><ind>1.0</ind><dep>25</dep></entry>

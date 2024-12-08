@@ -22,11 +22,11 @@
 	</model>
 	<model>
 		<name>panelElec</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Engine/panelEngine.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Panels.xml</path>
 		<offsets>
-			<x-m>-5.600</x-m>
+			<x-m>-5.982</x-m>
 			<y-m> 0.305</y-m>
-			<z-m> 0.468</z-m>
+			<z-m> 0.487</z-m>
 			<roll-deg>14.9</roll-deg>
 			<pitch-deg>2.9</pitch-deg>
 		</offsets>
