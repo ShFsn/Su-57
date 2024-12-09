@@ -1,14 +1,75 @@
 <PropertyList>
 	<path>panelLights.ac</path>
-<!--
+	<model>
+		<name>kn1</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
+		<offsets>
+			<x-m> 0.036</x-m>
+			<y-m> 0.045</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>kn2</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
+		<offsets>
+			<x-m> 0.036</x-m>
+			<y-m> 0.087</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>kn3</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
+		<offsets>
+			<x-m> 0.036</x-m>
+			<y-m> 0.130</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>kn4</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
+		<offsets>
+			<x-m> 0.083</x-m>
+			<y-m> 0.046</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>kn5</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
+		<offsets>
+			<x-m> 0.083</x-m>
+			<y-m> 0.112</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>kn6</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
+		<offsets>
+			<x-m> 0.086</x-m>
+			<y-m> 0.185</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
 	<model>
 		<name>mfd</name>
-		<path>Aircraft/Su-57/Models/Panels/mfd.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Lights/mfd.xml</path>
 		<offsets>
-			<x-m> 0.070</x-m>
-			<y-m> 0.100</y-m>
+			<x-m> 0.082</x-m>
+			<y-m> 0.142</y-m>
 			<z-m> 0.002</z-m>
 		</offsets>
 	</model>
--->
+	<model>
+		<name>selection</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+		<offsets>
+			<x-m> 0.035</x-m>
+			<y-m> 0.189</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
 </PropertyList>

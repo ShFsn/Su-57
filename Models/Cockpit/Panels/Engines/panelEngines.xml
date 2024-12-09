@@ -28,6 +28,15 @@
 		</offsets>
 	</model>
 	<model>
+		<name>selection</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+		<offsets>
+			<x-m> 0.036</x-m>
+			<y-m> 0.086</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+	<model>
 		<name>ac1</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Engines/ac1.xml</path>
 		<offsets>

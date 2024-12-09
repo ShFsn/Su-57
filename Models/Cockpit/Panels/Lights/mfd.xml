@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<path>switch1.ac</path>
+	<path>Aircraft/Su-57/Models/Cockpit/Parts/switch1.ac</path>
 	<animation>
 		<type>pick</type>
 		<object-name>switch</object-name>

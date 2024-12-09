@@ -8,7 +8,7 @@
 			<binding>
 				<command>set-tooltip</command>
 				<tooltip-id>apu-bug</tooltip-id>
-				<label>APU %s</label>
+				<label>APU Generator %s</label>
 				<property>fdm/jsbsim/electric/switches/apu</property>
 				<mapping>nasal</mapping>
 				<script>
