@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+
+<!-- V-1 Voltmeter -->
+
+<PropertyList>
+ <path>v-1.ac</path>
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>glass</object-name>
+	</effect>
+
+ <animation>
+   <type>material</type>
+   <object-name>housing</object-name>
+   <object-name>v-1_needle</object-name>
+   <object-name>label28.5V</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.7</green>
+     <blue>0.7</blue>
+     <factor-prop>controls/lighting/panel-elec_red</factor-prop>
+   </emission>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>v-1_needle</object-name>
+  <expression>
+    <table>
+      <mod>
+      <sum>
+       <product>
+        <property>an24/Electrical_Panel/v-1_ar1</property>
+        <property>an24/Electrics/DC_AUX_ShRAP500a_V</property>
+       </product>
+       <product>
+        <property>an24/Electrical_Panel/v-1_ar2</property>
+        <property>an24/Electrics/DC_AUX_ShRAP500b_V</property>
+       </product>
+       <product>
+        <property>an24/Electrical_Panel/v-1_akk1</property>
+        <property>an24/Electrics/DC_Batt_12SAM1_V</property>
+        <property>an24/RKCrew/sw01_batt1</property>
+       </product>
+       <product>
+        <property>an24/Electrical_Panel/v-1_akk2</property>
+        <property>an24/Electrics/DC_Batt_12SAM2_V</property>
+        <property>an24/RKCrew/sw02_batt2</property>
+       </product>
+       <product>
+        <property>an24/Electrical_Panel/v-1_gs-24</property>
+        <property>an24/Electrics/DC_Gen_GS-24_V</property>
+       </product>
+       <product>
+        <property>an24/Electrical_Panel/v-1_stg18l</property>
+        <property>an24/Electrics/DC_Gen_18TMOl_V</property>
+       </product>
+       <product>
+        <property>an24/Electrical_Panel/v-1_stg18r</property>
+        <property>an24/Electrics/DC_Gen_18TMOr_V</property>
+       </product>
+       <product>
+        <property>an24/Electrical_Panel/v-1_tsrul</property>
+        <property>an24/Electrics/TsRUl_V</property>
+       </product>
+       <product>
+        <property>an24/Electrical_Panel/v-1_tsrur</property>
+        <property>an24/Electrics/TsRUr_V</property>
+       </product>
+       <product>
+        <property>an24/Electrical_Panel/v-1_emerg</property>
+        <property>an24/Electrics/AZSemerg_V</property>
+       </product>
+      </sum>
+        <value>120.0</value>
+      </mod>
+    <entry><ind>  0.0</ind>	<dep>-120</dep></entry>
+    <entry><ind> 30.0</ind>	<dep>120</dep></entry>
+    </table>
+  </expression>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">V-1   Volt- meter</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+
+</PropertyList>
