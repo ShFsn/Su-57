@@ -30,15 +30,11 @@
 		<interpolation>
 		<entry>
         <ind>0.0</ind>
-        <dep>100</dep>
-		</entry>
-		<entry>
-        <ind>0.5</ind>
-        <dep>100</dep>
+        <dep>80</dep>
 		</entry>
 		<entry>
         <ind>0.6</ind>
-        <dep>100</dep>
+        <dep>80</dep>
 		</entry>
 		<entry>
         <ind>1.0</ind>

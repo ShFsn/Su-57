@@ -1,0 +1,12 @@
+<PropertyList>
+	<path>panelElectrics.ac</path>
+	<model>
+		<name>panel electrics</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Instruments/Voltage/Voltage.xml</path>
+		<offsets>
+			<x-m> 0.138</x-m>
+			<y-m>-0.009</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+</PropertyList>

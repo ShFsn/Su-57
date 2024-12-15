@@ -21,14 +21,26 @@
 		</offsets>
 	</model>
 	<model>
-		<name>panelElec</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Panels.xml</path>
+		<name>panels right</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsRight.xml</path>
 		<offsets>
 			<x-m>-5.982</x-m>
 			<y-m> 0.305</y-m>
 			<z-m> 0.487</z-m>
 			<roll-deg>14.9</roll-deg>
 			<pitch-deg>2.9</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>panel electrics</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/panelElectrics.xml</path>
+		<offsets>
+			<x-m>-5.617</x-m>
+			<y-m> 0.557</y-m>
+			<z-m> 0.630</z-m>
+			<roll-deg>74.0</roll-deg>
+			<pitch-deg>2.8</pitch-deg>
+			<heading-deg>-2.0</heading-deg>
 		</offsets>
 	</model>
 	<model>
