@@ -6,48 +6,48 @@
 		<offsets>
 			<x-m>-6.150</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.980</z-m>
-			<pitch-deg>-15</pitch-deg>
+			<z-m> 1.070</z-m>
+			<pitch-deg>-20</pitch-deg>
 		</offsets>
 	</model>
 	<model>
 		<name>mfd</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Instruments/MFD/mfd.xml</path>
 		<offsets>
-			<x-m>-6.210</x-m>
+			<x-m>-6.370</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.745</z-m>
-			<pitch-deg>-14</pitch-deg>
+			<z-m> 0.740</z-m>
+			<pitch-deg>-20</pitch-deg>
 		</offsets>
 	</model>
 	<model>
 		<name>panels right</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsRight.xml</path>
 		<offsets>
-			<x-m>-5.982</x-m>
-			<y-m> 0.305</y-m>
-			<z-m> 0.487</z-m>
-			<roll-deg>14.9</roll-deg>
-			<pitch-deg>2.9</pitch-deg>
+			<x-m>-6.080</x-m>
+			<y-m> 0.306</y-m>
+			<z-m> 0.540</z-m>
+			<roll-deg>9</roll-deg>
+			<pitch-deg>3</pitch-deg>
 		</offsets>
 	</model>
 	<model>
 		<name>panel electrics</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/panelElectrics.xml</path>
 		<offsets>
-			<x-m>-5.617</x-m>
-			<y-m> 0.557</y-m>
-			<z-m> 0.630</z-m>
-			<roll-deg>74.0</roll-deg>
-			<pitch-deg>2.8</pitch-deg>
-			<heading-deg>-2.0</heading-deg>
+			<x-m>-5.650</x-m>
+			<y-m> 0.572</y-m>
+			<z-m> 0.646</z-m>
+			<roll-deg>63.8</roll-deg>
+			<pitch-deg>6.0</pitch-deg>
+			<heading-deg>-5.3</heading-deg>
 		</offsets>
 	</model>
 	<model>
 		<name>seat</name>
 		<path>Aircraft/Su-57/Models/Stores/K-36DM/K-36DM.ac</path>
 		<offsets>
-			<x-m>-5.450</x-m>
+			<x-m>-5.500</x-m>
 			<y-m> 0.000</y-m>
 			<z-m> 0.200</z-m>
 			<pitch-deg>3</pitch-deg>

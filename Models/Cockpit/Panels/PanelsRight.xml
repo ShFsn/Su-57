@@ -1,18 +1,24 @@
 <PropertyList>
 	<model>
-		<name>panelElec</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Lights/panelLights.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Jamming/panelJamming.xml</path>
 		<offsets>
-			<x-m> 0.283</x-m>
+			<x-m> 0.030</x-m>
 			<y-m> 0.000</y-m>
 			<z-m> 0.000</z-m>
 		</offsets>
 	</model>
 	<model>
-		<name>panelElec</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Lights/panelLights.xml</path>
+		<offsets>
+			<x-m> 0.215</x-m>
+			<y-m> 0.000</y-m>
+			<z-m> 0.000</z-m>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Engines/panelEngines.xml</path>
 		<offsets>
-			<x-m> 0.390</x-m>
+			<x-m> 0.320</x-m>
 			<y-m> 0.000</y-m>
 			<z-m> 0.000</z-m>
 		</offsets>
