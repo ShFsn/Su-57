@@ -24,11 +24,11 @@
 		<name>panels right</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsRight.xml</path>
 		<offsets>
-			<x-m>-6.080</x-m>
+			<x-m>-6.053</x-m>
 			<y-m> 0.306</y-m>
-			<z-m> 0.540</z-m>
-			<roll-deg>9</roll-deg>
-			<pitch-deg>3</pitch-deg>
+			<z-m> 0.538</z-m>
+			<roll-deg>10.0</roll-deg>
+			<pitch-deg>2.7</pitch-deg>
 		</offsets>
 	</model>
 	<model>
@@ -47,7 +47,7 @@
 		<name>seat</name>
 		<path>Aircraft/Su-57/Models/Stores/K-36DM/K-36DM.ac</path>
 		<offsets>
-			<x-m>-5.500</x-m>
+			<x-m>-5.600</x-m>
 			<y-m> 0.000</y-m>
 			<z-m> 0.200</z-m>
 			<pitch-deg>3</pitch-deg>

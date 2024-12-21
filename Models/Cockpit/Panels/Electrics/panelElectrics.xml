@@ -33,6 +33,14 @@
 		</offsets>
 	</model>
 	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<offsets>
+			<x-m>-0.152</x-m>
+			<y-m>-0.043</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/ins1.xml</path>
 		<offsets>
 			<x-m>-0.115</x-m>
@@ -89,7 +97,23 @@
 		</offsets>
 	</model>
 	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<offsets>
+			<x-m> 0.057</x-m>
+			<y-m>-0.028</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+		<offsets>
+			<x-m>-0.131</x-m>
+			<y-m>-0.073</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
 		<offsets>
 			<x-m>-0.131</x-m>
 			<y-m>-0.073</y-m>
@@ -105,7 +129,23 @@
 		</offsets>
 	</model>
 	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<offsets>
+			<x-m>-0.108</x-m>
+			<y-m>-0.073</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+		<offsets>
+			<x-m>-0.085</x-m>
+			<y-m>-0.073</y-m>
+			<z-m> 0.006</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
 		<offsets>
 			<x-m>-0.085</x-m>
 			<y-m>-0.073</y-m>
