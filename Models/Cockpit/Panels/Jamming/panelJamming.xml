@@ -1,3 +1,27 @@
 <PropertyList>
 	<path>panelJamming.ac</path>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Jamming/master.xml</path>
+		<offsets>
+			<x-m> 0.092</x-m>
+			<y-m> 0.046</y-m>
+			<z-m> 0.002</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Jamming/type1.xml</path>
+		<offsets>
+			<x-m> 0.092</x-m>
+			<y-m> 0.105</y-m>
+			<z-m> 0.002</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Jamming/type2.xml</path>
+		<offsets>
+			<x-m> 0.092</x-m>
+			<y-m> 0.156</y-m>
+			<z-m> 0.002</z-m>
+		</offsets>
+	</model>
 </PropertyList>
