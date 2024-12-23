@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<fx>
+		<!--================================= Avionics =============================-->
+		<avionics>
+			<name>inverter</name>
+			<path>Sounds/misc/el_loop.wav</path>
+			<mode>looped</mode>
+			<type>avionics</type>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<property>fdm/jsbsim/electric/sources/output-ac</property>
+			</condition>
+			<volume>
+				<factor>0.5</factor>
+			</volume>
+		</avionics>
+		<avionics>
+			<name>click on</name>
+			<path>Sounds/misc/metalclick_2.wav</path>
+			<condition>
+				<property>sim/sound/switch1</property>
+			</condition>
+			<volume>
+				<factor>1.0</factor>
+				<min>1.0</min>
+				<max>1.0</max>
+			</volume>
+		</avionics>
+		<avionics>
+			<name>click off</name>
+			<path>Sounds/misc/metalclick_2.wav</path>
+			<condition>
+				<not>
+					<property>sim/sound/switch1</property>
+				</not>
+			</condition>
+			<volume>
+				<factor>1.0</factor>
+				<min>1.0</min>
+				<max>1.0</max>
+			</volume>
+		</avionics>
+	</fx>
+</PropertyList>

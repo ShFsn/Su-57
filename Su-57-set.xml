@@ -5,6 +5,7 @@
 		<long-description>production aircraft</long-description>
 		<expected-aircraft-dir-name>Su-57</expected-aircraft-dir-name>
 		<flight-model>jsb</flight-model>
+		<sound><path>Aircraft/Su-57/Sounds/Sounds.xml</path></sound>
 		<aero>Su-57</aero>
 		<model>
 			<path>Aircraft/Su-57/Models/Su-57-model.xml</path>

@@ -28,6 +28,10 @@
 				<command>property-toggle</command>
 				<property>fdm/jsbsim/electric/switches/eject2</property>
 			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/sound/switch1</property>
+			</binding>
 		</action>
 	</animation>
 	<animation>

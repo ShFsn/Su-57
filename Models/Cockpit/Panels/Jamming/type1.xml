@@ -32,6 +32,10 @@
 				<max>3</max>
 				<wrap>1</wrap>
 			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/sound/switch1</property>
+			</binding>
 		</action>
 		<action>
 			<button>3</button>
@@ -44,6 +48,10 @@
 				<max>3</max>
 				<wrap>1</wrap>
 			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/sound/switch1</property>
+			</binding>
 		</action>
 		<action>
 			<button>4</button>
@@ -55,6 +63,10 @@
 				<min>0</min>
 				<max>3</max>
 				<wrap>1</wrap>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/sound/switch1</property>
 			</binding>
 		</action>
 	</animation>
