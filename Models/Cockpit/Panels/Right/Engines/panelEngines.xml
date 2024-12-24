@@ -46,7 +46,7 @@
 	</model>
 	<model>
 		<name>ac1</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Engines/ac1.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/ac1.xml</path>
 		<offsets>
 			<x-m> 0.030</x-m>
 			<y-m> 0.149</y-m>
@@ -55,7 +55,7 @@
 	</model>
 	<model>
 		<name>ac2</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Engines/ac2.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/ac2.xml</path>
 		<offsets>
 			<x-m> 0.030</x-m>
 			<y-m> 0.171</y-m>
@@ -64,7 +64,7 @@
 	</model>
 	<model>
 		<name>apu</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Engines/apu.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/apu.xml</path>
 		<offsets>
 			<x-m> 0.030</x-m>
 			<y-m> 0.192</y-m>
@@ -73,7 +73,7 @@
 	</model>
 	<model>
 		<name>battery1</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Engines/battery1.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/battery1.xml</path>
 		<offsets>
 			<x-m> 0.074</x-m>
 			<y-m> 0.149</y-m>
@@ -82,7 +82,7 @@
 	</model>
 	<model>
 		<name>battery2</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Engines/battery2.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/battery2.xml</path>
 		<offsets>
 			<x-m> 0.074</x-m>
 			<y-m> 0.171</y-m>
@@ -91,7 +91,7 @@
 	</model>
 	<model>
 		<name>ground power</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Engines/ground.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/ground.xml</path>
 		<offsets>
 			<x-m> 0.074</x-m>
 			<y-m> 0.192</y-m>

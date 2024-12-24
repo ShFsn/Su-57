@@ -31,10 +31,10 @@
  </metrics>
 
  <mass_balance>
-   <ixx unit="KG*M2">   30000 </ixx>
-   <iyy unit="KG*M2">  318000 </iyy>
-   <izz unit="KG*M2">  348000 </izz>
-   <ixz unit="KG*M2">    6000 </ixz>
+   <ixx unit="KG*M2">   41000 </ixx>
+   <iyy unit="KG*M2">  371000 </iyy>
+   <izz unit="KG*M2">  411000 </izz>
+   <ixz unit="KG*M2">    2000 </ixz>
    <emptywt unit="KG" > 18500 </emptywt>
    <location name="CG" unit="M">
      <x>  0.00 </x>

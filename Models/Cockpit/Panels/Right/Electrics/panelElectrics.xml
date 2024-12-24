@@ -1,7 +1,7 @@
 <PropertyList>
 	<path>panelElectrics.ac</path>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/toilet.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/toilet.xml</path>
 		<offsets>
 			<x-m> 0.148</x-m>
 			<y-m> 0.064</y-m>
@@ -9,7 +9,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/eject1.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/eject1.xml</path>
 		<offsets>
 			<x-m> 0.035</x-m>
 			<y-m> 0.019</y-m>
@@ -17,7 +17,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/eject2.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/eject2.xml</path>
 		<offsets>
 			<x-m> 0.060</x-m>
 			<y-m> 0.019</y-m>
@@ -41,7 +41,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/ins1.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/ins1.xml</path>
 		<offsets>
 			<x-m>-0.115</x-m>
 			<y-m>-0.028</y-m>
@@ -49,7 +49,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/ins2.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/ins2.xml</path>
 		<offsets>
 			<x-m>-0.088</x-m>
 			<y-m>-0.028</y-m>
@@ -57,7 +57,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/radar.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/radar.xml</path>
 		<offsets>
 			<x-m>-0.050</x-m>
 			<y-m>-0.028</y-m>
@@ -65,7 +65,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/rwr.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/rwr.xml</path>
 		<offsets>
 			<x-m>-0.027</x-m>
 			<y-m>-0.028</y-m>
@@ -73,7 +73,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/cfd.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/cfd.xml</path>
 		<offsets>
 			<x-m>-0.003</x-m>
 			<y-m>-0.028</y-m>
@@ -81,7 +81,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/jammer.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/jammer.xml</path>
 		<offsets>
 			<x-m> 0.020</x-m>
 			<y-m>-0.028</y-m>
@@ -153,7 +153,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/hud.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/hud.xml</path>
 		<offsets>
 			<x-m>-0.045</x-m>
 			<y-m>-0.073</y-m>
@@ -161,7 +161,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/hmd.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/hmd.xml</path>
 		<offsets>
 			<x-m>-0.006</x-m>
 			<y-m>-0.073</y-m>
@@ -169,7 +169,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/fms.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/fms.xml</path>
 		<offsets>
 			<x-m> 0.036</x-m>
 			<y-m>-0.073</y-m>
@@ -177,7 +177,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/check.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/check.xml</path>
 		<offsets>
 			<x-m> 0.132</x-m>
 			<y-m>-0.076</y-m>

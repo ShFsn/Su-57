@@ -1,6 +1,6 @@
 <PropertyList>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Jamming/panelJamming.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Jamming/panelJamming.xml</path>
 		<offsets>
 			<x-m> 0.000</x-m>
 			<y-m> 0.000</y-m>
@@ -8,7 +8,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Lights/panelLights.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Lights/panelLights.xml</path>
 		<offsets>
 			<x-m> 0.185</x-m>
 			<y-m> 0.000</y-m>
@@ -16,7 +16,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Engines/panelEngines.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/panelEngines.xml</path>
 		<offsets>
 			<x-m> 0.290</x-m>
 			<y-m> 0.000</y-m>

@@ -22,7 +22,7 @@
 	</model>
 	<model>
 		<name>panels right</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsRight.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/PanelsRight.xml</path>
 		<offsets>
 			<x-m>-6.053</x-m>
 			<y-m> 0.306</y-m>
@@ -33,7 +33,7 @@
 	</model>
 	<model>
 		<name>panel electrics</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Electrics/panelElectrics.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/panelElectrics.xml</path>
 		<offsets>
 			<x-m>-5.650</x-m>
 			<y-m> 0.572</y-m>

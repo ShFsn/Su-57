@@ -56,7 +56,7 @@
 	</model>
 	<model>
 		<name>mfd</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Lights/mfd.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Lights/mfd.xml</path>
 		<offsets>
 			<x-m> 0.082</x-m>
 			<y-m> 0.142</y-m>
