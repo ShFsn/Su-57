@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/LandingLights/panelLandingLights.xml</path>
+		<offsets>
+			<x-m> 0.000</x-m>
+			<y-m>-0.440</y-m>
+			<z-m> 0.177</z-m>
+		</offsets>
+	</model>
+</PropertyList>

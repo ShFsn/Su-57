@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aerodynamics>
-	<property value="0">electric/switches/battery1</property>
 	<function name="aero/coefficients/Cla">
 		<description>Lift_due_to_alpha</description>
 			<table><!-- refId: 1 -->
@@ -204,7 +203,7 @@
 			<value>-9</value>
 		</product>
 	</function>
-	<function name="aero/force/Ptv">
+	<function name="aero/force/Mpv">
 		<description>Pitch moment due to thrust vector</description>
 		<product>
 			<sum>
@@ -213,7 +212,7 @@
 			</sum>
 			<sin>
 				<product>
-					<property>fcs/tvh-pos-deg</property>
+					<property>fcs/tvv-pos-deg</property>
 					<value>0.0175</value>
 				</product>
 			</sin>
@@ -241,6 +240,22 @@
 		<product>
 			<property>fcs/rudder-pos-rad</property>
 			<value>-0.1</value>
+		</product>
+	</function>
+	<function name="aero/force/Myv">
+		<description>Yaw moment due to thrust vector</description>
+		<product>
+			<sum>
+				<property>propulsion/engine[0]/thrust-lbs</property>
+				<property>propulsion/engine[1]/thrust-lbs</property>
+			</sum>
+			<sin>
+				<product>
+					<property>fcs/tvh-pos-deg</property>
+					<value>0.0175</value>
+				</product>
+			</sin>
+			<value>-15</value><!--7m = 24ft-->
 		</product>
 	</function>
 
@@ -314,23 +329,26 @@
 						<property>aero/coefficients/Cpe</property>
 					</sum>
 				</product>
-				<property>aero/force/Ptv</property>
+				<property>aero/force/Mpv</property>
 			</sum>
 		</function>
 	</axis>
 	<axis name="YAW">
 		<function name="aero/force/YAW">
 			<description>YAW Moment</description>
-			<product>
-				<property>aero/qbar-psf</property>
-				<property>metrics/Sw-sqft</property>
-				<property>metrics/bw-ft</property>
-				<sum>
-					<property>aero/coefficients/Cyb</property>
-					<property>aero/coefficients/Cyd</property>
-					<property>aero/coefficients/Cyr</property>
-				</sum>
-			 </product>
+			<sum>
+				<product>
+					<property>aero/qbar-psf</property>
+					<property>metrics/Sw-sqft</property>
+					<property>metrics/bw-ft</property>
+					<sum>
+						<property>aero/coefficients/Cyb</property>
+						<property>aero/coefficients/Cyd</property>
+						<property>aero/coefficients/Cyr</property>
+					</sum>
+				</product>
+				<property>aero/force/Myv</property>
+			</sum>
 		</function>
 	</axis>
 </aerodynamics>

@@ -1,5 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <flight_control name="FCS: Su-57-Jsb">
+  <property value="1">fcs/yaw-damper-enable</property>
+
   <channel name="Pitch">
    <summer name="Pitch Trim Sum">
       <input>fcs/elevator-cmd-norm</input>
@@ -29,13 +31,13 @@
       </range>
       <output>fcs/elevator-pos-norm</output>
    </aerosurface_scale>
-   <aerosurface_scale name="Thrust Vector Horizontal">
+   <aerosurface_scale name="Thrust Vector Vertical">
       <input>fcs/elevator-cmd-norm</input>
       <range>
         <min> -30 </min>
         <max>  30 </max>
       </range>
-      <output>fcs/tvh-pos-deg</output>
+      <output>fcs/tvv-pos-deg</output>
    </aerosurface_scale>
   </channel>
 
@@ -48,7 +50,6 @@
         <max>  1 </max>
       </clipto>
    </summer>
-
    <aerosurface_scale name="Left Aileron Control">
       <input>fcs/roll-trim-sum</input>
       <range>
@@ -57,7 +58,6 @@
       </range>
       <output>fcs/left-aileron-pos-rad</output>
    </aerosurface_scale>
-
    <aerosurface_scale name="Right Aileron Control">
       <input>fcs/roll-trim-sum</input>
       <range>
@@ -66,7 +66,6 @@
       </range>
       <output>fcs/right-aileron-pos-rad</output>
    </aerosurface_scale>
-
    <aerosurface_scale name="left aileron normalization">
       <input>fcs/left-aileron-pos-rad</input>
       <domain>
@@ -79,7 +78,6 @@
       </range>
       <output>fcs/left-aileron-pos-norm</output>
    </aerosurface_scale>
-
    <aerosurface_scale name="right aileron normalization">
       <input>fcs/right-aileron-pos-rad</input>
       <domain>
@@ -94,8 +92,6 @@
    </aerosurface_scale>
   </channel>
 
-  <property value="1">fcs/yaw-damper-enable</property>
-
   <channel name="Yaw">
    <summer name="Rudder Command Sum">
       <input>fcs/rudder-cmd-norm</input>
@@ -105,7 +101,6 @@
         <max>  1 </max>
       </clipto>
    </summer>
-
    <scheduled_gain name="Yaw Damper Rate">
       <input>velocities/r-aero-rad_sec</input>
       <table>
@@ -117,7 +112,6 @@
       </table>
       <gain>fcs/yaw-damper-enable</gain>
    </scheduled_gain>
-
    <summer name="Rudder Sum">
       <input>fcs/rudder-command-sum</input>
       <input>fcs/yaw-damper-rate</input>
@@ -126,7 +120,6 @@
         <max>  1.1 </max>
       </clipto>
    </summer>
-
    <aerosurface_scale name="Rudder Control">
       <input>fcs/rudder-sum</input>
       <domain>
@@ -139,7 +132,6 @@
       </range>
       <output>fcs/rudder-pos-rad</output>
    </aerosurface_scale>
-
    <aerosurface_scale name="rudder normalization">
       <input>fcs/rudder-pos-rad</input>
       <domain>
@@ -151,6 +143,14 @@
         <max>  1 </max>
       </range>
       <output>fcs/rudder-pos-norm</output>
+   </aerosurface_scale>
+   <aerosurface_scale name="Thrust Vector Horizontal">
+      <input>fcs/rudder-cmd-norm</input>
+      <range>
+        <min> -30 </min>
+        <max>  30 </max>
+      </range>
+      <output>fcs/tvh-pos-deg</output>
    </aerosurface_scale>
   </channel>
 
@@ -173,7 +173,6 @@
      </traverse>
      <output>fcs/flap-pos-deg</output>
    </kinematic>
-
    <aerosurface_scale name="flap normalization">
       <input>fcs/flap-pos-deg</input>
       <domain>
@@ -202,23 +201,6 @@
        </setting>
      </traverse>
      <output>gear/gear-pos-norm</output>
-   </kinematic>
-  </channel>
-
-  <channel name="Speedbrake">
-   <kinematic name="Speedbrake Control">
-     <input>fcs/speedbrake-cmd-norm</input>
-     <traverse>
-       <setting>
-          <position> 0 </position>
-          <time>     0 </time>
-       </setting>
-       <setting>
-          <position> 1 </position>
-          <time>     1 </time>
-       </setting>
-     </traverse>
-     <output>fcs/speedbrake-pos-norm</output>
    </kinematic>
   </channel>
 </flight_control>
