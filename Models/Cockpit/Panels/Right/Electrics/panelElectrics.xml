@@ -178,7 +178,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/check.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/probe.xml</path>
 		<offsets>
 			<x-m> 0.132</x-m>
 			<y-m>-0.076</y-m>

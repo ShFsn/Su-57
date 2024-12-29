@@ -7,10 +7,11 @@
 	<property value="0">electric/switches/ac2-gen</property>
 	<property value="0">electric/switches/ground-power</property>
 
+	<property value="1">electric/switches/probe</property>
 	<property value="0">electric/switches/floodlight</property>
 	<property value="0">electric/switches/instrument-lights</property>
 	<property value="0">electric/switches/label-lights</property>
-	<property value="0">electric/switches/landinglight</property>
+	<property value="1">electric/switches/landingLights</property>
 	<property value="0">electric/switches/nav</property>
 	<property value="0">electric/switches/fms</property>
 	<property value="0">electric/switches/hud</property>
@@ -34,6 +35,32 @@
 			</function>
 			<output>electric/sources/battery2</output>
 		</fcs_function>
+		<fcs_function name="electric/sources/dc1-gen">
+			<function>
+				<table>
+					<independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
+					<tableData>
+						  0.0	0.0
+						 30.0  24.0
+						100.0  28.0
+					</tableData>
+				</table>
+			</function>
+			<output>electric/sources/dc1-gen</output>
+		</fcs_function>
+		<fcs_function name="electric/sources/dc2-gen">
+			<function>
+				<table>
+					<independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
+					<tableData>
+						  0.0	0.0
+						 30.0  24.0
+						100.0  28.0
+					</tableData>
+				</table>
+			</function>
+			<output>electric/sources/dc2-gen</output>
+		</fcs_function>
 		<fcs_function name="electric/sources/ac1-gen">
 			<function>
 				<product>
@@ -41,7 +68,7 @@
 					<table>
 						<independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
 						<tableData>
-							  0.0    0.0
+							  0.0	0.0
 							 30.0  112.0
 							100.0  116.0
 						</tableData>
@@ -57,7 +84,7 @@
 					<table>
 						<independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
 						<tableData>
-							  0.0    0.0
+							  0.0	0.0
 							 30.0  112.0
 							100.0  116.0
 						</tableData>
@@ -122,10 +149,34 @@
 			</function>
 			<output>electric/output/label-lights</output>
 		</fcs_function>
-		<switch name="electric/output/landinglight">
+		<fcs_function name="electric/output/landingLights">
+			<function>
+				<product>
+					<property>electric/switches/landingLights</property>
+					<property>electric/sources/output-ac</property>
+					<value>2600</value>
+				</product>
+			</function>
+			<output>electric/output/landingLights</output>
+		</fcs_function>
+		<switch name="electric/output/dc-probe">
+			<default value="0"/>
+			<test logic="AND" value="electric/sources/dc1-gen">
+				electric/switches/probe == 0
+			</test>
+			<test logic="AND" value="electric/sources/dc2-gen">
+				electric/switches/probe == 2
+			</test>
+		</switch>
+		<lag_filter name="electric/output/voltmeter">
+			<input>electric/output/dc-probe</input>
+			<c1>7.0</c1>
+			<output>electric/output/voltmeter</output>
+		</lag_filter>
+		<switch name="electric/output/taxilight">
 			<default value="0"/>
 			<test logic="AND" value="electric/sources/output-ac">
-				electric/switches/landinglight == 1
+				electric/switches/landingLights == 2
 			</test>
 		</switch>
 		<switch name="electric/output/rsbn">
