@@ -1,82 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<path>LEngine.ac</path>
- 
-  <animation>
-    <type>rotate</type>
-    <object-name>orb</object-name>
-    <object-name>LBurner</object-name>
-    <object-name>heat</object-name>
-    <object-name>0</object-name>
-    <object-name>1</object-name>
-    <object-name>2</object-name>
-    <object-name>3</object-name>
-    <object-name>4</object-name>
-    <object-name>5</object-name>
-    <object-name>6</object-name>
-    <object-name>7</object-name>
-    <object-name>8</object-name>
-    <object-name>9</object-name>
-    <object-name>10</object-name>
-    <object-name>11</object-name>
-    <object-name>12</object-name>
-    <object-name>13</object-name>
-    <object-name>14</object-name>
-    <object-name>15</object-name>
-	<property>surface-positions/left-aileron-pos-norm</property>
-	<factor>20</factor>
-    <center>
-      <x-m>18.4404</x-m>
-      <y-m>-1.4297</y-m>
-      <z-m>-0.0556</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-  
-  <animation>
-    <type>rotate</type>
-    <object-name>orb</object-name>
-	<object-name>LBurner</object-name>
-    <object-name>heat</object-name>
-    <object-name>0</object-name>
-    <object-name>1</object-name>
-    <object-name>2</object-name>
-    <object-name>3</object-name>
-    <object-name>4</object-name>
-    <object-name>5</object-name>
-    <object-name>6</object-name>
-    <object-name>7</object-name>
-    <object-name>8</object-name>
-    <object-name>9</object-name>
-    <object-name>10</object-name>
-    <object-name>11</object-name>
-    <object-name>12</object-name>
-    <object-name>13</object-name>
-    <object-name>14</object-name>
-    <object-name>15</object-name>
-	<property>surface-positions/rudder-pos-norm</property>
-	<factor>30</factor>
-    <center>
-      <x-m>18.4404</x-m>
-      <y-m>-1.4297</y-m>
-      <z-m>-0.0556</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>0.0</y>
-      <z>1.0</z>
-    </axis>
-  </animation>
-  
+	<path>Engine.ac</path>
+	<model>
+		<name>afterburner</name>
+		<path>Aircraft/Su-57/Models/Effects/afterburner/afterburnerL.xml</path>
+	</model>
 	<animation>
 		<type>rotate</type>
 		<object-name>orb</object-name>
-		<object-name>LBurner</object-name>
 		<object-name>heat</object-name>
-		
+		<object-name>afterburner</object-name>
 		<object-name>0</object-name>
 		<object-name>1</object-name>
 		<object-name>2</object-name>
@@ -93,26 +26,18 @@
 		<object-name>13</object-name>
 		<object-name>14</object-name>
 		<object-name>15</object-name>
-		<property>surface-positions/elevator-pos-norm</property>
-		<factor>20</factor>
-		<center>
-		  <x-m>18.4404</x-m>
-		  <y-m>-1.4297</y-m>
-		  <z-m>-0.0556</z-m>
-		</center>
+		<property>sim/multiplay/generic/float[4]</property>
 		<axis>
-		  <x>0.0</x>
-		  <y>1.0</y>
-		  <z>0.0</z>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
 		</axis>
 	</animation>
-  
 	<animation>
 		<type>rotate</type>
 		<object-name>orb</object-name>
-		<object-name>LBurner</object-name>
 		<object-name>heat</object-name>
-		
+		<object-name>afterburner</object-name>
 		<object-name>0</object-name>
 		<object-name>1</object-name>
 		<object-name>2</object-name>
@@ -129,27 +54,21 @@
 		<object-name>13</object-name>
 		<object-name>14</object-name>
 		<object-name>15</object-name>
-		<property>surface-positions/speedbrake-pos-norm</property>
-		<factor>-20</factor>
-		<center>
-		  <x-m>18.4404</x-m>
-		  <y-m>-1.4297</y-m>
-		  <z-m>-0.0556</z-m>
-		</center>
+		<property>sim/multiplay/generic/float[5]</property>
 		<axis>
-		  <x>0.0</x>
-		  <y>1.0</y>
-		  <z>0.0</z>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>-1.0</z>
 		</axis>
 	</animation>
-    <animation>
-        <type>select</type>
-        <object-name>heat</object-name>
-        <condition>
-            <property>engines/engine[0]/running</property>
-            <not>
-                <property>sim/crashed</property>
-            </not>
-        </condition>
-    </animation>
+	<animation>
+		<type>select</type>
+		<object-name>heat</object-name>
+		<condition>
+			<property>engines/engine[0]/running</property>
+			<not>
+				<property>sim/crashed</property>
+			</not>
+		</condition>
+	</animation>
 </PropertyList>

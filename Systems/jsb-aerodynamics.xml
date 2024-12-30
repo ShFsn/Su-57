@@ -216,7 +216,7 @@
 					<value>0.0175</value>
 				</product>
 			</sin>
-			<value>-15</value><!--7m = 24ft-->
+			<value>-24</value><!--7m = 24ft-->
 		</product>
 	</function>
 
@@ -255,7 +255,7 @@
 					<value>0.0175</value>
 				</product>
 			</sin>
-			<value>-15</value><!--7m = 24ft-->
+			<value>-24</value><!--7m = 24ft-->
 		</product>
 	</function>
 

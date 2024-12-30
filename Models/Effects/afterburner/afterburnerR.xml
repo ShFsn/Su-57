@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+	<path>Aircraft/Generic/Effects/Thruster/thrust_flame.ac</path>
+	<nopreview/>
+	<animation>
+		<type>scale</type>
+		<object-name>Bounding_box</object-name>
+		<property>sim/multiplay/generic/float[3]</property>
+		<x-factor>0.8</x-factor>
+		<y-factor>0.4</y-factor>
+		<z-factor>0.4</z-factor>
+	</animation>
+	<effect>
+		<inherits-from>Aircraft/Su-57/Models/Effects/afterburner/afterburner</inherits-from>
+		<object-name>Bounding_box</object-name>
+	</effect>
+</PropertyList>

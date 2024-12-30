@@ -15,11 +15,21 @@
 	<model>
 		<name>LEngine</name>
 		<path>Aircraft/Su-57/Models/LEngine.xml</path>
+		<offsets>
+			<x-m>18.4404</x-m>
+			<y-m>-1.4297</y-m>
+			<z-m>-0.0556</z-m>
+		</offsets>
 	</model>
 	
 	<model>
 		<name>REngine</name>
 		<path>Aircraft/Su-57/Models/REngine.xml</path>
+		<offsets>
+			<x-m>18.4404</x-m>
+			<y-m> 1.4297</y-m>
+			<z-m>-0.0556</z-m>
+		</offsets>
 	</model>
 
 	<animation>

@@ -34,8 +34,8 @@
    <aerosurface_scale name="Thrust Vector Vertical">
       <input>fcs/elevator-cmd-norm</input>
       <range>
-        <min> -30 </min>
-        <max>  30 </max>
+        <min> -20 </min>
+        <max>  20 </max>
       </range>
       <output>fcs/tvv-pos-deg</output>
    </aerosurface_scale>
@@ -147,8 +147,8 @@
    <aerosurface_scale name="Thrust Vector Horizontal">
       <input>fcs/rudder-cmd-norm</input>
       <range>
-        <min> -30 </min>
-        <max>  30 </max>
+        <min> -20 </min>
+        <max>  20 </max>
       </range>
       <output>fcs/tvh-pos-deg</output>
    </aerosurface_scale>
