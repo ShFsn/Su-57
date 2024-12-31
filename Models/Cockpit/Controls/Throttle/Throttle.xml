@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>Throttle.ac</path>
+	<animation>
+		<type>rotate</type>
+		<object-name>ThrottleL</object-name>
+		<expression>
+			<sum>
+				<product>
+					<property>fdm/jsbsim/fcs/throttle-cmd-norm</property>
+					<difference>
+						<property>controls/engines/engine[0]/cutoff</property>
+						<value>1</value>
+					</difference>
+					<value>20</value>
+				</product>
+				<product>
+					<property>controls/engines/engine[0]/cutoff</property>
+					<value>3</value>
+				</product>
+				<value>10</value>
+			</sum>
+		</expression>
+		<center>
+			<x-m> 0.000</x-m>
+			<y-m> 0.000</y-m>
+			<z-m>-0.200</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>CutoffL</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[0]/cutoff</property>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>cutoffL-bug</tooltip-id>
+				<label>Cutoff Left</label>
+			</binding>
+		</hovered>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>ThrottleR</object-name>
+		<expression>
+			<sum>
+				<product>
+					<property>fdm/jsbsim/fcs/throttle-cmd-norm</property>
+					<difference>
+						<property>controls/engines/engine[1]/cutoff</property>
+						<value>1</value>
+					</difference>
+					<value>20</value>
+				</product>
+				<product>
+					<property>controls/engines/engine[1]/cutoff</property>
+					<value>3</value>
+				</product>
+				<value>10</value>
+			</sum>
+		</expression>
+		<center>
+			<x-m> 0.000</x-m>
+			<y-m> 0.000</y-m>
+			<z-m>-0.200</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>CutoffR</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[1]/cutoff</property>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>cutoffR-bug</tooltip-id>
+				<label>Cutoff Right</label>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>

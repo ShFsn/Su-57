@@ -14,7 +14,7 @@
 		<name>mfd</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Instruments/MFD/mfd.xml</path>
 		<offsets>
-			<x-m>-6.370</x-m>
+			<x-m>-6.340</x-m>
 			<y-m> 0.000</y-m>
 			<z-m> 0.740</z-m>
 			<pitch-deg>-20</pitch-deg>
@@ -51,6 +51,25 @@
 			<roll-deg>63.8</roll-deg>
 			<pitch-deg>6.0</pitch-deg>
 			<heading-deg>-5.3</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>joystick</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Controls/Joystick/Joystick.xml</path>
+		<offsets>
+			<x-m>-6.130</x-m>
+			<y-m> 0.000</y-m>
+			<z-m> 0.520</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>throttle</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Controls/Throttle/Throttle.xml</path>
+		<offsets>
+			<x-m>-5.910</x-m>
+			<y-m>-0.370</y-m>
+			<z-m> 0.680</z-m>
+			<roll-deg>-10</roll-deg>
 		</offsets>
 	</model>
 	<model>
