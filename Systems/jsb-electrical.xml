@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system name="electric">
-	<property value="0">electric/switches/battery1</property>
-	<property value="0">electric/switches/battery2</property>
+	<property value="1">electric/switches/battery1</property>
+	<property value="1">electric/switches/battery2</property>
 	<property value="0">electric/switches/apu-gen</property>
-	<property value="0">electric/switches/ac1-gen</property>
-	<property value="0">electric/switches/ac2-gen</property>
+	<property value="1">electric/switches/ac1-gen</property>
+	<property value="1">electric/switches/ac2-gen</property>
 	<property value="0">electric/switches/ground-power</property>
 
 	<property value="1">electric/switches/probe</property>
@@ -14,7 +14,7 @@
 	<property value="1">electric/switches/landingLights</property>
 	<property value="0">electric/switches/nav</property>
 	<property value="0">electric/switches/fms</property>
-	<property value="0">electric/switches/hud</property>
+	<property value="1">electric/switches/hud</property>
 
 	<channel name="sources">
 		<fcs_function name="electric/sources/battery1">
@@ -149,16 +149,6 @@
 			</function>
 			<output>electric/output/label-lights</output>
 		</fcs_function>
-		<fcs_function name="electric/output/landingLights">
-			<function>
-				<product>
-					<property>electric/switches/landingLights</property>
-					<property>electric/sources/output-ac</property>
-					<value>2600</value>
-				</product>
-			</function>
-			<output>electric/output/landingLights</output>
-		</fcs_function>
 		<switch name="electric/output/dc-probe">
 			<default value="0"/>
 			<test logic="AND" value="electric/sources/dc1-gen">
@@ -173,10 +163,16 @@
 			<c1>7.0</c1>
 			<output>electric/output/voltmeter</output>
 		</lag_filter>
-		<switch name="electric/output/taxilight">
+		<switch name="electric/output/landingLights">
 			<default value="0"/>
 			<test logic="AND" value="electric/sources/output-ac">
 				electric/switches/landingLights == 2
+			</test>
+		</switch>
+		<switch name="electric/output/taxilight">
+			<default value="0"/>
+			<test logic="AND" value="electric/sources/output-ac">
+				electric/switches/landingLights == 0
 			</test>
 		</switch>
 		<switch name="electric/output/rsbn">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PropertyList>
+<PropertyList include="Systems/initialization.xml">
 	<sim include="Systems/views.xml">
 		<description>Sukhoi Su-57</description>
 		<long-description>production aircraft</long-description>
@@ -14,6 +14,9 @@
 			<serviceable type="bool">true</serviceable>
 			<path>Aircraft/Su-57/Systems/submodels.xml</path>
 		</submodels>
+		<instrumentation>
+			<path>Systems/instrumentation.xml</path>
+		</instrumentation>
 		<multiplay>
 			<generic>
 				<bool  n="0" type="bool" alias="/damage/sounds/explode-on"/>
@@ -71,6 +74,14 @@
 			<file>Aircraft/Su-57/Nasal/MFD/mfd2.nas</file>
 			<file>Aircraft/Su-57/Nasal/MFD/MFD.nas</file>
 		</mfd>
+		<hud>
+			<file>Aircraft/Su-57/Nasal/HUD/hud_math.nas</file>
+			<file>Aircraft/Su-57/Nasal/HUD/hud_crosshairs.nas</file>
+			<file>Aircraft/Su-57/Nasal/HUD/hud_manual.nas</file>
+			<file>Aircraft/Su-57/Nasal/HUD/hud_ccip.nas</file>
+			<file>Aircraft/Su-57/Nasal/HUD/hud_radar.nas</file>
+			<file>Aircraft/Su-57/Nasal/HUD/hud.nas</file>
+		</hud>
 		<vector>
 			<file>Aircraft/Su-57/Nasal/weapons/vector.nas</file>
 		</vector>

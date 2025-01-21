@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<controls>
+		<ejected>0</ejected>
+		<gear>
+			<brake-parking>1</brake-parking>
+		</gear>
+	</controls>
+	<instrumentation>
+		<marker-beacon>
+			<serviceable type="bool">false</serviceable>
+		</marker-beacon>
+		<radar-altimeter>
+			<serviceable type="bool">true</serviceable>
+		</radar-altimeter>
+	</instrumentation>
+</PropertyList>
