@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>Aircraft/Su-57/Models/Cockpit/Parts/button1.ac</path>
+	<animation>
+		<type>pick</type>
+		<object-name>button</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>libraries.engineStart()</script>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>engine-start-bug</tooltip-id>
+				<label>Engine Start</label>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>

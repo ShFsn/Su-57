@@ -249,7 +249,10 @@
 			<type>avionics</type>
 			<condition>
 				<property>sim/current-view/internal</property>
-				<property>fdm/jsbsim/electric/sources/output-ac</property>
+				<greater-than>
+					<property>fdm/jsbsim/electric/sources/ac-bus</property>
+					<value>100</value>
+				</greater-than>
 			</condition>
 			<volume>
 				<factor>0.5</factor>

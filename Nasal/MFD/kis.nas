@@ -29,7 +29,7 @@ var canvas_kis = {
 		m.tempLn = props.globals.getNode("engines/engine[0]/egt-degf");
 		m.tempRn = props.globals.getNode("engines/engine[1]/egt-degf");
 		m.n2Ln = props.globals.getNode("engines/engine[0]/n2");
-		m.n2Rn = props.globals.getNode("engines/engine[0]/n2");
+		m.n2Rn = props.globals.getNode("engines/engine[1]/n2");
 
 		append(m.SubPages, canvasGroup.createChild('group'));
 		append(m.SubPages, canvasGroup.createChild('group'));

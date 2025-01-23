@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>Aircraft/Su-57/Models/Cockpit/Parts/button1.ac</path>
+	<animation>
+		<type>pick</type>
+		<object-name>button</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>property-assign</command>
+				<property>fdm/jsbsim/electric/switches/apu</property>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>apu-start-bug</tooltip-id>
+				<label>APU Start</label>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>

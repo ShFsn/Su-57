@@ -3,7 +3,7 @@
 	<path>panelEngines.ac</path>
 	<model>
 		<name>engine start</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/button1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/engineStart.xml</path>
 		<offsets>
 			<x-m> 0.047</x-m>
 			<y-m> 0.032</y-m>
@@ -12,7 +12,7 @@
 	</model>
 	<model>
 		<name>apu start</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/button1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/apuStart.xml</path>
 		<offsets>
 			<x-m> 0.030</x-m>
 			<y-m> 0.119</y-m>
@@ -21,7 +21,7 @@
 	</model>
 	<model>
 		<name>apu stop</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/button1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/apuStop.xml</path>
 		<offsets>
 			<x-m> 0.071</x-m>
 			<y-m> 0.119</y-m>
@@ -29,8 +29,8 @@
 		</offsets>
 	</model>
 	<model>
-		<name>selection</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+		<name>engine select</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/engineSelect.xml</path>
 		<offsets>
 			<x-m> 0.036</x-m>
 			<y-m> 0.086</y-m>
@@ -38,16 +38,8 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
-		<offsets>
-			<x-m> 0.036</x-m>
-			<y-m> 0.086</y-m>
-			<z-m> 0.002</z-m>
-		</offsets>
-	</model>
-	<model>
-		<name>ac1</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/ac1.xml</path>
+		<name>ac1-gen</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/ac1Gen.xml</path>
 		<offsets>
 			<x-m> 0.030</x-m>
 			<y-m> 0.149</y-m>
@@ -55,8 +47,8 @@
 		</offsets>
 	</model>
 	<model>
-		<name>ac2</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/ac2.xml</path>
+		<name>ac2-gen</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/ac2Gen.xml</path>
 		<offsets>
 			<x-m> 0.030</x-m>
 			<y-m> 0.171</y-m>
@@ -64,8 +56,8 @@
 		</offsets>
 	</model>
 	<model>
-		<name>apu</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/apu.xml</path>
+		<name>apu-generator</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/apuGen.xml</path>
 		<offsets>
 			<x-m> 0.030</x-m>
 			<y-m> 0.192</y-m>

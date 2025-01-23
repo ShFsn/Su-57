@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system name="electric">
-	<property value="1">electric/switches/battery1</property>
-	<property value="1">electric/switches/battery2</property>
+	<property value="0">electric/switches/battery1</property>
+	<property value="0">electric/switches/battery2</property>
+	<property value="0">electric/switches/apu</property>
 	<property value="0">electric/switches/apu-gen</property>
-	<property value="1">electric/switches/ac1-gen</property>
-	<property value="1">electric/switches/ac2-gen</property>
+	<property value="0">electric/switches/ac1-gen</property>
+	<property value="0">electric/switches/ac2-gen</property>
 	<property value="0">electric/switches/ground-power</property>
 
 	<property value="1">electric/switches/probe</property>
@@ -14,7 +15,9 @@
 	<property value="1">electric/switches/landingLights</property>
 	<property value="0">electric/switches/nav</property>
 	<property value="0">electric/switches/fms</property>
-	<property value="1">electric/switches/hud</property>
+	<property value="0">electric/switches/hud</property>
+	<property value="1">electric/switches/select-engine</property>
+	<property value="1">electric/switches/select-mode</property>
 
 	<channel name="sources">
 		<fcs_function name="electric/sources/battery1">
@@ -93,7 +96,17 @@
 			</function>
 			<output>electric/sources/ac2-gen</output>
 		</fcs_function>
-		<fcs_function name="electric/sources/output-dc">
+		<fcs_function name="electric/sources/apu-gen">
+			<function>
+				<product>
+					<property>electric/switches/apu</property>
+					<property>electric/switches/apu-gen</property>
+					<value>112</value>
+				</product>
+			</function>
+			<output>electric/sources/apu-gen</output>
+		</fcs_function>
+		<fcs_function name="electric/sources/dc-bus">
 			<function>
 				<max>
 					<property>electric/sources/battery1</property>
@@ -106,26 +119,31 @@
 						<property>electric/sources/ac2-gen</property>
 						<value>0.21</value>
 					</product>
+					<product>
+						<property>electric/sources/apu-gen</property>
+						<value>0.21</value>
+					</product>
 				</max>
 			</function>
-			<output>electric/sources/output-dc</output>
+			<output>electric/sources/dc-bus</output>
 		</fcs_function>
-		<fcs_function name="electric/sources/output-ac">
+		<fcs_function name="electric/sources/ac-bus">
 			<function>
 				<max>
 					<property>electric/sources/ac1-gen</property>
 					<property>electric/sources/ac2-gen</property>
+					<property>electric/sources/apu-gen</property>
 				</max>
 			</function>
-			<output>electric/sources/output-ac</output>
+			<output>electric/sources/ac-bus</output>
 		</fcs_function>
 	</channel>
-	
+
 	<channel name="output">
 		<fcs_function name="electric/output/floodlight">
 			<function>
 				<min>
-					<property>electric/sources/output-dc</property>
+					<property>electric/sources/dc-bus</property>
 					<property>electric/switches/floodlight</property>
 				</min>
 			</function>
@@ -134,7 +152,7 @@
 		<fcs_function name="electric/output/instrument-lights">
 			<function>
 				<min>
-					<property>electric/sources/output-dc</property>
+					<property>electric/sources/dc-bus</property>
 					<property>electric/switches/instrument-lights</property>
 				</min>
 			</function>
@@ -143,7 +161,7 @@
 		<fcs_function name="electric/output/label-lights">
 			<function>
 				<min>
-					<property>electric/sources/output-dc</property>
+					<property>electric/sources/dc-bus</property>
 					<property>electric/switches/label-lights</property>
 				</min>
 			</function>
@@ -165,37 +183,37 @@
 		</lag_filter>
 		<switch name="electric/output/landingLights">
 			<default value="0"/>
-			<test logic="AND" value="electric/sources/output-ac">
+			<test logic="AND" value="electric/sources/ac-bus">
 				electric/switches/landingLights == 2
 			</test>
 		</switch>
 		<switch name="electric/output/taxilight">
 			<default value="0"/>
-			<test logic="AND" value="electric/sources/output-ac">
+			<test logic="AND" value="electric/sources/ac-bus">
 				electric/switches/landingLights == 0
 			</test>
 		</switch>
 		<switch name="electric/output/rsbn">
 			<default value="0"/>
-			<test logic="AND" value="electric/sources/output-dc">
+			<test logic="AND" value="electric/sources/dc-bus">
 				electric/switches/nav == 2
 			</test>
 		</switch>
 		<switch name="electric/output/ark">
 			<default value="0"/>
-			<test logic="AND" value="electric/sources/output-dc">
+			<test logic="AND" value="electric/sources/dc-bus">
 				electric/switches/nav == 1
 			</test>
 		</switch>
 		<switch name="electric/output/fms">
 			<default value="0"/>
-			<test logic="AND" value="electric/sources/output-dc">
+			<test logic="AND" value="electric/sources/dc-bus">
 				electric/switches/fms == 1
 			</test>
 		</switch>
 		<switch name="electric/output/hud">
 			<default value="0"/>
-			<test logic="AND" value="electric/sources/output-ac">
+			<test logic="AND" value="electric/sources/ac-bus">
 				electric/switches/hud == 1
 			</test>
 		</switch>
