@@ -14,6 +14,7 @@ var engineStart = func {
 var autostart = func {
     setprop("fdm/jsbsim/electric/switches/battery1", 1);
     setprop("fdm/jsbsim/electric/switches/battery2", 1);
+    setprop("fdm/jsbsim/electric/switches/fms", 1);
     setprop("fdm/jsbsim/electric/switches/apu", 1);
     setprop("fdm/jsbsim/electric/switches/apu-gen", 1);
     setprop("controls/engines/engine[0]/starter", "true");
