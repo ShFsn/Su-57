@@ -170,10 +170,10 @@
 		<switch name="electric/output/dc-probe">
 			<default value="0"/>
 			<test logic="AND" value="electric/sources/dc1-gen">
-				electric/switches/probe == 0
+				electric/switches/probe == 2
 			</test>
 			<test logic="AND" value="electric/sources/dc2-gen">
-				electric/switches/probe == 2
+				electric/switches/probe == 0
 			</test>
 		</switch>
 		<lag_filter name="electric/output/voltmeter">
