@@ -8,19 +8,17 @@ var HUD = {
         # HUD .ac coords: upper-left lower-right
         HudMath.init([-5.750,-0.078,0.717-0.35], [-5.750,0.082,0.557-0.35], [256,256], [0,1], [1,0], 0);
 
-        m.Pages[0] = hud_crosshairs.new(group.createChild('group'), instance);
-        m.Pages[1] = hud_manual.new(group.createChild('group'), instance, 0);
-        m.Pages[2] = hud_radar.new(group.createChild('group'), instance);
+        m.Pages[0] = hud_nav.new(group.createChild('group'), instance);
         m.Power = props.globals.getNode("fdm/jsbsim/electric/output/hud", 1);
         m.Knob = props.globals.getNode("instrumentation/hud/knob", 1);
         m.HudMode = props.globals.getNode("instrumentation/hud/hud_mode", 1);
         m.TargetMode = props.globals.getNode("instrumentation/hud/target_mode", 1);
 
-        m.ActivatePage(2);
+        m.ActivatePage(0);
         m.Timer = maketimer(0.05, m, m.Update);
         m.Timer.start();
         m.group = group;
-        
+
         return m;
     },
     ActivatePage: func(input = -1)

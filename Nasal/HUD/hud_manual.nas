@@ -3,8 +3,8 @@ var hud_manual = {
 	{
 		var m = { parents: [hud_manual] };
 		m.group = canvasGroup;
-		canvas.parsesvg(canvasGroup, "Aircraft/MiG-23MLD/Nasal/hud/hud_manual.svg");
-		canvas.parsesvg(canvasGroup, "Aircraft/MiG-23MLD/Nasal/hud/hud_crosshairs.svg");
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/HUD/hud_manual.svg");
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/HUD/hud_crosshairs.svg");
 		m.cross = canvasGroup.getElementById("cross");
 		m.cross.setTranslation(10, 10);
 		m.vert = props.globals.getNode("instrumentation/hud/hud_vert", 1);
