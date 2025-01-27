@@ -9,4 +9,84 @@
 		<inherits-from>Effects/model-transparent</inherits-from>
 		<object-name>HUD.Glass</object-name>
 	</effect>
+	<animation>
+		<type>pick</type>
+		<object-name>BT.Backup</object-name>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>hud-backup-bug</tooltip-id>
+				<label>Backup Sight</label>
+			</binding>
+		</hovered>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>hud.hudBtClick(0, 0)</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>BT.NAV</object-name>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>hud-nav-bug</tooltip-id>
+				<label>NAV Mode</label>
+			</binding>
+		</hovered>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>hud.hudBtClick(1, 0)</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>BT.AG</object-name>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>hud-ag-bug</tooltip-id>
+				<label>A/G Mode</label>
+			</binding>
+		</hovered>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>hud.hudBtClick(1, 1)</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>BT.AA</object-name>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>hud-aa-bug</tooltip-id>
+				<label>A/A Mode</label>
+			</binding>
+		</hovered>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>hud.hudBtClick(1, 2)</script>
+			</binding>
+		</action>
+	</animation>
 </PropertyList>

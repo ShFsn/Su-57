@@ -25,7 +25,7 @@ var hud_nav = {
 		foreach(var name; keys(m.input))
 			m.input[name] = props.globals.getNode(m.input[name], 1);
 
-		m.heading.set("clip", "rect(0, 169, 256, 100)"); #top,right,bottom,left
+		m.heading.set("clip", "rect(0, 162, 256, 94)"); #top,right,bottom,left
 
 		return m;
 	},
@@ -33,7 +33,7 @@ var hud_nav = {
 	{
 		me.asi.setText(sprintf("%d", me.input.ias.getValue()));
 		me.alt.setText(sprintf("%d", 0.3*me.input.alt.getValue()));
-		me.mach.setText(sprintf("%.2f", 0.3*me.input.mach.getValue()));
+		me.mach.setText(sprintf("%.2f", me.input.mach.getValue()));
 		
 		me.tmp = me.input.hdg.getValue();
 		if(me.tmp < 180) {
