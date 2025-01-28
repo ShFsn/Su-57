@@ -73,7 +73,7 @@ var hudListener = setlistener("sim/signals/fdm-initialized", func () {
     var hudCanvas = canvas.new({
         "name": "HUD.Screen",
         "size": [1024, 1024],
-        "view": [256, 256],
+        "view": [1024, 768],
         "mipmapping": 1
     });
     hudCanvas.addPlacement({"node": "HUD.Screen"});
