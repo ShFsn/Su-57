@@ -97,7 +97,7 @@
 			</binding>
 		</item>
 		<item>
-			<name>Engine Cutoff</name>
+			<name>Engine 1 Cutoff</name>
 			<value>OFF</value>
 			<condition>
 				<equals>
@@ -116,13 +116,13 @@
 			<value>ON</value>
 			<condition>
 				<equals>
-					<property>fdm/jsbsim/electric/switches/ac1-gen</property>
+					<property>fdm/jsbsim/electric/switches/ac-gen1</property>
 					<value>1</value>
 				</equals>
 			</condition>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/ac1-gen</property>
+				<property>fdm/jsbsim/electric/switches/ac-gen1</property>
 				<value>1</value>
 			</binding>
 		</item>
@@ -161,7 +161,7 @@
 			</binding>
 		</item>
 		<item>
-			<name>Engine Cutoff</name>
+			<name>Engine 2 Cutoff</name>
 			<value>OFF</value>
 			<condition>
 				<equals>
@@ -180,13 +180,13 @@
 			<value>ON</value>
 			<condition>
 				<equals>
-					<property>fdm/jsbsim/electric/switches/ac2-gen</property>
+					<property>fdm/jsbsim/electric/switches/ac-gen2</property>
 					<value>1</value>
 				</equals>
 			</condition>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/ac2-gen</property>
+				<property>fdm/jsbsim/electric/switches/ac-gen2</property>
 				<value>1</value>
 			</binding>
 		</item>

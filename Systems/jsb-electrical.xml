@@ -4,8 +4,8 @@
 	<property value="0">electric/switches/battery2</property>
 	<property value="0">electric/switches/apu</property>
 	<property value="0">electric/switches/apu-gen</property>
-	<property value="0">electric/switches/ac1-gen</property>
-	<property value="0">electric/switches/ac2-gen</property>
+	<property value="0">electric/switches/ac-gen1</property>
+	<property value="0">electric/switches/ac-gen2</property>
 	<property value="0">electric/switches/ground-power</property>
 
 	<property value="1">electric/switches/probe</property>
@@ -38,7 +38,7 @@
 			</function>
 			<output>electric/sources/battery2</output>
 		</fcs_function>
-		<fcs_function name="electric/sources/dc1-gen">
+		<fcs_function name="electric/sources/dc-gen1">
 			<function>
 				<table>
 					<independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
@@ -49,9 +49,9 @@
 					</tableData>
 				</table>
 			</function>
-			<output>electric/sources/dc1-gen</output>
+			<output>electric/sources/dc-gen1</output>
 		</fcs_function>
-		<fcs_function name="electric/sources/dc2-gen">
+		<fcs_function name="electric/sources/dc-gen2">
 			<function>
 				<table>
 					<independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
@@ -62,12 +62,12 @@
 					</tableData>
 				</table>
 			</function>
-			<output>electric/sources/dc2-gen</output>
+			<output>electric/sources/dc-gen2</output>
 		</fcs_function>
-		<fcs_function name="electric/sources/ac1-gen">
+		<fcs_function name="electric/sources/ac-gen1">
 			<function>
 				<product>
-					<property>electric/switches/ac1-gen</property>
+					<property>electric/switches/ac-gen1</property>
 					<table>
 						<independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
 						<tableData>
@@ -78,12 +78,12 @@
 					</table>
 				</product>
 			</function>
-			<output>electric/sources/ac1-gen</output>
+			<output>electric/sources/ac-gen1</output>
 		</fcs_function>
-		<fcs_function name="electric/sources/ac2-gen">
+		<fcs_function name="electric/sources/ac-gen2">
 			<function>
 				<product>
-					<property>electric/switches/ac2-gen</property>
+					<property>electric/switches/ac-gen2</property>
 					<table>
 						<independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
 						<tableData>
@@ -94,7 +94,7 @@
 					</table>
 				</product>
 			</function>
-			<output>electric/sources/ac2-gen</output>
+			<output>electric/sources/ac-gen2</output>
 		</fcs_function>
 		<fcs_function name="electric/sources/apu-gen">
 			<function>
@@ -106,17 +106,12 @@
 			</function>
 			<output>electric/sources/apu-gen</output>
 		</fcs_function>
-		<fcs_function name="electric/sources/dc-bus">
+		<fcs_function name="electric/sources/dc-bus1">
 			<function>
 				<max>
 					<property>electric/sources/battery1</property>
-					<property>electric/sources/battery2</property>
 					<product>
-						<property>electric/sources/ac1-gen</property>
-						<value>0.21</value>
-					</product>
-					<product>
-						<property>electric/sources/ac2-gen</property>
+						<property>electric/sources/ac-gen1</property>
 						<value>0.21</value>
 					</product>
 					<product>
@@ -125,14 +120,56 @@
 					</product>
 				</max>
 			</function>
+			<output>electric/sources/dc-bus1</output>
+		</fcs_function>
+		<fcs_function name="electric/sources/dc-bus2">
+			<function>
+				<max>
+					<property>electric/sources/battery2</property>
+					<product>
+						<property>electric/sources/ac-gen2</property>
+						<value>0.21</value>
+					</product>
+					<product>
+						<property>electric/sources/apu-gen</property>
+						<value>0.21</value>
+					</product>
+				</max>
+			</function>
+			<output>electric/sources/dc-bus2</output>
+		</fcs_function>
+		<fcs_function name="electric/sources/dc-bus">
+			<function>
+				<max>
+					<property>electric/sources/dc-bus1</property>
+					<property>electric/sources/dc-bus2</property>
+				</max>
+			</function>
 			<output>electric/sources/dc-bus</output>
+		</fcs_function>
+		<fcs_function name="electric/sources/ac-bus1">
+			<function>
+				<max>
+					<property>electric/sources/ac-gen1</property>
+					<property>electric/sources/apu-gen</property>
+				</max>
+			</function>
+			<output>electric/sources/ac-bus1</output>
+		</fcs_function>
+		<fcs_function name="electric/sources/ac-bus2">
+			<function>
+				<max>
+					<property>electric/sources/ac-gen2</property>
+					<property>electric/sources/apu-gen</property>
+				</max>
+			</function>
+			<output>electric/sources/ac-bus2</output>
 		</fcs_function>
 		<fcs_function name="electric/sources/ac-bus">
 			<function>
 				<max>
-					<property>electric/sources/ac1-gen</property>
-					<property>electric/sources/ac2-gen</property>
-					<property>electric/sources/apu-gen</property>
+					<property>electric/sources/ac-bus1</property>
+					<property>electric/sources/ac-bus2</property>
 				</max>
 			</function>
 			<output>electric/sources/ac-bus</output>
@@ -169,10 +206,10 @@
 		</fcs_function>
 		<switch name="electric/output/dc-probe">
 			<default value="0"/>
-			<test logic="AND" value="electric/sources/dc1-gen">
+			<test logic="AND" value="electric/sources/dc-gen1">
 				electric/switches/probe == 2
 			</test>
-			<test logic="AND" value="electric/sources/dc2-gen">
+			<test logic="AND" value="electric/sources/dc-gen2">
 				electric/switches/probe == 0
 			</test>
 		</switch>

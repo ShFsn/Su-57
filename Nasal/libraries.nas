@@ -1,6 +1,6 @@
 # Generic System Libraries
 var engineStart = func {
-    if(getprop("fdm/jsbsim/electric/sources/ac-bus") > 100 and
+    if(getprop("fdm/jsbsim/electric/sources/ac-bus1") > 100 and
     getprop("fdm/jsbsim/electric/switches/select-mode") == 2) {
         if(getprop("fdm/jsbsim/electric/switches/select-engine") == 0) {
             setprop("controls/engines/engine[0]/starter", 1);
@@ -23,8 +23,8 @@ var autostart = func {
         setprop("controls/engines/engine[0]/cutoff", "false");
         setprop("controls/engines/engine[1]/cutoff", "false");
         setprop("fdm/jsbsim/electric/switches/hud", 1);
-        setprop("fdm/jsbsim/electric/switches/ac1-gen", 1);
-        setprop("fdm/jsbsim/electric/switches/ac2-gen", 1);
+        setprop("fdm/jsbsim/electric/switches/ac-gen1", 1);
+        setprop("fdm/jsbsim/electric/switches/ac-gen2", 1);
     }, 5);
     settimer(func {
         setprop("fdm/jsbsim/electric/switches/apu-gen", 0);

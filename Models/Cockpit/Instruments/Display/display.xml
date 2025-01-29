@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>display.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Su-57/Models/Effects/display/display</inherits-from>
+		<object-name>Display.SCREEN</object-name>
+	</effect>
+</PropertyList>

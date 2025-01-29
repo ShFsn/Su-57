@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>hud.ac</path>
+	<model>
+		<path>glass.gltf</path>
+	</model>
+	<animation>
+		<type>select</type>
+		<object-name>HUD.Glass</object-name>
+		<condition>
+			<equals>
+				<value>0</value>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
 	<effect>
 		<object-name>HUD.Screen</object-name>
 		<inherits-from>Aircraft/Su-57/Models/Effects/hud</inherits-from>

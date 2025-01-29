@@ -55,8 +55,14 @@ void main()
     float metallic = orm.b * metallic_factor;
 
     vec3 emissive_texel = texture(emissive_tex, fs_in.texcoord).rgb;
-    //vec3 emissive = eotf_inverse_sRGB(emissive_texel) * emissive_factor;
-    vec3 emissive = 750.0*base_color.rgb;//eotf_inverse_sRGB(emissive_texel) * emissive_factor;
+    vec3 emissive = vec3(0.0);
+
+    if(emissive_factor.r < 0.0) {
+        emissive = -emissive_factor.r*base_color.rgb;
+    }
+    else {
+        emissive = eotf_inverse_sRGB(emissive_texel) * emissive_factor;
+    }
 
     vec3 V = normalize(-fs_in.view_vector);
 

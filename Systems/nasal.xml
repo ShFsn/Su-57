@@ -2,6 +2,7 @@
 <PropertyList>
 	<libraries>
 		<file>Aircraft/Su-57/Nasal/libraries.nas</file>
+		<file>Aircraft/Su-57/Nasal/Display/Display.nas</file>
 	</libraries>
 	<mfd>
 		<file>Aircraft/Su-57/Nasal/MFD/maps/loader.nas</file>
@@ -28,6 +29,7 @@
 	<hud>
 		<file>Aircraft/Su-57/Nasal/HUD/hud_math.nas</file>
 		<file>Aircraft/Su-57/Nasal/HUD/hud_manual.nas</file>
+		<file>Aircraft/Su-57/Nasal/HUD/hud_base.nas</file>
 		<file>Aircraft/Su-57/Nasal/HUD/hud_nav.nas</file>
 		<file>Aircraft/Su-57/Nasal/HUD/hud.nas</file>
 	</hud>

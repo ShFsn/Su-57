@@ -39,7 +39,7 @@
 	</model>
 	<model>
 		<name>ac1-gen</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/ac1Gen.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/acGen1.xml</path>
 		<offsets>
 			<x-m> 0.030</x-m>
 			<y-m> 0.149</y-m>
@@ -48,7 +48,7 @@
 	</model>
 	<model>
 		<name>ac2-gen</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/ac2Gen.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/acGen2.xml</path>
 		<offsets>
 			<x-m> 0.030</x-m>
 			<y-m> 0.171</y-m>

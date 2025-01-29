@@ -11,7 +11,8 @@ var HUD = {
         HudMath.init([-5.750,-0.078,0.717-0.35], [-5.750,0.082,0.557-0.35], [256,256], [0,1], [1,0], 0);
 
         m.Pages[0] = hud_manual.new(group.createChild('group'), instance);
-        m.Pages[1] = hud_nav.new(group.createChild('group'), instance);
+        m.Pages[1] = hud_base.new(group.createChild('group'), instance);
+        m.Pages[2] = hud_nav.new(group.createChild('group'), instance);
         m.Power = props.globals.getNode("fdm/jsbsim/electric/output/hud", 1);
         m.Knob = props.globals.getNode("instrumentation/hud/knob", 1);
         m.HudMode = props.globals.getNode("instrumentation/hud/hud_mode", 1);

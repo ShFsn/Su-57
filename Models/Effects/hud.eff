@@ -2,4 +2,7 @@
 <PropertyList>
 	<name>Effects/hud</name>
 	<inherits-from>Effects/model-pbr-transparent</inherits-from>
+	<parameters>
+		<emissive-factor type="vec3d"> -750.0 </emissive-factor>
+	</parameters>
 </PropertyList>
