@@ -9,9 +9,17 @@
 		</offsets>
 	</model>
 	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/ARK/panelArk.xml</path>
+		<offsets>
+			<x-m> 0.116</x-m>
+			<y-m> 0.000</y-m>
+			<z-m> 0.000</z-m>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Lights/panelLights.xml</path>
 		<offsets>
-			<x-m> 0.185</x-m>
+			<x-m> 0.183</x-m>
 			<y-m> 0.000</y-m>
 			<z-m> 0.000</z-m>
 		</offsets>

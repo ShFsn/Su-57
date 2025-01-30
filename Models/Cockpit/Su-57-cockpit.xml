@@ -6,38 +6,28 @@
 		<offsets>
 			<x-m>-6.150</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 1.045</z-m>
-			<pitch-deg>-17</pitch-deg>
-		</offsets>
-	</model>
-	<model>
-		<name>display</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Instruments/Display/display.xml</path>
-		<offsets>
-			<x-m>-6.375</x-m>
-			<y-m> 0.190</y-m>
-			<z-m> 0.945</z-m>
-			<pitch-deg>-20</pitch-deg>
+			<z-m> 0.995</z-m>
+			<pitch-deg>-16</pitch-deg>
 		</offsets>
 	</model>
 	<model>
 		<name>mfd</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Instruments/MFD/mfd.xml</path>
 		<offsets>
-			<x-m>-6.350</x-m>
+			<x-m>-6.345</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.750</z-m>
-			<pitch-deg>-20</pitch-deg>
+			<z-m> 0.715</z-m>
+			<pitch-deg>-22</pitch-deg>
 		</offsets>
 	</model>
 	<model>
 		<name>panels top</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsTop.xml</path>
 		<offsets>
-			<x-m>-6.252</x-m>
+			<x-m>-6.235</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.593</z-m>
-			<pitch-deg>-20</pitch-deg>
+			<z-m> 0.560</z-m>
+			<pitch-deg>-22</pitch-deg>
 		</offsets>
 	</model>
 	<model>
