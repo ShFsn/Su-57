@@ -46,7 +46,7 @@ mfdListener = setlistener("/sim/signals/fdm-initialized", func () {
 		"mipmapping": 1
 	});
 
-	displayCanvas.addPlacement({"node": "Display.SCREEN"});
+	displayCanvas.addPlacement({"node": "Display.Screen"});
 	DisplayInstance = canvas_display.new(displayCanvas.createGroup());
 
 	removelistener(mfdListener);

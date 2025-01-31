@@ -1,3 +1,8 @@
+var ap_heading = 0;
+var ap_auto = 0;
+var ap_pitch = 0;
+var ap_altitude = 0;
+
 # Generic System Libraries
 var engineStart = func {
     if(getprop("fdm/jsbsim/electric/sources/ac-bus1") > 100 and
@@ -30,6 +35,41 @@ var autostart = func {
         setprop("fdm/jsbsim/electric/switches/apu-gen", 0);
         setprop("fdm/jsbsim/electric/switches/apu", 0);
     }, 25);
+}
+
+var autopilot = func(input = 0) {
+    if(getprop("fdm/jsbsim/electric/sources/dc-bus") > 17 and input > 0) {
+        if(input == 1) {
+            if(ap_heading > 0) {
+                setprop("autopilot/locks/heading", "");
+                ap_heading = 0;
+            }
+            else {
+                setprop("autopilot/locks/heading", "wing-leveler");
+                ap_heading = 1;
+            }
+        }
+        if(input == 3) {
+            if(ap_altitude > 0) {
+                setprop("autopilot/locks/altitude", "");
+                ap_altitude = 0;
+            }
+            else {
+                setprop("autopilot/locks/altitude", "vertical-speed-hold");
+                setprop("autopilot/settings/vertical-speed-fpm", 0);
+                ap_altitude = 1;
+            }
+        }
+    }
+    else {
+        setprop("autopilot/locks/heading", "");
+        setprop("autopilot/locks/altitude", "");
+        ap_heading = 0;
+        ap_altitude = 0;
+    }
+
+    setprop("sim/gui/dialogs/autopilot/heading-active", ap_heading);
+    setprop("sim/gui/dialogs/autopilot/altitude-active", ap_altitude);
 }
 
 #var prop = "payload/armament/fire-control";

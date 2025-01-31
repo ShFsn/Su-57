@@ -15,6 +15,23 @@
 		<path>Aircraft/Su-57/Models/Cockpit/Su-57-cockpit.xml</path>
 	</model>
 	<model>
+		<path>Aircraft/Su-57/Models/Pilot/pilot.xml</path>
+		<offsets>
+			<x-m>-5.750</x-m>
+			<y-m> 0.000</y-m>
+			<z-m> 0.612</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<condition>
+			<not>
+				<property>/sim/current-view/internal</property>
+			</not>
+			<not>
+				<property>controls/ejected</property>
+			</not>
+		</condition>
+	</model>
+	<model>
 		<name>Stores</name>
 		<path>Aircraft/Su-57/Models/Stores/Stores.xml</path>
 	</model>

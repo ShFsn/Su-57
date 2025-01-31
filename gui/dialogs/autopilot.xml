@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    <name>autopilot</name>
+    <modal type="bool">false</modal>
+    <draggable>true</draggable>
+    <resizable>true</resizable>
+    <layout>vbox</layout>
+
+    <!-- Т УПР -->
+    <button>
+        <legend>Heading Hold</legend>
+        <binding>
+            <command>nasal</command>
+            <script>libraries.autopilot(1)</script>
+        </binding>
+    </button>
+
+    <!-- АВТ -->
+    <button>
+        <legend>Automatic</legend>
+        <binding>
+            <command>nasal</command>
+            <script>libraries.autopilot(2)</script>
+        </binding>
+    </button>
+
+    <!-- H БАР -->
+    <button>
+        <legend>Altitude Hold</legend>
+        <binding>
+            <command>nasal</command>
+            <script>libraries.autopilot(3)</script>
+        </binding>
+    </button>
+
+    <!-- АУТ -->
+    <button>
+        <legend>Pitch Hold</legend>
+        <binding>
+            <command>nasal</command>
+            <script>libraries.autopilot(4)</script>
+        </binding>
+    </button>
+
+    <!-- OFF -->
+    <button>
+        <legend>OFF</legend>
+        <binding>
+            <command>nasal</command>
+            <script>libraries.autopilot(0)</script>
+        </binding>
+    </button>
+</PropertyList>

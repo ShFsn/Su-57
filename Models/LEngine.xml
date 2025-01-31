@@ -61,14 +61,4 @@
 			<z>-1.0</z>
 		</axis>
 	</animation>
-	<animation>
-		<type>select</type>
-		<object-name>heat</object-name>
-		<condition>
-			<property>engines/engine[0]/running</property>
-			<not>
-				<property>sim/crashed</property>
-			</not>
-		</condition>
-	</animation>
 </PropertyList>

@@ -103,7 +103,7 @@ refs 4
 9 0.892915 0.661066
 kids 0
 OBJECT poly
-name "Display.SCREEN"
+name "Display.Screen"
 data 8
 Case.003
 crease 40.0
