@@ -28,6 +28,7 @@
 	</mfd>
 	<hud>
 		<file>Aircraft/Su-57/Nasal/HUD/hud_math.nas</file>
+		<file>Aircraft/Su-57/Nasal/HUD/hud_clip.nas</file>
 		<file>Aircraft/Su-57/Nasal/HUD/hud_manual.nas</file>
 		<file>Aircraft/Su-57/Nasal/HUD/hud_base.nas</file>
 		<file>Aircraft/Su-57/Nasal/HUD/hud_nav.nas</file>

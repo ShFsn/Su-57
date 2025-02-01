@@ -58,7 +58,12 @@ void main()
     vec3 emissive = vec3(0.0);
 
     if(emissive_factor.r < 0.0) {
-        emissive = -emissive_factor.r*base_color.rgb;
+        if(base_color.b > 0.0) {
+            discard;
+        }
+        else {
+            emissive = -emissive_factor.r*base_color.rgb;
+        }
     }
     else {
         emissive = eotf_inverse_sRGB(emissive_texel) * emissive_factor;

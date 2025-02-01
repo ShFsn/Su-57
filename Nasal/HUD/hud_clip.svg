@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="768"
+   viewBox="0 0 1024 768"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="hud_clip.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.4634833"
+     inkscape:cx="475.7453"
+     inkscape:cy="272.93324"
+     inkscape:document-units="px"
+     inkscape:current-layer="svg8"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     units="px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <path
+     id="top"
+     style="fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.471632;stroke-linejoin:round"
+     d="M 0,0 H 1024 V 1 H 0 Z" />
+  <path
+     id="left"
+     style="fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.408445;stroke-linejoin:round"
+     d="M 0,0 H 1 V 768 H 0 Z" />
+  <path
+     id="right"
+     style="fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.408445;stroke-linejoin:round"
+     d="M 1023,0 H 1024 V 768 H 1023 Z" />
+</svg>
