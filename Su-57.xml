@@ -246,4 +246,10 @@
     <system file="jsb-electrical"/>
     <flight_control file="Systems/jsb-controls"/>
     <aerodynamics file="Systems/jsb-aerodynamics.xml"/>
+
+<output name="/tmp/su57.csv" type="CSV" rate="10">
+                        <property>aero/coefficients/Cla</property>
+                        <property>aero/alpha-deg</property>
+</output>
+
 </fdm_config>

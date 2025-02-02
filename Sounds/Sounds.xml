@@ -3,6 +3,28 @@
 	<fx>
 		<!--================================= Engine =============================-->
 		<engine>
+			<name>engine-start-inside</name>
+			<mode>once</mode>
+			<path>Aircraft/Su-57/Sounds/engine/mig21startup.wav</path>
+			<condition>
+				<property>/controls/engines/engine[0]/starter</property>
+			</condition>
+			<volume>
+				<max>0.5</max>
+			</volume>
+		</engine>
+		<engine>
+			<name>engine-start-outside</name>
+			<mode>looped</mode>
+			<path>Aircraft/Su-57/Sounds/engine/engine-exhaust.wav</path>
+			<condition>
+				<property>/controls/engines/engine[0]/starter</property>
+				<not>
+					<property>sim/current-view/internal</property>
+				</not>
+			</condition>
+		</engine>
+		<engine>
 			<name>engine1</name>
 			<path>Aircraft/Su-57/Sounds/engine/jet-blast.wav</path>
 			<mode>looped</mode>
@@ -243,10 +265,21 @@
 
 		<!--================================= Avionics =============================-->
 		<avionics>
+			<name>error</name>
+			<path>Sounds/misc/error.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<property>instrumentation/error</property>
+			</condition>
+			<volume>
+				<factor>1.0</factor>
+			</volume>
+		</avionics>
+		<avionics>
 			<name>inverter</name>
 			<path>Sounds/misc/el_loop.wav</path>
 			<mode>looped</mode>
-			<type>avionics</type>
 			<condition>
 				<property>sim/current-view/internal</property>
 				<greater-than>
