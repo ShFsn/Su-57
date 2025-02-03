@@ -5,6 +5,7 @@ var hud_base = {
 		m.group = canvasGroup;
 		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/HUD/hud_base.svg");
 		m.tmp = 0;
+		m.kmh = 1;
 
 		var svg_keys = ["heading", "horizon", "roll", "gearL", "gearR", "asi", "ias", "mach", "alt", "vsi", "vv"];
 		foreach(var key; svg_keys) {
@@ -35,8 +36,14 @@ var hud_base = {
 	update: func()
 	{
 		# asi
+		if(me.kmh) {
+			me.ias.hide();
+		}
+		else {
+			me.ias.show();
+		}
 		if(me.input.ias.getValue() > 40) {
-			me.asi.setText(sprintf("%d", me.input.ias.getValue()));
+			me.asi.setText(sprintf("%d", me.input.ias.getValue()*(me.kmh?1.85:1)));
 			me.mach.setText(sprintf("%.2f", me.input.mach.getValue()));
 		}
 		else {

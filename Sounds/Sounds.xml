@@ -9,19 +9,13 @@
 			<condition>
 				<property>/controls/engines/engine[0]/starter</property>
 			</condition>
-			<volume>
-				<max>0.5</max>
-			</volume>
 		</engine>
 		<engine>
-			<name>engine-start-outside</name>
-			<mode>looped</mode>
-			<path>Aircraft/Su-57/Sounds/engine/engine-exhaust.wav</path>
+			<name>engine-start-inside</name>
+			<mode>once</mode>
+			<path>Aircraft/Su-57/Sounds/engine/mig21startup.wav</path>
 			<condition>
-				<property>/controls/engines/engine[0]/starter</property>
-				<not>
-					<property>sim/current-view/internal</property>
-				</not>
+				<property>/controls/engines/engine[1]/starter</property>
 			</condition>
 		</engine>
 		<engine>
@@ -61,7 +55,6 @@
 			<path>Aircraft/Su-57/Sounds/engine/jet-blast.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<property>engines/engine[1]/running</property>
 				<not>
 					<property>sim/current-view/internal</property>
 					<property>engines/engine/out-of-fuel</property>
@@ -93,7 +86,6 @@
 			<path>Aircraft/Su-57/Sounds/engine/engine-exhaust.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<property>engines/engine[0]/running</property>
 				<not>
 					<property>sim/current-view/internal</property>
 					<property>engines/engine/out-of-fuel</property>
@@ -114,7 +106,6 @@
 			<path>Aircraft/Su-57/Sounds/engine/engine-exhaust.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<property>engines/engine[1]/running</property>
 				<not>
 					<property>sim/current-view/internal</property>
 					<property>engines/engine/out-of-fuel</property>
@@ -135,7 +126,6 @@
 			<path>Aircraft/Su-57/Sounds/engine/f16-engine-int.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<property>engines/engine[0]/running</property>
 				<not>
 					<property>sim/current-view/external</property>
 					<property>engines/engine/out-of-fuel</property>

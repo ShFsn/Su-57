@@ -1,7 +1,38 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<checklist>
-		<title>Engine Startup</title>  
+		<title>Before Engine Startup</title>  
+		<item>
+			<name>Seat and Pedal Position</name>
+			<value>Check</value>
+		</item>
+		<item>
+			<name>All Switches OFF, Covers closed</name>
+			<value>Check</value>
+			<condition>
+				<equals>
+					<property>fdm/jsbsim/electric/output/switches</property>
+					<value>0</value>
+				</equals>
+			</condition>
+		</item>
+		<item>
+			<name>Eject System</name>
+			<value>OFF</value>
+			<condition>
+				<equals>
+					<property>fdm/jsbsim/electric/output/eject</property>
+					<value>0</value>
+				</equals>
+			</condition>
+		</item>
+		<item>
+			<name>Eject Handle</name>
+			<value>Disabled</value>
+		</item>
+	</checklist>
+	<checklist>
+		<title>Engine Startup</title>
 		<item>
 			<name>Battery 1</name>
 			<value>ON</value>

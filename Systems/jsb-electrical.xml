@@ -254,5 +254,31 @@
 				electric/switches/hud == 1
 			</test>
 		</switch>
+		<fcs_function name="electric/output/switches">
+			<function>
+				<max>
+					<property>electric/switches/cfd</property>
+					<property>electric/switches/fms</property>
+					<property>electric/switches/hud</property>
+					<property>electric/switches/hmd</property>
+					<property>electric/switches/ins1</property>
+					<property>electric/switches/ins2</property>
+					<property>electric/switches/jammer</property>
+					<property>electric/switches/radar</property>
+					<property>electric/switches/rwr</property>
+					<property>electric/switches/toilet</property>
+				</max>
+			</function>
+			<output>electric/output/switches</output>
+		</fcs_function>
+		<fcs_function name="electric/output/eject">
+			<function>
+				<max>
+					<property>electric/switches/eject1</property>
+					<property>electric/switches/eject2</property>
+				</max>
+			</function>
+			<output>electric/output/switches</output>
+		</fcs_function>
 	</channel>
 </system>

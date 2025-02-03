@@ -1,4 +1,4 @@
-input = {
+parameters = {
     alpha:  "orientation/alpha-deg",
     alt:    "instrumentation/altimeter/indicated-altitude-ft",
     fuel:   "consumables/fuel/total-fuel-gal_us",
@@ -8,8 +8,8 @@ input = {
     power:  "fdm/jsbsim/electric/sources/dc-bus",
     pullUp: "instrumentation/mk-viii/outputs/discretes/gpws-warning",
 };
-foreach(var name; keys(input)) {
-    input[name] = props.globals.getNode(input[name], 1);
+foreach(var name; keys(parameters)) {
+    parameters[name] = props.globals.getNode(parameters[name], 1);
 }
 
 # Generic System Libraries
@@ -51,7 +51,7 @@ var ap_auto = 0;
 var ap_pitch = 0;
 var ap_altitude = 0;
 var autopilot = func(input = 0) {
-    if(input.power.getValue() > 17 and input > 0) {
+    if(parameters.power.getValue() > 17 and input > 0) {
         if(input == 1) {
             if(ap_heading > 0) {
                 setprop("autopilot/locks/heading", "");
@@ -110,8 +110,8 @@ var ground = 0;
 var speed = 0;
 
 var EventHandler = func {
-    if(input.power.getValue() > 17) {
-        if(input.fuel.getValue()*3.6 < 1500) {
+    if(parameters.power.getValue() > 17) {
+        if(parameters.fuel.getValue()*3.6 < 1500) {
             if(fuel == 0) {
                 screen.log.write("1500kg Fuel remaining", 1, 0.8, 0);
                 playAudio("misc/warning.wav");
@@ -123,9 +123,9 @@ var EventHandler = func {
             fuel = 0;
         }
 
-        if( input.ias.getValue() > 40 and
-            input.alpha.getValue() > 6 and
-            input.gload.getValue() > 3 and
+        if( parameters.ias.getValue() > 40 and
+            parameters.alpha.getValue() > 6 and
+            parameters.gload.getValue() > 3 and
             aoa == 0)
         {
             playAudio("misc/warning.wav");
@@ -138,8 +138,8 @@ var EventHandler = func {
             aoa -= 1;
         }
 
-        if( input.ias.getValue() > 40 and
-            input.alpha.getValue() > 12 and
+        if( parameters.ias.getValue() > 40 and
+            parameters.alpha.getValue() > 12 and
             aoa == 0)
         {
             screen.log.write("Critical AOA", 1, 0.8, 0);
@@ -148,8 +148,8 @@ var EventHandler = func {
             aoa = 7;
         }
 
-        if( input.ias.getValue() > 650 and
-            input.alt.getValue() < 9000 and
+        if( parameters.ias.getValue() > 650 and
+            parameters.alt.getValue() < 9000 and
             speed == 0)
         {
             screen.log.write("Dangerous Speed", 1, 0.8, 0);
@@ -161,14 +161,14 @@ var EventHandler = func {
             speed -= 1;
         }
 
-        if(input.pullUp.getValue() > 0 and ground == 0) {
-            if(input.ias.getValue() > 250) {
+        if(parameters.pullUp.getValue() > 0 and ground == 0) {
+            if(parameters.ias.getValue() > 250) {
                 screen.log.write("Dangerous Altitude", 1, 0.8, 0);
                 playAudio("misc/warning.wav");
                 playAudio("misc/altitude.wav");
                 ground = 7;
             }
-            else if(input.gear.getValue() < 1) {
+            else if(parameters.gear.getValue() < 1) {
                 screen.log.write("Extend Gear", 1, 0.8, 0);
                 playAudio("misc/warning.wav");
                 playAudio("misc/gear.wav");
