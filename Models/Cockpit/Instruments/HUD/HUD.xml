@@ -26,6 +26,10 @@
 		<inherits-from>Aircraft/Su-57/Models/Effects/hud</inherits-from>
 	</effect>
 	<effect>
+		<object-name>HUD.Display</object-name>
+		<inherits-from>Aircraft/Su-57/Models/Effects/display/display</inherits-from>
+	</effect>
+	<effect>
 		<inherits-from>Effects/model-transparent</inherits-from>
 		<object-name>HUD.Glass</object-name>
 	</effect>

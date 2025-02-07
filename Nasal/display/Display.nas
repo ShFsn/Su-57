@@ -14,7 +14,7 @@ var canvas_display = {
 			}
 		};
 
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/Display/Display.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/display/Display.svg", {'font-mapper': font_mapper});
 		var svg_keys = ["horizon", "aircraft"];
 		foreach(var key; svg_keys) {
 			m[key] = canvasGroup.getElementById(key);

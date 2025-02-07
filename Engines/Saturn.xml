@@ -6,14 +6,14 @@
   Inputs:
     name:           Saturn
     type:           turbine
-    thrust:         20200.0 lb
+    thrust:         19400 lb
     augmented?      yes
     injected?       no
 -->
 
 <turbine_engine name="Saturn">
-  <milthrust> 20200.0 </milthrust>
-  <maxthrust> 35300.0 </maxthrust>
+  <milthrust> 19400 </milthrust>
+  <maxthrust> 33000 </maxthrust>
   <bypassratio>     1.0 </bypassratio>
   <tsfc>            0.57 </tsfc>
   <atsfc>           1.92 </atsfc>

@@ -10,7 +10,7 @@ var canvas_refueling = {
 			}
 		};
 
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/MFD/refueling.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/mfd/refueling.svg", {'font-mapper': font_mapper});
 
 		m.group = canvasGroup;
 		return m;

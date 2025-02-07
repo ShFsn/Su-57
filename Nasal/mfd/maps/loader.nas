@@ -54,8 +54,8 @@ setlistener("/nasal/canvas/loaded", func() {
 
     var load_deps = func(name) {
         print('Loading MapStructure Layer: '~ name);
-        load(aircraft_root~"/Nasal/MFD/maps/"~name~".lcontroller",  name);
-        load(aircraft_root~"/Nasal/MFD/maps/"~name~".symbol", name);
+        load(aircraft_root~"/Nasal/mfd/maps/"~name~".lcontroller",  name);
+        load(aircraft_root~"/Nasal/mfd/maps/"~name~".symbol", name);
     }
 
     #foreach( var name; ['APS','ALT-profile','SPD-profile','HOLD','RTE','WPT','DECEL','NDB'] )
@@ -67,7 +67,7 @@ setlistener("/nasal/canvas/loaded", func() {
         "scontroller",
         "controller",
     ];
-    var map_root = aircraft_root~"/Nasal/MFD/maps/";
+    var map_root = aircraft_root~"/Nasal/mfd/maps/";
     var files = directory(map_root);
     var deps = {};
     foreach (var d; dep_names) deps[d] = [];

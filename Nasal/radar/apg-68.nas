@@ -2552,7 +2552,7 @@ var FlirSensor = {
 	pics: [nil,nil],
 	setup: func (group, index) {
 		me.flirPicHD = group.createChild("image")
-                .set("src", "Aircraft/f16/Nasal/HUD/flir"~flirImageReso~".png")
+                .set("src", "Aircraft/f16/Nasal/hud/flir"~flirImageReso~".png")
                 #.setScale(256/flirImageReso,256/flirImageReso)#340,260
                 .set("z-index",10001);
         me.scanY = 0;

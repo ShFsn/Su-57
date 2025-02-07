@@ -2,37 +2,41 @@
 <PropertyList>
 	<libraries>
 		<file>Aircraft/Su-57/Nasal/libraries.nas</file>
-		<file>Aircraft/Su-57/Nasal/Display/Display.nas</file>
+		<file>Aircraft/Su-57/Nasal/display/Display.nas</file>
 	</libraries>
 	<mfd>
-		<file>Aircraft/Su-57/Nasal/MFD/maps/loader.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/Framework.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/empty.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/map.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/pfd.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/fuel.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/gear.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/hydraulics.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/oxy.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/refueling.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/elec.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/to.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/skND.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/skPFD.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/skMFD.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/skKIS.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/kis.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/mfd1.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/mfd2.nas</file>
-		<file>Aircraft/Su-57/Nasal/MFD/MFD.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/maps/loader.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/Framework.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/empty.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/map.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/pfd.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/fuel.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/gear.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/hydraulics.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/oxy.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/refueling.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/elec.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/to.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/skND.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/skPFD.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/skMFD.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/skKIS.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/kis.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/mfd1.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/mfd2.nas</file>
+		<file>Aircraft/Su-57/Nasal/mfd/MFD.nas</file>
 	</mfd>
 	<hud>
-		<file>Aircraft/Su-57/Nasal/HUD/hud_math.nas</file>
-		<file>Aircraft/Su-57/Nasal/HUD/hud_clip.nas</file>
-		<file>Aircraft/Su-57/Nasal/HUD/hud_manual.nas</file>
-		<file>Aircraft/Su-57/Nasal/HUD/hud_base.nas</file>
-		<file>Aircraft/Su-57/Nasal/HUD/hud_nav.nas</file>
-		<file>Aircraft/Su-57/Nasal/HUD/hud.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/hud_math.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/hud_clip.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/hud_manual.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/hud_base.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/hud_nav.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/hud.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud_panel/panel_base.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud_panel/panel_nav.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud_panel/panel_radio.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud_panel/panel.nas</file>
 	</hud>
 	<vector>
 		<file>Aircraft/Su-57/Nasal/weapons/vector.nas</file>

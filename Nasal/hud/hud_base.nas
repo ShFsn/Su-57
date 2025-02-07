@@ -1,9 +1,9 @@
 var hud_base = {
-	new: func(canvasGroup, instance)
+	new: func(canvasGroup)
 	{
 		var m = { parents: [hud_base] };
 		m.group = canvasGroup;
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/HUD/hud_base.svg");
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/hud/hud_base.svg");
 		m.tmp = 0;
 		m.kmh = 1;
 

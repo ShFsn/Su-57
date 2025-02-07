@@ -1,19 +1,18 @@
 var HUDInstance = {};
 
 var HUD = {
-    new: func(group, instance) {
+    new: func(group) {
         var m = {parents:[HUD], Pages:{}};
-        m.Instance = instance;
         m.ActivePage = 0;
         m.OldPage = 0;
 
         # HUD .ac coords: upper-left lower-right
         HudMath.init([-5.750,-0.078,0.717-0.35], [-5.750,0.082,0.557-0.35], [256,256], [0,1], [1,0], 0);
 
-        m.Pages[0] = hud_manual.new(group.createChild('group'), instance);
-        m.Pages[1] = hud_base.new(group.createChild('group'), instance);
-        m.Pages[2] = hud_nav.new(group.createChild('group'), instance);
-        m.Clip = hud_clip.new(group.createChild('group'), instance);
+        m.Pages[0] = hud_manual.new(group.createChild('group'));
+        m.Pages[1] = hud_base.new(group.createChild('group'));
+        m.Pages[2] = hud_nav.new(group.createChild('group'));
+        m.Clip = hud_clip.new(group.createChild('group'));
         m.Power = props.globals.getNode("fdm/jsbsim/electric/output/hud", 1);
         m.Knob = props.globals.getNode("instrumentation/hud/knob", 1);
         m.HudMode = props.globals.getNode("instrumentation/hud/hud_mode", 1);
@@ -82,6 +81,6 @@ var hudListener = setlistener("sim/signals/fdm-initialized", func () {
     hudCanvas.addPlacement({"node": "HUD.Screen"});
     hudCanvas.set("additive-blend", 1);
     hudCanvas.setColorBackground(0, 0, 0, 0);
-    HUDInstance = HUD.new(hudCanvas.createGroup(), 0);
+    HUDInstance = HUD.new(hudCanvas.createGroup());
     removelistener(hudListener);
 });

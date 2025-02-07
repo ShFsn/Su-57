@@ -1,10 +1,10 @@
 var hud_clip = {
-	new: func(canvasGroup, instance)
+	new: func(canvasGroup)
 	{
 		var m = { parents: [hud_clip] };
 		m.tmp = 0;
 		m.group = canvasGroup;
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/HUD/hud_clip.svg");
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/hud/hud_clip.svg");
 
 		var svg_keys = ["top", "left", "right"];
 		foreach(var key; svg_keys) {
