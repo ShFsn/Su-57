@@ -75,12 +75,12 @@
 	</animation>
 	<animation>
 		<type>pick</type>
-		<object-name>BT.AG</object-name>
+		<object-name>BT.BVR_AG</object-name>
 		<hovered>
 			<binding>
 				<command>set-tooltip</command>
-				<tooltip-id>hud-ag-bug</tooltip-id>
-				<label>A/G Mode</label>
+				<tooltip-id>hud-bvr_ag-bug</tooltip-id>
+				<label>BVR A/G Mode</label>
 			</binding>
 		</hovered>
 		<visible>true</visible>
@@ -95,12 +95,12 @@
 	</animation>
 	<animation>
 		<type>pick</type>
-		<object-name>BT.AA</object-name>
+		<object-name>BT.WVR_AG</object-name>
 		<hovered>
 			<binding>
 				<command>set-tooltip</command>
-				<tooltip-id>hud-aa-bug</tooltip-id>
-				<label>A/A Mode</label>
+				<tooltip-id>hud-wvr_ag-bug</tooltip-id>
+				<label>WVR A/G Mode</label>
 			</binding>
 		</hovered>
 		<visible>true</visible>
@@ -110,6 +110,66 @@
 			<binding>
 				<command>nasal</command>
 				<script>hud.hudBtClick(1, 2)</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>BT.WVR_AA</object-name>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>hud-wvr_aa-bug</tooltip-id>
+				<label>WVR A/A Mode</label>
+			</binding>
+		</hovered>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>hud.hudBtClick(1, 3)</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>BT.BVR_AA</object-name>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>hud-bvr_aa-bug</tooltip-id>
+				<label>BVR A/A Mode</label>
+			</binding>
+		</hovered>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>hud.hudBtClick(1, 4)</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>BT.COM</object-name>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>hud-com-bug</tooltip-id>
+				<label>Radio Settings</label>
+			</binding>
+		</hovered>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>hud.hudBtClick(2, 0)</script>
 			</binding>
 		</action>
 	</animation>

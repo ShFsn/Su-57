@@ -1,16 +1,23 @@
 var PanelInstance = {};
 
+var PageEnum = {
+    AG:     0,
+    COM:    1,
+    NAV:    2,
+};
+
 var Panel = {
     new: func(group) {
         var m = {parents:[Panel], Pages:{}};
         m.ActivePage = 0;
         m.OldPage = 0;
 
-        m.Pages[0] = panel_nav.new(group.createChild('group'));
-        m.Pages[1] = panel_radio.new(group.createChild('group'));
+        m.Pages[PageEnum.AG] = panel_ag.new(group.createChild('group'));
+        m.Pages[PageEnum.COM] = panel_radio.new(group.createChild('group'));
+        m.Pages[PageEnum.NAV] = panel_nav.new(group.createChild('group'));
         m.Power = props.globals.getNode("fdm/jsbsim/electric/output/mfd", 1);
 
-        m.ActivatePage(0);
+        m.ActivatePage(PageEnum.NAV);
         m.Timer = maketimer(0.05, m, m.Update);
         m.Timer.start();
         m.group = group;
@@ -39,20 +46,24 @@ var Panel = {
     },
     BtClick: func(location = 0, input = -1)
     {
-        if(location == 0) {
-            if(me.ActivePage == 0) {
-                me.ActivatePage(me.OldPage);
+        if(location == 1) {
+            if(input == 0) {
+                me.ActivatePage(PageEnum.NAV);
             }
-            else {
-                me.ActivatePage(0);
+            if(input == 1) {
+                me.ActivatePage(PageEnum.AG);
             }
         }
-        else {
+        if(location == 2) {
+            if(input == 0) {
+                me.ActivatePage(PageEnum.COM);
+            }
         }
     }
 };
 
-var panelBtClick = func(location = 0, input = -1) {
+var hudBtClick = func(location = 0, input = -1) {
+    HUDInstance.BtClick(location, input);
     PanelInstance.BtClick(location, input);
 }
 

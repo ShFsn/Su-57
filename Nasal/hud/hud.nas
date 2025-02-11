@@ -61,14 +61,8 @@ var HUD = {
                 me.ActivatePage(0);
             }
         }
-        else {
-        }
     }
 };
-
-var hudBtClick = func(location = 0, input = -1) {
-    HUDInstance.BtClick(location, input);
-}
 
 var hudListener = setlistener("sim/signals/fdm-initialized", func () {
 

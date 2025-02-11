@@ -34,6 +34,7 @@
 		<file>Aircraft/Su-57/Nasal/hud/hud_nav.nas</file>
 		<file>Aircraft/Su-57/Nasal/hud/hud.nas</file>
 		<file>Aircraft/Su-57/Nasal/hud_panel/panel_base.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud_panel/panel_ag.nas</file>
 		<file>Aircraft/Su-57/Nasal/hud_panel/panel_nav.nas</file>
 		<file>Aircraft/Su-57/Nasal/hud_panel/panel_radio.nas</file>
 		<file>Aircraft/Su-57/Nasal/hud_panel/panel.nas</file>
