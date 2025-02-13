@@ -2,7 +2,7 @@
 <PropertyList>
 	<path>panelArk.ac</path>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/ARK/navType.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/ARK/insType.xml</path>
 		<offsets>
 			<x-m> 0.040</x-m>
 			<y-m> 0.043</y-m>

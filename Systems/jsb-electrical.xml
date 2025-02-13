@@ -13,7 +13,7 @@
 	<property value="0">electric/switches/instrument-lights</property>
 	<property value="0">electric/switches/label-lights</property>
 	<property value="1">electric/switches/landingLights</property>
-	<property value="0">electric/switches/nav</property>
+	<property value="1">electric/switches/ins</property>
 	<property value="0">electric/switches/fms</property>
 	<property value="0">electric/switches/hud</property>
 	<property value="1">electric/switches/select-engine</property>
@@ -228,18 +228,6 @@
 			<default value="0"/>
 			<test logic="AND" value="electric/sources/ac-bus">
 				electric/switches/landingLights == 0
-			</test>
-		</switch>
-		<switch name="electric/output/rsbn">
-			<default value="0"/>
-			<test logic="AND" value="electric/sources/dc-bus">
-				electric/switches/nav == 2
-			</test>
-		</switch>
-		<switch name="electric/output/ark">
-			<default value="0"/>
-			<test logic="AND" value="electric/sources/dc-bus">
-				electric/switches/nav == 1
 			</test>
 		</switch>
 		<switch name="electric/output/fms">

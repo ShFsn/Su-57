@@ -17,9 +17,9 @@ var panel_radio = {
 		m.L3D.setText("00.0000").setColor(0,1,0);
 
 		m.L4A.setText("100.000").setColor(0,1,0);
-		m.L4B.setText("AM ").setColor(0,1,0);
-		m.L4C.setText(" OM").setColor(0,1,0);
-		m.L3D.setText("00.0000").setColor(0,1,0);
+		m.L4B.setText("AM").setColor(0,1,0);
+		m.L4C.setText("OM").setColor(0,1,0);
+		m.L4D.setText("00.0000").setColor(0,1,0);
 
 		m.L5A.setText("СА");
 		m.L5B.setText("");
@@ -27,8 +27,8 @@ var panel_radio = {
 		m.L5D.setText("СА");
 
 		m.L6A.setText("БКЛ");
-		m.L6B.setText("ОТКЛ ").setColor(0,1,0);
-		m.L6C.setText(" БКЛ");
+		m.L6B.setText("ОТКЛ").setColor(0,1,0);
+		m.L6C.setText("БКЛ");
 		m.L6D.setText("ОТКЛ").setColor(0,1,0);
 
 		return m;
