@@ -1,9 +1,9 @@
 var PanelInstance = {};
 
 var PageEnum = {
-    AG:     0,
-    COM:    1,
-    NAV:    2,
+    COM:    0,
+    NAV:    1,
+    WPN:    2,
 };
 
 var Panel = {
@@ -12,9 +12,9 @@ var Panel = {
         m.ActivePage = 0;
         m.OldPage = 0;
 
-        m.Pages[PageEnum.AG] = panel_ag.new(group.createChild('group'));
         m.Pages[PageEnum.COM] = panel_radio.new(group.createChild('group'));
         m.Pages[PageEnum.NAV] = panel_nav.new(group.createChild('group'));
+        m.Pages[PageEnum.WPN] = panel_wpn.new(group.createChild('group'));
         m.Power = props.globals.getNode("fdm/jsbsim/electric/output/mfd", 1);
 
         m.ActivatePage(PageEnum.NAV);
@@ -44,19 +44,23 @@ var Panel = {
         me.Pages[me.ActivePage].update();
         me.group.show();
     },
-    BtClick: func(location = 0, input = -1)
+    BtClick: func(location, input)
     {
         if(location == 1) {
             if(input == 0) {
                 me.ActivatePage(PageEnum.NAV);
             }
-            if(input == 1) {
-                me.ActivatePage(PageEnum.AG);
+            else {
+                me.Pages[PageEnum.WPN].setMode(input);
+                me.ActivatePage(PageEnum.WPN);
             }
         }
         if(location == 2) {
             if(input == 0) {
                 me.ActivatePage(PageEnum.COM);
+            }
+            else {
+                me.Pages[me.ActivePage].btClick(location, input);
             }
         }
     }
@@ -69,15 +73,15 @@ var hudBtClick = func(location = 0, input = -1) {
 
 var panelListener = setlistener("/sim/signals/fdm-initialized", func () {
 
-	var panelCanvas = canvas.new({
-		"name": "HUD.Display",
-		"size": [512, 512],
-		"view": [800, 480],
-		"mipmapping": 1
-	});
+    var panelCanvas = canvas.new({
+        "name": "HUD.Display",
+        "size": [512, 512],
+        "view": [800, 480],
+        "mipmapping": 1
+    });
 
-	panelCanvas.addPlacement({"node": "HUD.Display"});
-	PanelInstance = Panel.new(panelCanvas.createGroup());
+    panelCanvas.addPlacement({"node": "HUD.Display"});
+    PanelInstance = Panel.new(panelCanvas.createGroup());
 
-	removelistener(panelListener);
+    removelistener(panelListener);
 });

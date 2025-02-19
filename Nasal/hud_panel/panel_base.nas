@@ -25,9 +25,21 @@ var panel_base = {
 	show: func()
 	{
 		me.group.show();
+		setprop("instrumentation/hud/l1", "unused");
+		setprop("instrumentation/hud/l2", "unused");
+		setprop("instrumentation/hud/l3", "unused");
+		setprop("instrumentation/hud/r1", "unused");
+		setprop("instrumentation/hud/r2", "unused");
+		setprop("instrumentation/hud/r3", "unused");
 	},
 	hide: func()
 	{
 		me.group.hide();
+	},
+	update: func()
+	{
+	},
+	btClick: func(location, input)
+	{
 	}
 };
