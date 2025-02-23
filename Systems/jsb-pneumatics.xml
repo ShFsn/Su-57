@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="pneumatics">
+	<property value="0">pneumatics/switches/master</property>
+	<property value="0">pneumatics/switches/apu</property>
+	<property value="0">pneumatics/switches/engines</property>
+
+	<channel name="sources">
+		<fcs_function name="pneumatics/sources/apu">
+			<function>
+				<product>
+					<property>electric/switches/apu</property>
+					<property>pneumatics/switches/apu</property>
+				</product>
+			</function>
+			<output>pneumatics/sources/apu</output>
+		</fcs_function>
+		<fcs_function name="pneumatics/sources/engines">
+			<function>
+				<product>
+					<property>pneumatics/switches/engines</property>
+					<max>
+						<table>
+							<independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
+							<tableData>
+							  0.0  0.0
+							 30.0  0.9
+							100.0  1.0
+							</tableData>
+						</table>
+						<table>
+							<independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
+							<tableData>
+							  0.0  0.0
+							 30.0  0.9
+							100.0  1.0
+							</tableData>
+						</table>
+					</max>
+				</product>
+			</function>
+			<output>pneumatics/sources/engines</output>
+		</fcs_function>
+		<fcs_function name="pneumatics/sources/bus">
+			<function>
+				<product>
+					<property>pneumatics/switches/master</property>
+					<max>
+						<property>pneumatics/sources/apu</property>
+						<property>pneumatics/sources/engines</property>
+					</max>
+				</product>
+			</function>
+			<output>pneumatics/sources/bus</output>
+		</fcs_function>
+	</channel>
+</system>

@@ -2,10 +2,14 @@ var panel_radio = {
 	new: func(canvasGroup)
 	{
 		var m = { parents: [panel_radio, panel_base.new(canvasGroup)] };
+		m.FilePath = getprop("/sim/fg-home")~"/aircraft-data/Su-57-Radio.xml";
+		m.Node = "instrumentation";
 		m.Radio1 = 0;
 		m.Radio2 = 0;
 		m.SA1 = 0;
 		m.SA2 = 0;
+		m.Channel1 = 0;
+		m.Channel2 = 0;
 
 		m.L1A.setText("РАДИО1");
 		m.L1B.setText("РС1");
@@ -35,6 +39,22 @@ var panel_radio = {
 		m.L6C.setText("БКЛ");
 		m.L6D.setText("ОТКЛ");
 
+		var tree = {
+			"radio": {
+				"comm": {
+					"channel": [0, 0, 0, 0, 0,
+								0, 0, 0, 0, 0,
+								0, 0, 0, 0, 0,
+								0, 0, 0, 0, 0]
+				}
+			}
+		};
+		props.globals.getNode(m.Node).setValues(tree);
+
+		# read data from xml file
+		io.read_properties(m.FilePath, m.Node~"instrumentation/radio");
+		#io.write_properties(m.FilePath, props.globals.getNode(m.Node~"/radio"));
+
 		return m;
 	},
 	show: func()
@@ -52,7 +72,7 @@ var panel_radio = {
 		}
 		else {
 			me.L2A.setText("УКВ1");
-			me.L3A.setText("К01");
+			me.L3A.setText(sprintf("К%02d", me.Channel1+1));
 			me.L4A.setText("100.000");
 			me.L4B.setText("AM");
 			setprop("instrumentation/hud/l1", "VHF1");

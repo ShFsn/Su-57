@@ -242,6 +242,7 @@
 				electric/switches/hud == 1
 			</test>
 		</switch>
+		<!-- checklist -->
 		<fcs_function name="electric/output/switches">
 			<function>
 				<max>
@@ -261,12 +262,12 @@
 		</fcs_function>
 		<fcs_function name="electric/output/eject">
 			<function>
-				<max>
+				<sum>
 					<property>electric/switches/eject1</property>
 					<property>electric/switches/eject2</property>
-				</max>
+				</sum>
 			</function>
-			<output>electric/output/switches</output>
+			<output>electric/output/eject</output>
 		</fcs_function>
 	</channel>
 </system>
