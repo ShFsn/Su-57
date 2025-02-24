@@ -113,9 +113,6 @@ var panel_radio = {
 			setprop("instrumentation/hud/r3", "SA OFF");
 		}
 	},
-	update: func()
-	{
-	},
 	btClick: func(location, input)
 	{
 		if(location == 2) {

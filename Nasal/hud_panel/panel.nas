@@ -1,5 +1,6 @@
 var PanelInstance = {};
 
+var Power = props.globals.getNode("fdm/jsbsim/electric/output/hud", 1);
 var PageEnum = {
     COM:    0,
     NAV:    1,
@@ -63,12 +64,17 @@ var Panel = {
                 me.Pages[me.ActivePage].btClick(location, input);
             }
         }
+        else {
+            me.Pages[me.ActivePage].btClick(location, input);
+        }
     }
 };
 
 var hudBtClick = func(location = 0, input = -1) {
-    HUDInstance.BtClick(location, input);
-    PanelInstance.BtClick(location, input);
+    if(Power.getValue() > 20) {
+        HUDInstance.BtClick(location, input);
+        PanelInstance.BtClick(location, input);
+    }
 }
 
 var font_mapper = func(family, weight) {

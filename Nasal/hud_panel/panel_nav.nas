@@ -10,13 +10,15 @@ var panel_nav = {
 		foreach(var name; keys(m.input)) {
 			m.input[name] = props.globals.getNode(m.input[name], 1);
 		}
+		m.Mode = 0;
+		m.Airfield = 0;
 
 		m.L1A.setText("01").setColor(0,1,0);
 		m.L1B.setText("НВГ");
 		m.L1C.setText("Р ЗЕМ");
 
-		m.L2A.setText("14 XXX").setColor(0,1,0);
-		m.L2B.setText("МРШ01");
+		m.L2A.setColor(0,1,0);
+		m.L2B.setText("");
 		m.L2C.setColor(0,1,0);
 
 		m.L3A.setText("029° /").setColor(0,1,0);
@@ -42,9 +44,55 @@ var panel_nav = {
 		m.path1.hide();
 		return m;
 	},
+	show: func()
+	{
+		me.group.show();
+		setprop("instrumentation/hud/l1", "unused");
+		setprop("instrumentation/hud/l2", "unused");
+		setprop("instrumentation/hud/l3", "unused");
+		setprop("instrumentation/hud/r1", "unused");
+		setprop("instrumentation/hud/r2", "unused");
+		setprop("instrumentation/hud/r3", "unused");
+		
+		if(me.Mode == 0) {
+			me.L2A.setText("14 XXX");
+			me.L2B.setText("МРШ01");
+		}
+
+		if(me.Mode == 1) {
+			me.L2A.setText("");
+			me.L2B.setText("ПЗК");
+		}
+
+		if(me.Mode == 2) {
+			me.L2A.setText(sprintf("%02d OAIX", me.Airfield+1));
+			me.L2B.setText("ВЗВ");
+		}
+	},
 	update: func()
 	{
 		me.L2C.setText(sprintf("%.1f", me.input.mmhg.getValue()*0.75));
 		me.L4B.setText(sprintf("%dКГ", me.input.fuel.getValue()*3.1));
+	},
+	btClick: func(location, input)
+	{
+		if(location == 4) {
+			if(input == 2) {
+				me.Mode = 0;
+			}
+			if(input == 4) {
+				me.Mode = 1;
+			}
+			if(input == 5) {
+				if(me.Mode == 2) {
+					me.Airfield += 1;
+				}
+				else {
+					me.Mode = 2;
+					me.Airfield = 0;
+				}
+			}
+		}
+		me.show();
 	}
 };
