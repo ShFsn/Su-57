@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+	</model>
+	<animation>
+		<type>rotate</type>
+		<object-name>switch</object-name>
+		<property>fdm/jsbsim/electric/switches/emergency-gear</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep>-25</dep></entry>
+			<entry><ind>1.0</ind><dep>25</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+</PropertyList>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>panelEmergency.ac</path>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Emergency/cover.gltf</path>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Emergency/radioSilence.xml</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m> 0.028</y-m>
+			<z-m>-0.089</z-m>
+			<pitch-deg>90</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Emergency/emergencyGear.xml</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m> 0.040</y-m>
+			<z-m>-0.035</z-m>
+			<pitch-deg>90</pitch-deg>
+		</offsets>
+	</model>
+</PropertyList>

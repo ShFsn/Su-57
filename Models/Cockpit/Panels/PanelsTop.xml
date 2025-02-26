@@ -17,4 +17,12 @@
 			<z-m> 0.177</z-m>
 		</offsets>
 	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Emergency/panelEmergency.xml</path>
+		<offsets>
+			<x-m> 0.000</x-m>
+			<y-m> 0.355</y-m>
+			<z-m> 0.215</z-m>
+		</offsets>
+	</model>
 </PropertyList>
