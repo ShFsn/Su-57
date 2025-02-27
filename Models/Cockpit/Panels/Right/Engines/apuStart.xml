@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>Aircraft/Su-57/Models/Cockpit/Parts/button1.ac</path>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/protector1.ac</path>
+	</model>
 	<animation>
 		<type>pick</type>
 		<object-name>button</object-name>

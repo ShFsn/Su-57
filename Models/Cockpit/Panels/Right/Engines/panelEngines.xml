@@ -91,4 +91,40 @@
 			<z-m> 0.002</z-m>
 		</offsets>
 	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw1.ac</path>
+		<offsets>
+			<x-m> 0.007</x-m>
+			<y-m> 0.006</y-m>
+			<z-m> 0.000</z-m>
+			<heading-deg>-32</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw1.ac</path>
+		<offsets>
+			<x-m> 0.007</x-m>
+			<y-m> 0.220</y-m>
+			<z-m> 0.000</z-m>
+			<heading-deg>-42</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw1.ac</path>
+		<offsets>
+			<x-m> 0.081</x-m>
+			<y-m> 0.006</y-m>
+			<z-m> 0.000</z-m>
+			<heading-deg>-62</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw1.ac</path>
+		<offsets>
+			<x-m> 0.081</x-m>
+			<y-m> 0.220</y-m>
+			<z-m> 0.000</z-m>
+			<heading-deg>-89</heading-deg>
+		</offsets>
+	</model>
 </PropertyList>

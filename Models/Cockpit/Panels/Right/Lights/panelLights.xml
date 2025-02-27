@@ -56,6 +56,23 @@
 		</offsets>
 	</model>
 	<model>
+		<name>btn</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/button2.ac</path>
+		<offsets>
+			<x-m> 0.082</x-m>
+			<y-m> 0.080</y-m>
+			<z-m> 0.004</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<offsets>
+			<x-m> 0.082</x-m>
+			<y-m> 0.080</y-m>
+			<z-m> 0.004</z-m>
+		</offsets>
+	</model>
+	<model>
 		<name>mfd</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Lights/mfd.xml</path>
 		<offsets>
@@ -79,6 +96,42 @@
 			<x-m> 0.035</x-m>
 			<y-m> 0.189</y-m>
 			<z-m> 0.004</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw1.ac</path>
+		<offsets>
+			<x-m> 0.007</x-m>
+			<y-m> 0.006</y-m>
+			<z-m> 0.000</z-m>
+			<heading-deg>65</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw1.ac</path>
+		<offsets>
+			<x-m> 0.007</x-m>
+			<y-m> 0.220</y-m>
+			<z-m> 0.000</z-m>
+			<heading-deg>-26</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw1.ac</path>
+		<offsets>
+			<x-m> 0.098</x-m>
+			<y-m> 0.006</y-m>
+			<z-m> 0.000</z-m>
+			<heading-deg>50</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw1.ac</path>
+		<offsets>
+			<x-m> 0.098</x-m>
+			<y-m> 0.220</y-m>
+			<z-m> 0.000</z-m>
+			<heading-deg>63</heading-deg>
 		</offsets>
 	</model>
 </PropertyList>
