@@ -858,4 +858,36 @@
 			</binding>
 		</action>
 	</animation>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw2.gltf</path>
+		<offsets>
+			<x-m> 0.010</x-m>
+			<y-m> 0.315</y-m>
+			<z-m> 0.080</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw2.gltf</path>
+		<offsets>
+			<x-m> 0.010</x-m>
+			<y-m> 0.315</y-m>
+			<z-m>-0.080</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw2.gltf</path>
+		<offsets>
+			<x-m> 0.010</x-m>
+			<y-m>-0.315</y-m>
+			<z-m> 0.080</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw2.gltf</path>
+		<offsets>
+			<x-m> 0.010</x-m>
+			<y-m>-0.315</y-m>
+			<z-m>-0.080</z-m>
+		</offsets>
+	</model>
 </PropertyList>
