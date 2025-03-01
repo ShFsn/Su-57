@@ -18,6 +18,14 @@
 		</offsets>
 	</model>
 	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/GearLever/panelGearLever.xml</path>
+		<offsets>
+			<x-m> 0.001</x-m>
+			<y-m>-0.405</y-m>
+			<z-m> 0.135</z-m>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Emergency/panelEmergency.xml</path>
 		<offsets>
 			<x-m>-0.005</x-m>
