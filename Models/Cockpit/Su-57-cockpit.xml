@@ -42,6 +42,16 @@
 		</offsets>
 	</model>
 	<model>
+		<name>panel refueling</name>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Refueling/panelRefueling.ac</path>
+		<offsets>
+			<x-m>-6.273</x-m>
+			<y-m> 0.000</y-m>
+			<z-m> 0.587</z-m>
+			<pitch-deg>-60.0</pitch-deg>
+		</offsets>
+	</model>
+	<model>
 		<name>panel electrics</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/panelElectrics.xml</path>
 		<offsets>

@@ -13,16 +13,16 @@
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/LandingLights/panelLandingLights.xml</path>
 		<offsets>
 			<x-m>-0.005</x-m>
-			<y-m>-0.440</y-m>
-			<z-m> 0.177</z-m>
+			<y-m>-0.435</y-m>
+			<z-m> 0.190</z-m>
 		</offsets>
 	</model>
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/GearLever/panelGearLever.xml</path>
 		<offsets>
 			<x-m> 0.001</x-m>
-			<y-m>-0.405</y-m>
-			<z-m> 0.135</z-m>
+			<y-m>-0.400</y-m>
+			<z-m> 0.145</z-m>
 		</offsets>
 	</model>
 	<model>
