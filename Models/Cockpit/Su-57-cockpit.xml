@@ -6,7 +6,7 @@
 		<offsets>
 			<x-m>-6.150</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.995</z-m>
+			<z-m> 0.990</z-m>
 			<pitch-deg>-16</pitch-deg>
 		</offsets>
 	</model>
@@ -14,9 +14,9 @@
 		<name>mfd</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Instruments/MFD/mfd.xml</path>
 		<offsets>
-			<x-m>-6.360</x-m>
+			<x-m>-6.338</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.715</z-m>
+			<z-m> 0.713</z-m>
 			<pitch-deg>-22</pitch-deg>
 		</offsets>
 	</model>
@@ -24,7 +24,7 @@
 		<name>panels top</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsTop.xml</path>
 		<offsets>
-			<x-m>-6.235</x-m>
+			<x-m>-6.215</x-m>
 			<y-m> 0.000</y-m>
 			<z-m> 0.560</z-m>
 			<pitch-deg>-22</pitch-deg>
@@ -34,21 +34,21 @@
 		<name>panels right</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsRight.xml</path>
 		<offsets>
-			<x-m>-6.053</x-m>
-			<y-m> 0.296</y-m>
-			<z-m> 0.538</z-m>
-			<roll-deg>10.0</roll-deg>
+			<x-m>-6.045</x-m>
+			<y-m> 0.297</y-m>
+			<z-m> 0.540</z-m>
+			<roll-deg>7.0</roll-deg>
 			<pitch-deg>2.7</pitch-deg>
 		</offsets>
 	</model>
 	<model>
 		<name>panel refueling</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Refueling/panelRefueling.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Refueling/panelRefueling.xml</path>
 		<offsets>
-			<x-m>-6.273</x-m>
+			<x-m>-6.253</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.587</z-m>
-			<pitch-deg>-60.0</pitch-deg>
+			<z-m> 0.586</z-m>
+			<pitch-deg>-50.0</pitch-deg>
 		</offsets>
 	</model>
 	<model>
@@ -56,8 +56,8 @@
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/panelElectrics.xml</path>
 		<offsets>
 			<x-m>-5.650</x-m>
-			<y-m> 0.572</y-m>
-			<z-m> 0.646</z-m>
+			<y-m> 0.590</y-m>
+			<z-m> 0.630</z-m>
 			<roll-deg>63.8</roll-deg>
 			<pitch-deg>6.0</pitch-deg>
 			<heading-deg>-5.3</heading-deg>

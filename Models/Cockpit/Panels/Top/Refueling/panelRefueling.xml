@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>panelRefueling.ac</path>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m>-0.054</y-m>
+			<z-m>-0.005</z-m>
+			<pitch-deg>90</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m>-0.054</y-m>
+			<z-m>-0.005</z-m>
+			<pitch-deg>90</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m>-0.031</y-m>
+			<z-m>-0.005</z-m>
+			<pitch-deg>90</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m>-0.031</y-m>
+			<z-m>-0.005</z-m>
+			<pitch-deg>90</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m>-0.009</y-m>
+			<z-m>-0.005</z-m>
+			<pitch-deg>90</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m>-0.009</y-m>
+			<z-m>-0.005</z-m>
+			<pitch-deg>90</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m> 0.053</y-m>
+			<z-m>-0.005</z-m>
+			<pitch-deg>90</pitch-deg>
+		</offsets>
+	</model>
+</PropertyList>

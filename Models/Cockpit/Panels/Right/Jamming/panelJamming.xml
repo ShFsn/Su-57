@@ -4,7 +4,7 @@
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Jamming/master.xml</path>
 		<offsets>
-			<x-m> 0.092</x-m>
+			<x-m> 0.082</x-m>
 			<y-m> 0.046</y-m>
 			<z-m> 0.002</z-m>
 		</offsets>
@@ -13,7 +13,7 @@
 		<name>btn1</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/button2.ac</path>
 		<offsets>
-			<x-m> 0.059</x-m>
+			<x-m> 0.049</x-m>
 			<y-m> 0.094</y-m>
 			<z-m> 0.004</z-m>
 		</offsets>
@@ -21,7 +21,7 @@
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
 		<offsets>
-			<x-m> 0.059</x-m>
+			<x-m> 0.049</x-m>
 			<y-m> 0.094</y-m>
 			<z-m> 0.004</z-m>
 		</offsets>
@@ -29,7 +29,7 @@
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Jamming/type1.xml</path>
 		<offsets>
-			<x-m> 0.092</x-m>
+			<x-m> 0.082</x-m>
 			<y-m> 0.105</y-m>
 			<z-m> 0.002</z-m>
 		</offsets>
@@ -37,7 +37,7 @@
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Jamming/type2.xml</path>
 		<offsets>
-			<x-m> 0.092</x-m>
+			<x-m> 0.082</x-m>
 			<y-m> 0.156</y-m>
 			<z-m> 0.002</z-m>
 		</offsets>
@@ -46,7 +46,7 @@
 		<name>btn2</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/button2.ac</path>
 		<offsets>
-			<x-m> 0.100</x-m>
+			<x-m> 0.090</x-m>
 			<y-m> 0.191</y-m>
 			<z-m> 0.004</z-m>
 		</offsets>
@@ -54,7 +54,7 @@
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
 		<offsets>
-			<x-m> 0.100</x-m>
+			<x-m> 0.090</x-m>
 			<y-m> 0.191</y-m>
 			<z-m> 0.004</z-m>
 		</offsets>
@@ -71,7 +71,7 @@
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw1.ac</path>
 		<offsets>
-			<x-m> 0.106</x-m>
+			<x-m> 0.096</x-m>
 			<y-m> 0.220</y-m>
 			<z-m> 0.000</z-m>
 			<heading-deg>7</heading-deg>
@@ -80,7 +80,7 @@
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/screw1.ac</path>
 		<offsets>
-			<x-m> 0.106</x-m>
+			<x-m> 0.096</x-m>
 			<y-m> 0.006</y-m>
 			<z-m> 0.000</z-m>
 			<heading-deg>-2</heading-deg>
