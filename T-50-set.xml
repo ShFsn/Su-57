@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList include="Su-57-Common.xml">
+	<sim>
+		<description>Sukhoi T-50</description>
+		<variant-of>Su-57</variant-of>
+		<long-description>The Sukhoi T-50 is the prototype version of the Su-57.</long-description>
+		<variant-id type="int">2</variant-id>
+		<menubar include="gui/T-50-menubar.xml"/>
+		<model>
+			<path>Aircraft/Su-57/Models/T-50.xml</path>
+		</model>
+	</sim>
+</PropertyList>

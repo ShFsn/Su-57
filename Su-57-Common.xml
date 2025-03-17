@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList include="Systems/initialization.xml">
+	<sim include="Systems/views.xml">
+		<expected-aircraft-dir-name>Su-57</expected-aircraft-dir-name>
+		<flight-model>jsb</flight-model>
+		<sound><path>Aircraft/Su-57/Sounds/Sounds.xml</path></sound>
+		<aero>Su-57</aero>
+		<checklists include="gui/checklists.xml"/>
+		<submodels>
+			<serviceable type="bool">true</serviceable>
+			<path>Aircraft/Su-57/Systems/submodels.xml</path>
+		</submodels>
+		<instrumentation>
+			<path>Systems/instrumentation.xml</path>
+		</instrumentation>
+		<multiplay>
+			<generic>
+				<bool  n="0" type="bool" alias="/damage/sounds/explode-on"/>
+				<bool  n="1" type="bool" alias="/damage/fire/serviceable"/>
+				<bool  n="2" type="bool">true</bool><!-- this must stay true to prevent bug in MP protocol for bools -->
+				<float n="0" type="double" alias="/engines/engine[0]/nozzle-pos-norm"/>
+				<float n="1" type="double" alias="/engines/engine[1]/nozzle-pos-norm"/>
+				<float n="2" type="double" alias="/engines/engine[0]/augmentation"/>
+				<float n="3" type="double" alias="/engines/engine[1]/augmentation"/>
+				<float n="4" type="double" alias="/fdm/jsbsim/fcs/tvv-pos-deg"/>
+				<float n="5" type="double" alias="/fdm/jsbsim/fcs/tvh-pos-deg"/>
+			</generic>
+		</multiplay>
+	</sim>
+	<input>
+		<keyboard include="Systems/keyboard.xml" />
+	</input>
+	<nasal include="Systems/nasal.xml"/>
+	<payload include="Systems/payload.xml"/>
+</PropertyList>

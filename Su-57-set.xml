@@ -1,41 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PropertyList include="Systems/initialization.xml">
-	<sim include="Systems/views.xml">
+<PropertyList include="Su-57-Common.xml">
+	<sim>
 		<description>Sukhoi Su-57</description>
-		<long-description>production aircraft</long-description>
-		<expected-aircraft-dir-name>Su-57</expected-aircraft-dir-name>
-		<flight-model>jsb</flight-model>
-		<sound><path>Aircraft/Su-57/Sounds/Sounds.xml</path></sound>
-		<aero>Su-57</aero>
-		<menubar include="gui/menubar.xml"/>
-		<checklists include="gui/checklists.xml"/>
+		<long-description>The Sukhoi Su-57 is the production variant of this 5th generation stealth fighter.</long-description>
+		<variant-id type="int">1</variant-id>
+		<menubar include="gui/Su-57-menubar.xml"/>
 		<model>
 			<path>Aircraft/Su-57/Models/Su-57.xml</path>
 		</model>
-		<submodels>
-			<serviceable type="bool">true</serviceable>
-			<path>Aircraft/Su-57/Systems/submodels.xml</path>
-		</submodels>
-		<instrumentation>
-			<path>Systems/instrumentation.xml</path>
-		</instrumentation>
-		<multiplay>
-			<generic>
-				<bool  n="0" type="bool" alias="/damage/sounds/explode-on"/>
-				<bool  n="1" type="bool" alias="/damage/fire/serviceable"/>
-				<bool  n="2" type="bool">true</bool><!-- this must stay true to prevent bug in MP protocol for bools -->
-				<float n="0" type="double" alias="/engines/engine[0]/nozzle-pos-norm"/>
-				<float n="1" type="double" alias="/engines/engine[1]/nozzle-pos-norm"/>
-				<float n="2" type="double" alias="/engines/engine[0]/augmentation"/>
-				<float n="3" type="double" alias="/engines/engine[1]/augmentation"/>
-				<float n="4" type="double" alias="/fdm/jsbsim/fcs/tvv-pos-deg"/>
-				<float n="5" type="double" alias="/fdm/jsbsim/fcs/tvh-pos-deg"/>
-			</generic>
-		</multiplay>
 	</sim>
-	<input>
-		<keyboard include="Systems/keyboard.xml" />
-	</input>
-	<nasal include="Systems/nasal.xml"/>
-	<payload include="Systems/payload.xml"/>
 </PropertyList>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList include="Su-57-Common.xml">
+	<sim>
+		<description>Sukhoi Su-57E</description>
+		<variant-of>Su-57</variant-of>
+		<long-description>The Sukhoi Su-57E is the export version of the Su-57.</long-description>
+		<variant-id type="int">2</variant-id>
+		<menubar include="gui/Su-57E-menubar.xml"/>
+		<model>
+			<path>Aircraft/Su-57/Models/Su-57E.xml</path>
+		</model>
+	</sim>
+</PropertyList>

@@ -88,41 +88,47 @@ var load_texture = func {
         "view": [1024, 1024],
         "mipmapping": 1
     });
-    panelTexture.addPlacement({"node": "Info"});
-    panelTexture.addPlacement({"node": "BT.NAV"});
-    panelTexture.addPlacement({"node": "BT.BVR_AG"});
-    panelTexture.addPlacement({"node": "BT.WVR_AG"});
-    panelTexture.addPlacement({"node": "BT.BVR_AA"});
-    panelTexture.addPlacement({"node": "BT.WVR_AA"});
-    panelTexture.addPlacement({"node": "BT.NVD"});
-    panelTexture.addPlacement({"node": "BT.COM"});
-    panelTexture.addPlacement({"node": "BT.IFF"});
-    panelTexture.addPlacement({"node": "BT.GS"});
-    panelTexture.addPlacement({"node": "BT.L1"});
-    panelTexture.addPlacement({"node": "BT.L2"});
-    panelTexture.addPlacement({"node": "BT.L3"});
-    panelTexture.addPlacement({"node": "BT.R1"});
-    panelTexture.addPlacement({"node": "BT.R2"});
-    panelTexture.addPlacement({"node": "BT.R3"});
-    panelTexture.addPlacement({"node": "BT.MVP"});
-    panelTexture.addPlacement({"node": "BT.NM"});
-    panelTexture.addPlacement({"node": "BT.GSV"});
-    panelTexture.addPlacement({"node": "BT.Left"});
-    panelTexture.addPlacement({"node": "BT.1Plus"});
-    panelTexture.addPlacement({"node": "BT.2"});
-    panelTexture.addPlacement({"node": "BT.3"});
-    panelTexture.addPlacement({"node": "BT.4"});
-    panelTexture.addPlacement({"node": "BT.5"});
-    panelTexture.addPlacement({"node": "BT.Right"});
-    panelTexture.addPlacement({"node": "BT.ARJA"});
-    panelTexture.addPlacement({"node": "BT.CLR"});
-    panelTexture.addPlacement({"node": "BT.6"});
-    panelTexture.addPlacement({"node": "BT.7"});
-    panelTexture.addPlacement({"node": "BT.8"});
-    panelTexture.addPlacement({"node": "BT.9"});
-    panelTexture.addPlacement({"node": "BT.0Minus"});
-    panelTexture.addPlacement({"node": "BT.ENT"});
-    panelTexture.addPlacement({"node": "BT.ACK"});
+
+    if(getprop("sim/variant-id") == 1) {
+        panelTexture.addPlacement({"node": "Info"});
+        panelTexture.addPlacement({"node": "BT.NAV"});
+        panelTexture.addPlacement({"node": "BT.BVR_AG"});
+        panelTexture.addPlacement({"node": "BT.WVR_AG"});
+        panelTexture.addPlacement({"node": "BT.BVR_AA"});
+        panelTexture.addPlacement({"node": "BT.WVR_AA"});
+        panelTexture.addPlacement({"node": "BT.NVD"});
+        panelTexture.addPlacement({"node": "BT.COM"});
+        panelTexture.addPlacement({"node": "BT.IFF"});
+        panelTexture.addPlacement({"node": "BT.GS"});
+        panelTexture.addPlacement({"node": "BT.L1"});
+        panelTexture.addPlacement({"node": "BT.L2"});
+        panelTexture.addPlacement({"node": "BT.L3"});
+        panelTexture.addPlacement({"node": "BT.R1"});
+        panelTexture.addPlacement({"node": "BT.R2"});
+        panelTexture.addPlacement({"node": "BT.R3"});
+        panelTexture.addPlacement({"node": "BT.MVP"});
+        panelTexture.addPlacement({"node": "BT.NM"});
+        panelTexture.addPlacement({"node": "BT.GSV"});
+        panelTexture.addPlacement({"node": "BT.Left"});
+        panelTexture.addPlacement({"node": "BT.1Plus"});
+        panelTexture.addPlacement({"node": "BT.2"});
+        panelTexture.addPlacement({"node": "BT.3"});
+        panelTexture.addPlacement({"node": "BT.4"});
+        panelTexture.addPlacement({"node": "BT.5"});
+        panelTexture.addPlacement({"node": "BT.Right"});
+        panelTexture.addPlacement({"node": "BT.ARJA"});
+        panelTexture.addPlacement({"node": "BT.CLR"});
+        panelTexture.addPlacement({"node": "BT.6"});
+        panelTexture.addPlacement({"node": "BT.7"});
+        panelTexture.addPlacement({"node": "BT.8"});
+        panelTexture.addPlacement({"node": "BT.9"});
+        panelTexture.addPlacement({"node": "BT.0Minus"});
+        panelTexture.addPlacement({"node": "BT.ENT"});
+        panelTexture.addPlacement({"node": "BT.ACK"});
+        panelTexture.addPlacement({"node": "knob1"});
+        panelTexture.addPlacement({"node": "knob2"});
+        panelTexture.addPlacement({"node": "knob3"});
+    }
     canvas.parsesvg(panelTexture.createGroup(), "Aircraft/Su-57/Nasal/hud_panel/texture.svg", {'font-mapper': font_mapper});
 }
 

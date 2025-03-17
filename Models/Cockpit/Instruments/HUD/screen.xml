@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>screen.ac</path>
+	<animation>
+		<type>select</type>
+		<object-name>HUD.Screen</object-name>
+		<condition>
+			<property>/sim/current-view/internal</property>
+		</condition>
+	</animation>
+	<effect>
+		<object-name>HUD.Screen</object-name>
+		<inherits-from>Aircraft/Su-57/Models/Effects/hud</inherits-from>
+	</effect>
+</PropertyList>

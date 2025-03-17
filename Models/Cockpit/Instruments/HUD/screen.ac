@@ -1,0 +1,25 @@
+AC3Db
+MATERIAL "HUD.canvas" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 1.000 1.000 1.000  spec 0.500 0.500 0.500  shi 64 trans 0.020
+OBJECT world
+name "Blender_exporter_v4.1__screen.ac"
+kids 1
+OBJECT poly
+name "HUD.Screen"
+data 9
+Plane.001
+crease 40.0
+texture "hud.png"
+numvert 4
+-2.13546 0.15527 0.61776
+-2.13546 0.15527 -0.61776
+-1.86454 1.0414 0.61776
+-1.86454 1.0414 -0.61776
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+0 0 0
+1 1 0
+3 1 1
+2 0 1
+kids 0
