@@ -1,6 +1,9 @@
 <PropertyList>
 	<path>cockpit.ac</path>
 	<model>
+		<path>Su-57-panels.ac</path>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Instruments/HUD/T-50-HUD.xml</path>
 		<offsets>
 			<x-m>-6.150</x-m>
@@ -32,7 +35,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsTop.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Su-57-PanelsTop.xml</path>
 		<offsets>
 			<x-m>-6.215</x-m>
 			<y-m> 0.000</y-m>

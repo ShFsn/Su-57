@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList include="Systems/initialization.xml">
 	<sim include="Systems/views.xml">
+		<minimum-fg-version>2024.2.0</minimum-fg-version>
 		<expected-aircraft-dir-name>Su-57</expected-aircraft-dir-name>
 		<flight-model>jsb</flight-model>
 		<sound><path>Aircraft/Su-57/Sounds/Sounds.xml</path></sound>

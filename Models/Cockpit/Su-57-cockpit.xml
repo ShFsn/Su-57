@@ -1,7 +1,9 @@
 <PropertyList>
 	<path>cockpit.ac</path>
 	<model>
-		<name>hud</name>
+		<path>Su-57-panels.ac</path>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Instruments/HUD/Su-57-HUD.xml</path>
 		<offsets>
 			<x-m>-6.150</x-m>
@@ -11,7 +13,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>mfd</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Instruments/MFD/mfd.xml</path>
 		<offsets>
 			<x-m>-6.338</x-m>
@@ -21,8 +22,7 @@
 		</offsets>
 	</model>
 	<model>
-		<name>panels top</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsTop.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Su-57-PanelsTop.xml</path>
 		<offsets>
 			<x-m>-6.215</x-m>
 			<y-m> 0.000</y-m>
@@ -31,7 +31,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>panels right</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsRight.xml</path>
 		<offsets>
 			<x-m>-6.045</x-m>
@@ -42,7 +41,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>panel refueling</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Refueling/panelRefueling.xml</path>
 		<offsets>
 			<x-m>-6.253</x-m>
@@ -52,7 +50,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>panel electrics</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Electrics/panelElectrics.xml</path>
 		<offsets>
 			<x-m>-5.650</x-m>
@@ -64,7 +61,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>joystick</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Controls/Joystick/Joystick.xml</path>
 		<offsets>
 			<x-m>-6.130</x-m>
@@ -73,7 +69,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>throttle</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Controls/Throttle/Throttle.xml</path>
 		<offsets>
 			<x-m>-5.910</x-m>
@@ -83,7 +78,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>seat</name>
 		<path>Aircraft/Su-57/Models/Stores/K-36DM/K-36DM.ac</path>
 		<offsets>
 			<x-m>-5.600</x-m>

@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<model>
-		<name>display</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Instruments/Display/display.xml</path>
-		<offsets>
-			<x-m> 0.005</x-m>
-			<y-m> 0.190</y-m>
-			<z-m> 0.370</z-m>
-		</offsets>
-	</model>
-	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/LandingLights/panelLandingLights.xml</path>
 		<offsets>
 			<x-m> 0.010</x-m>
