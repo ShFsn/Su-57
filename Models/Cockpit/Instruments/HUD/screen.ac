@@ -8,7 +8,7 @@ name "HUD.Screen"
 data 9
 Plane.001
 crease 40.0
-texture "hud.png"
+texture "hud1.png"
 numvert 4
 -2.13546 0.15527 0.61776
 -2.13546 0.15527 -0.61776
