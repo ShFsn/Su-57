@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<path>hud1.ac</path>
-	<model>
-		<path>Su-57-panel.xml</path>
-	</model>
+	<path>hud2.ac</path>
 	<model>
 		<path>screen.xml</path>
 	</model>
-	<model>
-		<path>glass.gltf</path>
-	</model>
-	<animation>
-		<type>select</type>
-		<object-name>HUD.Glass</object-name>
-		<condition>
-			<equals>
-				<value>0</value>
-				<value>1</value>
-			</equals>
-		</condition>
-	</animation>
 </PropertyList>

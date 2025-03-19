@@ -17,7 +17,7 @@
 		<offsets>
 			<x-m>-6.338</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.713</z-m>
+			<z-m> 0.730</z-m>
 			<pitch-deg>-22</pitch-deg>
 		</offsets>
 	</model>
@@ -43,9 +43,9 @@
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Refueling/panelRefueling.xml</path>
 		<offsets>
-			<x-m>-6.253</x-m>
+			<x-m>-6.259</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.586</z-m>
+			<z-m> 0.604</z-m>
 			<pitch-deg>-50.0</pitch-deg>
 		</offsets>
 	</model>
