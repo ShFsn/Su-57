@@ -4,4 +4,36 @@
 	<model>
 		<path>screen.xml</path>
 	</model>
+	<model>
+		<path>knob.ac</path>
+		<offsets>
+			<x-m> 0.052</x-m>
+			<y-m>-0.104</y-m>
+			<z-m> 0.018</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>knob.ac</path>
+		<offsets>
+			<x-m> 0.052</x-m>
+			<y-m> 0.104</y-m>
+			<z-m> 0.018</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>knob.ac</path>
+		<offsets>
+			<x-m> 0.052</x-m>
+			<y-m>-0.104</y-m>
+			<z-m>-0.014</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>knob.ac</path>
+		<offsets>
+			<x-m> 0.052</x-m>
+			<y-m> 0.104</y-m>
+			<z-m>-0.014</z-m>
+		</offsets>
+	</model>
 </PropertyList>
