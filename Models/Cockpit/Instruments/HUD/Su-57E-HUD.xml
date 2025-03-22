@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>hud2.ac</path>
+	<effect>
+		<object-name>HUD.Display</object-name>
+		<inherits-from>Aircraft/Su-57/Models/Effects/display/display</inherits-from>
+	</effect>
 	<model>
 		<path>screen.xml</path>
 	</model>

@@ -8,6 +8,7 @@
 
     <!-- Т УПР -->
     <button>
+        <pref-width>150</pref-width><pref-height>30</pref-height>
         <legend>Heading Hold</legend>
         <binding>
             <command>nasal</command>
@@ -17,6 +18,7 @@
 
     <!-- АВТ -->
     <button>
+        <pref-width>150</pref-width><pref-height>30</pref-height>
         <legend>Automatic</legend>
         <binding>
             <command>nasal</command>
@@ -26,6 +28,7 @@
 
     <!-- H БАР -->
     <button>
+        <pref-width>150</pref-width><pref-height>30</pref-height>
         <legend>Altitude Hold</legend>
         <binding>
             <command>nasal</command>
@@ -35,6 +38,7 @@
 
     <!-- АУТ -->
     <button>
+        <pref-width>150</pref-width><pref-height>30</pref-height>
         <legend>Pitch Hold</legend>
         <binding>
             <command>nasal</command>
@@ -44,10 +48,23 @@
 
     <!-- OFF -->
     <button>
+        <pref-width>150</pref-width><pref-height>30</pref-height>
         <legend>OFF</legend>
         <binding>
             <command>nasal</command>
             <script>libraries.autopilot(0)</script>
+        </binding>
+    </button>
+
+    <!-- Close -->
+    <button>
+        <pref-width>150</pref-width><pref-height>30</pref-height>
+        <legend>Close</legend>
+        <binding>
+            <command>dialog-close</command>
+        </binding>
+        <binding>
+            <command>dialog-apply</command>
         </binding>
     </button>
 </PropertyList>
