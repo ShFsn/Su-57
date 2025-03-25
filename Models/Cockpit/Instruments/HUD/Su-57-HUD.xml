@@ -5,9 +5,6 @@
 		<path>Su-57-panel.xml</path>
 	</model>
 	<model>
-		<path>screen.xml</path>
-	</model>
-	<model>
 		<path>glass.gltf</path>
 	</model>
 	<animation>

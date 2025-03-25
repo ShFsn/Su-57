@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>cockpit.ac</path>
 	<model>
@@ -10,6 +11,14 @@
 			<y-m> 0.000</y-m>
 			<z-m> 0.990</z-m>
 			<pitch-deg>-16</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Instruments/HUD/screen.xml</path>
+		<offsets>
+			<x-m>-8.000</x-m>
+			<y-m> 0.000</y-m>
+			<z-m> 1.000</z-m>
 		</offsets>
 	</model>
 	<model>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>cockpit.ac</path>
 	<model>
@@ -6,10 +7,18 @@
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Instruments/HUD/Su-57E-HUD.xml</path>
 		<offsets>
-			<x-m>-6.150</x-m>
+			<x-m>-6.280</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.990</z-m>
-			<pitch-deg>-16</pitch-deg>
+			<z-m> 0.980</z-m>
+			<pitch-deg>-20</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Instruments/HUD/screen.xml</path>
+		<offsets>
+			<x-m>-9.000</x-m>
+			<y-m> 0.000</y-m>
+			<z-m> 0.980</z-m>
 		</offsets>
 	</model>
 	<model>

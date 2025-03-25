@@ -6,9 +6,6 @@
 		<inherits-from>Aircraft/Su-57/Models/Effects/display/display</inherits-from>
 	</effect>
 	<model>
-		<path>screen.xml</path>
-	</model>
-	<model>
 		<path>knob.ac</path>
 		<offsets>
 			<x-m> 0.052</x-m>
