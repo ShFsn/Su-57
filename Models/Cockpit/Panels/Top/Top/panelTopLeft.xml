@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>panelTopLeft.ac</path>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/button3.ac</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m>-0.049</y-m>
+			<z-m>-0.008</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Top/masterArm.xml</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m>-0.020</y-m>
+			<z-m>-0.008</z-m>
+			<pitch-deg>90</pitch-deg>
+		</offsets>
+	</model>
+</PropertyList>

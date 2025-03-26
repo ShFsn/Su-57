@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Top/panelTopLeft.xml</path>
+		<offsets>
+			<x-m>-0.010</x-m>
+			<y-m>-0.230</y-m>
+			<z-m> 0.363</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Top/panelTopRight.xml</path>
+		<offsets>
+			<x-m>-0.010</x-m>
+			<y-m> 0.240</y-m>
+			<z-m> 0.363</z-m>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/LandingLights/panelLandingLights.xml</path>
 		<offsets>
 			<x-m> 0.010</x-m>
