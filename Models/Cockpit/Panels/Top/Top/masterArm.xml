@@ -11,7 +11,7 @@
 			<binding>
 				<command>set-tooltip</command>
 				<tooltip-id>masterarm-bug</tooltip-id>
-				<label>Master Arm %s</label>
+				<label>Master-arm %s</label>
 				<property>controls/armament/master-arm</property>
 				<mapping>nasal</mapping>
 				<script>
@@ -25,8 +25,11 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<command>property-toggle</command>
-				<property>controls/armament/master-arm</property>
+				<command>nasal</command>
+				<script><![CDATA[
+					setprop("controls/armament/master-arm",!getprop("controls/armament/master-arm"));
+					screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
+					]]></script>
 			</binding>
 		</action>
 	</animation>

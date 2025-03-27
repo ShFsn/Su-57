@@ -1,4 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>panelTopRight.ac</path>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/button4.ac</path>
+		<offsets>
+			<x-m>-0.005</x-m>
+			<y-m>-0.070</y-m>
+			<z-m> 0.022</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/button4.ac</path>
+		<offsets>
+			<x-m>-0.005</x-m>
+			<y-m>-0.070</y-m>
+			<z-m>-0.003</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/button4.ac</path>
+		<offsets>
+			<x-m>-0.005</x-m>
+			<y-m>-0.045</y-m>
+			<z-m> 0.022</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/button4.ac</path>
+		<offsets>
+			<x-m>-0.005</x-m>
+			<y-m>-0.045</y-m>
+			<z-m>-0.003</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/button3.ac</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m>-0.010</y-m>
+			<z-m> 0.001</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/protector3.ac</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m>-0.010</y-m>
+			<z-m> 0.001</z-m>
+		</offsets>
+	</model>
 </PropertyList>
