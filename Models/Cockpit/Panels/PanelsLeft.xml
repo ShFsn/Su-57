@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Left/Pneumatics/pneumatics.xml</path>
+		<offsets>
+			<x-m> 0.550</x-m>
+			<y-m>-0.170</y-m>
+			<z-m> 0.000</z-m>
+		</offsets>
+	</model>
+</PropertyList>

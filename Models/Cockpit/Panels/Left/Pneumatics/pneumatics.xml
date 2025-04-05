@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
-	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
-	</model>
+	<path>pneumatics.ac</path>
 	<animation>
 		<type>pick</type>
 		<object-name>switch</object-name>
 		<hovered>
 			<binding>
 				<command>set-tooltip</command>
-				<tooltip-id>masterarm-bug</tooltip-id>
-				<label>Master-arm %s</label>
-				<property>controls/armament/master-arm</property>
+				<tooltip-id>pneumatics-bug</tooltip-id>
+				<label>Pneumatics %s</label>
+				<property>fdm/jsbsim/pneumatics/switches/master</property>
 				<mapping>nasal</mapping>
 				<script>
 					var modes = ['OFF', 'ON'];
@@ -25,11 +22,8 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<command>nasal</command>
-				<script><![CDATA[
-					setprop("controls/armament/master-arm",!getprop("controls/armament/master-arm"));
-					screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
-					]]></script>
+				<command>property-toggle</command>
+				<property>fdm/jsbsim/pneumatics/switches/master</property>
 			</binding>
 			<binding>
 				<command>property-toggle</command>
@@ -40,14 +34,14 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>controls/armament/master-arm</property>
+		<property>fdm/jsbsim/pneumatics/switches/master</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>-25</dep></entry>
 			<entry><ind>1.0</ind><dep>25</dep></entry>
 		</interpolation>
 		<axis>
-			<x>0.0</x>
-			<y>-1.0</y>
+			<x>1.0</x>
+			<y>0.0</y>
 			<z>0.0</z>
 		</axis>
 	</animation>

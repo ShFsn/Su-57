@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system name="pneumatics">
 	<property value="0">pneumatics/switches/master</property>
-	<property value="0">pneumatics/switches/apu</property>
-	<property value="0">pneumatics/switches/engines</property>
+	<property value="1">pneumatics/switches/apu</property>
+	<property value="1">pneumatics/switches/engines</property>
+	<property value="0">pneumatics/switches/pressurization</property>
 
 	<channel name="sources">
 		<fcs_function name="pneumatics/sources/apu">
@@ -52,5 +53,10 @@
 			</function>
 			<output>pneumatics/sources/bus</output>
 		</fcs_function>
+		<lag_filter name="pneumatics/switches/press_switch_animation">
+			<input>pneumatics/switches/pressurization</input>
+			<c1>10.0</c1>
+			<output>fcs/press_switch_animation</output>
+		</lag_filter>
 	</channel>
 </system>

@@ -40,6 +40,16 @@
 		</offsets>
 	</model>
 	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsLeft.xml</path>
+		<offsets>
+			<x-m>-6.045</x-m>
+			<y-m>-0.297</y-m>
+			<z-m> 0.540</z-m>
+			<roll-deg>-7.0</roll-deg>
+			<pitch-deg>2.7</pitch-deg>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsRight.xml</path>
 		<offsets>
 			<x-m>-6.045</x-m>
@@ -67,6 +77,15 @@
 			<roll-deg>63.8</roll-deg>
 			<pitch-deg>6.0</pitch-deg>
 			<heading-deg>-5.3</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Left/Pneumatics/valve.xml</path>
+		<offsets>
+			<x-m>-5.470</x-m>
+			<y-m>-0.612</y-m>
+			<z-m> 0.660</z-m>
+			<roll-deg>-70.0</roll-deg>
 		</offsets>
 	</model>
 	<model>

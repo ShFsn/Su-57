@@ -14,8 +14,9 @@ foreach(var name; keys(parameters)) {
 
 # Generic System Libraries
 var engineStart = func {
-    if(getprop("fdm/jsbsim/electric/sources/ac-bus1") > 100 and
-    getprop("fdm/jsbsim/electric/switches/select-mode") == 2) {
+    if( getprop("fdm/jsbsim/electric/sources/ac-bus1") > 100 and
+        getprop("fdm/jsbsim/electric/switches/select-mode") == 2 and
+        getprop("fdm/jsbsim/pneumatics/sources/bus") > 0.5) {
         if(getprop("fdm/jsbsim/electric/switches/select-engine") == 0) {
             setprop("controls/engines/engine[0]/starter", 1);
         }
@@ -31,6 +32,7 @@ var autostart = func {
     setprop("fdm/jsbsim/electric/switches/fms", 1);
     setprop("fdm/jsbsim/electric/switches/apu", 1);
     setprop("fdm/jsbsim/electric/switches/apu-gen", 1);
+    setprop("fdm/jsbsim/pneumatics/switches/master", 1);
     setprop("controls/engines/engine[0]/starter", "true");
     setprop("controls/engines/engine[1]/starter", "true");
     settimer(func {

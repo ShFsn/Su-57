@@ -68,6 +68,10 @@
 				screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
 				]]></script>
 		</binding>
+		<binding>
+			<command>property-toggle</command>
+			<property>sim/sound/switch1</property>
+		</binding>
 	</key>
 	<key n="113">
 		<name>q</name>

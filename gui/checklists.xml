@@ -94,6 +94,21 @@
 			</binding>
 		</item>
 		<item>
+			<name>Pneumatics</name>
+			<value>ON</value>
+			<condition>
+				<equals>
+					<property>fdm/jsbsim/pneumatics/switches/master</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>fdm/jsbsim/pneumatics/switches/master</property>
+				<value>1</value>
+			</binding>
+		</item>
+		<item>
 			<name>Select Engine 1</name>
 			<value>1</value>
 			<condition>

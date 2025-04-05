@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>valve.ac</path>
+	<animation>
+		<type>pick</type>
+		<object-name>valve</object-name>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>pressurization-bug</tooltip-id>
+				<label>Pressurization %s</label>
+				<property>fdm/jsbsim/pneumatics/switches/pressurization</property>
+				<mapping>nasal</mapping>
+				<script>
+					var modes = ['OFF', 'ON'];
+					return modes[arg[0]];
+				</script>
+			</binding>
+		</hovered>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>fdm/jsbsim/pneumatics/switches/pressurization</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>valve</object-name>
+		<property>fdm/jsbsim/pneumatics/switches/press_switch_animation</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep>55</dep></entry>
+			<entry><ind>1.0</ind><dep>-45</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
+</PropertyList>
