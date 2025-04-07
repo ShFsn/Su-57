@@ -35,16 +35,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
-		<offsets>
-			<x-m> 0.004</x-m>
-			<y-m> 0.042</y-m>
-			<z-m> 0.007</z-m>
-			<pitch-deg>90</pitch-deg>
-		</offsets>
-	</model>
-	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Top/Top/wpnJettison.xml</path>
 		<offsets>
 			<x-m> 0.004</x-m>
 			<y-m> 0.042</y-m>

@@ -18,6 +18,7 @@
 	<property value="0">electric/switches/hud</property>
 	<property value="1">electric/switches/select-engine</property>
 	<property value="1">electric/switches/select-mode</property>
+	<property value="1">electric/switches/weapon-jettison</property>
 
 	<channel name="sources">
 		<fcs_function name="electric/sources/battery1">
