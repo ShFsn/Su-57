@@ -10,4 +10,5 @@
 			<path>Aircraft/Su-57/Models/T-50.xml</path>
 		</model>
 	</sim>
+	<nasal include="Systems/T-50-nasal.xml"/>
 </PropertyList>

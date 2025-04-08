@@ -3,7 +3,7 @@ var hud_crosshairs = {
 	{
 		var m = { parents: [hud_crosshairs] };
 		m.group = canvasGroup;
-		canvas.parsesvg(canvasGroup, "Aircraft/MiG-23MLD/Nasal/hud/hud_crosshairs.svg");
+		canvas.parsesvg(canvasGroup, "Aircraft/MiG-23MLD/Nasal/hud/screen/hud_crosshairs.svg");
 
 		var svg_keys = ["cross"];
 		foreach(var key; svg_keys) {

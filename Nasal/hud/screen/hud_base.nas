@@ -3,7 +3,7 @@ var hud_base = {
 	{
 		var m = { parents: [hud_base] };
 		m.group = canvasGroup;
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/hud/hud_base.svg");
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/hud/screen/hud_base.svg");
 		m.tmp = 0;
 		m.kmh = 1;
 

@@ -129,7 +129,7 @@ var load_texture = func {
         panelTexture.addPlacement({"node": "knob2"});
         panelTexture.addPlacement({"node": "knob3"});
     }
-    canvas.parsesvg(panelTexture.createGroup(), "Aircraft/Su-57/Nasal/hud_panel/texture.svg", {'font-mapper': font_mapper});
+    canvas.parsesvg(panelTexture.createGroup(), "Aircraft/Su-57/Nasal/hud/Su-57-panel/texture.svg", {'font-mapper': font_mapper});
 }
 
 var panelListener = setlistener("/sim/signals/fdm-initialized", func () {

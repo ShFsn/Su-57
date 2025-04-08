@@ -8,7 +8,7 @@ var panel_base = {
 		{
 			return "LiberationFonts/LiberationSans-Regular.ttf";
 		};
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/hud_panel/panel.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/hud/Su-57-panel/panel.svg", {'font-mapper': font_mapper});
 
 		var svg_keys = ["L1A", "L1B", "L1C",
 						"L2A", "L2B", "L2C",

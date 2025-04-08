@@ -4,7 +4,7 @@ var hud_clip = {
 		var m = { parents: [hud_clip] };
 		m.tmp = 0;
 		m.group = canvasGroup;
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/hud/hud_clip.svg");
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/hud/screen/hud_clip.svg");
 
 		var svg_keys = ["top", "left", "right"];
 		foreach(var key; svg_keys) {

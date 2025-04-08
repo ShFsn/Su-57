@@ -27,17 +27,17 @@
 		<file>Aircraft/Su-57/Nasal/mfd/MFD.nas</file>
 	</mfd>
 	<hud>
-		<file>Aircraft/Su-57/Nasal/hud/hud_math.nas</file>
-		<file>Aircraft/Su-57/Nasal/hud/hud_clip.nas</file>
-		<file>Aircraft/Su-57/Nasal/hud/hud_manual.nas</file>
-		<file>Aircraft/Su-57/Nasal/hud/hud_base.nas</file>
-		<file>Aircraft/Su-57/Nasal/hud/hud_nav.nas</file>
-		<file>Aircraft/Su-57/Nasal/hud/hud.nas</file>
-		<file>Aircraft/Su-57/Nasal/hud_panel/panel_base.nas</file>
-		<file>Aircraft/Su-57/Nasal/hud_panel/panel_nav.nas</file>
-		<file>Aircraft/Su-57/Nasal/hud_panel/panel_radio.nas</file>
-		<file>Aircraft/Su-57/Nasal/hud_panel/panel_wpn.nas</file>
-		<file>Aircraft/Su-57/Nasal/hud_panel/panel.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/screen/hud_math.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/screen/hud_clip.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/screen/hud_manual.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/screen/hud_base.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/screen/hud_nav.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/screen/hud.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/Su-57-panel/panel_base.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/Su-57-panel/panel_nav.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/Su-57-panel/panel_radio.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/Su-57-panel/panel_wpn.nas</file>
+		<file>Aircraft/Su-57/Nasal/hud/Su-57-panel/panel.nas</file>
 	</hud>
 	<vector>
 		<file>Aircraft/Su-57/Nasal/weapons/vector.nas</file>

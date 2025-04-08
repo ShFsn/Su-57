@@ -31,6 +31,5 @@
 	<input>
 		<keyboard include="Systems/keyboard.xml" />
 	</input>
-	<nasal include="Systems/nasal.xml"/>
 	<payload include="Systems/payload.xml"/>
 </PropertyList>
