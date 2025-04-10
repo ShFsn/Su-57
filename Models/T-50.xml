@@ -13,6 +13,9 @@
 		<path>Aircraft/Su-57/Models/Cockpit/T-50-cockpit.xml</path>
 	</model>
 	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Cockpit-Common.xml</path>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Pilot/pilot.xml</path>
 		<offsets>
 			<x-m>-5.750</x-m>

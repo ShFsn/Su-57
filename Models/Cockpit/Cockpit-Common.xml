@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Controls/Joystick/Joystick.xml</path>
+		<offsets>
+			<x-m>-6.130</x-m>
+			<y-m> 0.000</y-m>
+			<z-m> 0.520</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Controls/Throttle/Throttle.xml</path>
+		<offsets>
+			<x-m>-5.910</x-m>
+			<y-m>-0.370</y-m>
+			<z-m> 0.680</z-m>
+			<roll-deg>-10</roll-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Controls/Pedals/Pedals.xml</path>
+		<offsets>
+			<x-m>-6.550</x-m>
+			<y-m> 0.000</y-m>
+			<z-m> 0.150</z-m>
+			<pitch-deg>-11</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Stores/K-36DM/K-36DM.ac</path>
+		<offsets>
+			<x-m>-5.600</x-m>
+			<y-m> 0.000</y-m>
+			<z-m> 0.200</z-m>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
+</PropertyList>
