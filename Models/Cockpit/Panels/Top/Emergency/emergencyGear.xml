@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+	<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.gltf</path>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.gltf</path>
 	</model>
 	<animation>
 		<type>rotate</type>

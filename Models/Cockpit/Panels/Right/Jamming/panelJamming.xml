@@ -19,7 +19,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.gltf</path>
 		<offsets>
 			<x-m> 0.049</x-m>
 			<y-m> 0.094</y-m>
@@ -52,7 +52,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.gltf</path>
 		<offsets>
 			<x-m> 0.090</x-m>
 			<y-m> 0.191</y-m>

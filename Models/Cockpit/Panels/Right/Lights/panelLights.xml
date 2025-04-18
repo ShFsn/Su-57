@@ -65,7 +65,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.gltf</path>
 		<offsets>
 			<x-m> 0.082</x-m>
 			<y-m> 0.080</y-m>
@@ -83,7 +83,7 @@
 	</model>
 	<model>
 		<name>selection</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.gltf</path>
 		<offsets>
 			<x-m> 0.035</x-m>
 			<y-m> 0.189</y-m>
@@ -91,7 +91,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/base1.gltf</path>
 		<offsets>
 			<x-m> 0.035</x-m>
 			<y-m> 0.189</y-m>

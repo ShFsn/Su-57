@@ -22,4 +22,13 @@
 			<pitch-deg>90</pitch-deg>
 		</offsets>
 	</model>
+	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/cover1.ac</path>
+		<offsets>
+			<x-m> 0.005</x-m>
+			<y-m> 0.060</y-m>
+			<z-m>-0.096</z-m>
+			<pitch-deg>90</pitch-deg>
+		</offsets>
+	</model>
 </PropertyList>

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Instruments/MFD/mfpi.ac</path>
+		<offsets>
+			<x-m>-6.132</x-m>
+			<y-m> 0.388</y-m>
+			<z-m> 0.580</z-m>
+			<roll-deg>11.4</roll-deg>
+			<pitch-deg>22.0</pitch-deg>
+			<heading-deg>-10.1</heading-deg>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Controls/Joystick/Joystick.xml</path>
 		<offsets>
 			<x-m>-6.130</x-m>

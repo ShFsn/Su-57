@@ -15,12 +15,13 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "screw"
+            "name" : "switch"
         }
     ],
     "materials" : [
         {
-            "name" : "Material.001",
+            "doubleSided" : true,
+            "name" : "switch",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "index" : 0
@@ -33,7 +34,7 @@
     ],
     "meshes" : [
         {
-            "name" : "Cube",
+            "name" : "Sphere",
             "primitives" : [
                 {
                     "attributes" : {
@@ -60,71 +61,71 @@
     "images" : [
         {
             "mimeType" : "image/png",
-            "name" : "screw2",
-            "uri" : "Aircraft/Su-57/Models/Cockpit/Parts/screw2.png"
+            "name" : "switch1",
+            "uri" : "Aircraft/Su-57/Models/Cockpit/Parts/switch1.png"
         },
         {
             "mimeType" : "image/png",
-            "name" : "screw2-orm",
-            "uri" : "Aircraft/Su-57/Models/Cockpit/Parts/screw2-orm.png"
+            "name" : "switch1-orm",
+            "uri" : "Aircraft/Su-57/Models/Cockpit/Parts/switch1-orm.png"
         }
     ],
     "accessors" : [
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 191,
+            "count" : 736,
             "max" : [
-                0.003379999892786145,
-                0.011250000447034836,
-                0.009560000151395798
+                0.0037899999879300594,
+                0.003789999056607485,
+                0.020409999415278435
             ],
             "min" : [
-                -0.0028099999763071537,
-                -0.011250000447034836,
-                -0.009560000151395798
+                -0.0037899999879300594,
+                -0.003790000919252634,
+                -0.0028299998957663774
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 191,
+            "count" : 736,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 191,
+            "count" : 736,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 786,
+            "count" : 3024,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 2292,
+            "byteLength" : 8832,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 2292,
-            "byteOffset" : 2292
+            "byteLength" : 8832,
+            "byteOffset" : 8832
         },
         {
             "buffer" : 0,
-            "byteLength" : 1528,
-            "byteOffset" : 4584
+            "byteLength" : 5888,
+            "byteOffset" : 17664
         },
         {
             "buffer" : 0,
-            "byteLength" : 1572,
-            "byteOffset" : 6112
+            "byteLength" : 6048,
+            "byteOffset" : 23552
         }
     ],
     "samplers" : [
@@ -135,8 +136,8 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 7684,
-            "uri" : "screw2.bin"
+            "byteLength" : 29600,
+            "uri" : "switch1.bin"
         }
     ]
 }
