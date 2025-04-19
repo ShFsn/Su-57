@@ -4,7 +4,7 @@ OBJECT world
 name "Blender_exporter_v4.1__panelLights.ac"
 kids 1
 OBJECT poly
-name "panelEngines"
+name "panelLights"
 data 9
 Plane.003
 crease 40.0

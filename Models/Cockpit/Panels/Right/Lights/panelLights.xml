@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>panelLights.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Su-57/Models/Effects/panels/panels</inherits-from>
+		<object-name>panelLights</object-name>
+	</effect>
 	<model>
 		<name>kn1</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>panelEngines.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Su-57/Models/Effects/panels/panels</inherits-from>
+		<object-name>panelEngines</object-name>
+	</effect>
 	<model>
 		<name>engine start</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Engines/engineStart.xml</path>

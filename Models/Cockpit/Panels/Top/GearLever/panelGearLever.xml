@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>panelGearLever.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Su-57/Models/Effects/panels/panels</inherits-from>
+		<object-name>panelGearLever</object-name>
+	</effect>
 	<animation>
 		<type>pick</type>
 		<object-name>lever</object-name>

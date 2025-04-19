@@ -4,7 +4,7 @@ OBJECT world
 name "Blender_exporter_v4.1__panelElectrics.ac"
 kids 1
 OBJECT poly
-name "electrics"
+name "panelElectrics"
 data 6
 Circle
 crease 40.0

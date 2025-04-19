@@ -292,7 +292,7 @@ refs 4
 1 0.798181 0.800114
 kids 0
 OBJECT poly
-name "panel"
+name "panelEmergency"
 data 9
 Plane.005
 crease 40.0

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- V-1 Voltmeter -->
 <PropertyList>
-	<path>v-1.ac</path>
+	<path>v-1.gltf</path>
 	<effect>
 		<inherits-from>Effects/model-transparent</inherits-from>
 		<object-name>glass</object-name>

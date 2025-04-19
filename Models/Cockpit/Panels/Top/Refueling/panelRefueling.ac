@@ -4,7 +4,7 @@ OBJECT world
 name "Blender_exporter_v4.1__panelRefueling.ac"
 kids 2
 OBJECT poly
-name "label"
+name "labels"
 data 9
 Plane.012
 crease 40.0
@@ -101,7 +101,7 @@ refs 4
 28 0.51044 0.957504
 kids 0
 OBJECT poly
-name "panel"
+name "panelRefueling"
 data 9
 Plane.005
 crease 40.0

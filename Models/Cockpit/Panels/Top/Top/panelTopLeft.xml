@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>panelTopLeft.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Su-57/Models/Effects/panels/panels</inherits-from>
+		<object-name>panelTopLeft</object-name>
+	</effect>
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/button3.ac</path>
 		<offsets>
