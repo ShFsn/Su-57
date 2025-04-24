@@ -25,6 +25,21 @@
 			<property>fdm/jsbsim/electric/switches/cockpit-lights</property>
 		</binding>
 	</key>
+	<key n="77">
+		<name>M</name>
+		<desc>Maneuver</desc>
+		<binding>
+			<command>nasal</command>
+			<script><![CDATA[
+				setprop("fdm/jsbsim/fcs/maneuver",!getprop("fdm/jsbsim/fcs/maneuver"));
+				screen.log.write((getprop("fdm/jsbsim/fcs/maneuver")==0?"Fly-by-wire":"Thrust vectoring"), 0.5, 0.5, 1);
+				]]></script>
+		</binding>
+		<binding>
+			<command>property-toggle</command>
+			<property>sim/sound/switch1</property>
+		</binding>
+	</key>
 	<key n="100">
 		<name>d</name>
 		<desc>Open Canopy</desc>

@@ -248,7 +248,8 @@
 			</sum>
 			<sin>
 				<product>
-					<property>fcs/tvv-pos-deg</property>
+					<property>fcs/tvc-vert-deg</property>
+					<property>fcs/maneuver</property>
 					<value>0.0175</value>
 				</product>
 			</sin>
@@ -287,7 +288,8 @@
 			</sum>
 			<sin>
 				<product>
-					<property>fcs/tvh-pos-deg</property>
+					<property>fcs/tvc-horz-deg</property>
+					<property>fcs/maneuver</property>
 					<value>0.0175</value>
 				</product>
 			</sin>

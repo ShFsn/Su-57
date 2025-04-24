@@ -7,6 +7,7 @@
 		<sound><path>Aircraft/Su-57/Sounds/Sounds.xml</path></sound>
 		<aero>Su-57</aero>
 		<checklists include="gui/checklists.xml"/>
+		<help include="gui/help.xml"/>
 		<submodels>
 			<serviceable type="bool">true</serviceable>
 			<path>Aircraft/Su-57/Systems/submodels.xml</path>
@@ -23,8 +24,8 @@
 				<float n="1" type="double" alias="/engines/engine[1]/nozzle-pos-norm"/>
 				<float n="2" type="double" alias="/engines/engine[0]/augmentation"/>
 				<float n="3" type="double" alias="/engines/engine[1]/augmentation"/>
-				<float n="4" type="double" alias="/fdm/jsbsim/fcs/tvv-pos-deg"/>
-				<float n="5" type="double" alias="/fdm/jsbsim/fcs/tvh-pos-deg"/>
+				<float n="4" type="double" alias="/fdm/jsbsim/fcs/tvc-vert-deg"/>
+				<float n="5" type="double" alias="/fdm/jsbsim/fcs/tvc-horz-deg"/>
 			</generic>
 		</multiplay>
 	</sim>

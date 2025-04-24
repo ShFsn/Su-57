@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<title>Su-57</title>
+	<key>
+		<name>b</name>
+		<desc>Hold to deploy brakes</desc>
+	</key>
+	<key>
+		<name>B</name>
+		<desc>Toggle parking brake</desc>
+	</key>
+	<key>
+		<name>Ctrl+b</name>
+		<desc>Toggle speedbrake</desc>
+	</key>
+	<key>
+		<name>e</name>
+		<desc>Weapon trigger</desc>
+	</key>
+	<key>
+		<name>g/G</name>
+		<desc>Gear up/down</desc>
+	</key>
+	<key>
+		<name>m</name>
+		<desc>Toggle masterarm</desc>
+	</key>
+	<key>
+		<name>M</name>
+		<desc>Maneuver (FBW/TVC)</desc>
+	</key>
+	<key>
+		<name>w</name>
+		<desc>Select next weapon</desc>
+	</key>
+	<key>
+		<name>[ ]</name>
+		<desc>Flaps up/down</desc>
+	</key>
+	<!--
+	<key>
+		<name>C</name>
+		<desc>Toggle canopy</desc>
+	</key>
+	<key>
+		<name>o</name>
+		<desc>Deploy dragchute</desc>
+	</key>
+	<key>
+		<name>O</name>
+		<desc>Release dragchute</desc>
+	</key>
+	<key>
+		<name>q</name>
+		<desc>Trigger flare release</desc>
+	</key>
+	<key>
+		<name>y/Y</name>
+		<desc>Select next/prev radar contact</desc>
+	</key>
+	<key>
+		<name>F6</name>
+		<desc>Eject</desc>
+	</key>
+	-->
+	<text>
+	</text>
+</PropertyList>
