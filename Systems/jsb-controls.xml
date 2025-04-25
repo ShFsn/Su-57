@@ -2,29 +2,180 @@
 <flight_control name="FCS: Su-57-Jsb">
 	<property value="1">fcs/yaw-damper-enable</property>
 	<property value="0">fcs/maneuver</property>
+	<property value="0">fcs/fbw-failure</property>
+	<property value="0">fcs/tvc-failure</property>
 
-	<function name="fcs/tvc-horz-deg">
-		<description>Thrust Vector Horizontal</description>
-		<product>
-			<property>fcs/tvc-horz-cmd</property>
-			<property>fcs/maneuver</property>
-		</product>
-	</function>
-	<function name="fcs/tvc-vert-deg">
-		<description>Thrust Vector Vertical</description>
-		<product>
-			<property>fcs/tvc-vert-cmd</property>
-			<property>fcs/maneuver</property>
-		</product>
-	</function>
+	<channel name="Fly-by-wire">
+		<switch name="fcs/fbw-enabled">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				fcs/maneuver lt 1
+				fcs/fbw-failure lt 1
+			</test>
+		</switch>
+		<fcs_function name="fcs/speed-limit">
+			<function>
+				<description>Speed Limit</description>
+				<table>
+				<independentVar lookup="row">velocities/mach</independentVar>
+					<tableData>
+						0.0 1.0
+						0.2 1.0
+						0.4 0.8
+						0.6 0.4
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		<fcs_function name="fcs/pitch-up-limit">
+			<function>
+				<description>Pitch Up Limit</description>
+				<product>
+					<table>
+						<independentVar lookup="row">aero/alpha-deg</independentVar>
+						<independentVar lookup="column">attitude/pitch-rad</independentVar>
+						<tableData>
+								0.0  0.2  0.4  0.6
+							 0 -1.0 -1.0  0.0  0.5
+							 2 -1.0 -1.0  0.0  0.5
+							 4 -1.0 -1.0  0.0  0.5
+							 6 -0.5 -0.5  0.0  0.5
+							 8  0.0  0.0  0.0  0.5
+							10  0.5  0.5  0.5  0.5
+						</tableData>
+					</table>
+					<property>fcs/speed-limit</property>
+				</product>
+			</function>
+		</fcs_function>
+		<fcs_function name="fcs/pitch-down-limit">
+			<function>
+				<description>Pitch Up Limit</description>
+				<product>
+					<table>
+						<independentVar lookup="row">aero/alpha-deg</independentVar>
+						<independentVar lookup="column">attitude/pitch-rad</independentVar>
+						<tableData>
+							   -0.6 -0.4 -0.2  0.0
+							 0 -0.5  0.0  1.0  1.0
+							 2 -0.5  0.0  1.0  1.0
+							 4 -0.5  0.0  1.0  1.0
+							 6  0.0  0.5  1.0  1.0
+							 8  0.0  0.5  1.0  1.0
+							10  0.0  0.5  1.0  1.0
+						</tableData>
+					</table>
+					<property>fcs/speed-limit</property>
+				</product>
+			</function>
+		</fcs_function>
+		<fcs_function name="fcs/roll-left-limit">
+			<function>
+				<description>Roll Left Limit</description>
+				<table>
+					<independentVar lookup="row">attitude/roll-rad</independentVar>
+					<tableData>
+						-0.6  0.5
+						-0.4  0.0
+						-0.2 -1.0
+						 0.0 -1.0
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		<fcs_function name="fcs/roll-right-limit">
+			<function>
+				<description>Roll Right Limit</description>
+				<table>
+					<independentVar lookup="row">attitude/roll-rad</independentVar>
+					<tableData>
+						 0.0  1.0
+						 0.2  1.0
+						 0.4  0.0
+						 0.6 -0.5
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		<switch name="fcs/min-pitch">
+			<default value="-1.0"/>
+			<test logic="AND" value="fcs/pitch-up-limit">
+				fcs/fbw-enabled == 1
+			</test>
+		</switch>
+		<switch name="fcs/max-pitch">
+			<default value="1.0"/>
+			<test logic="AND" value="fcs/pitch-down-limit">
+				fcs/fbw-enabled == 1
+			</test>
+		</switch>
+		<switch name="fcs/min-roll">
+			<default value="-1.0"/>
+			<test logic="AND" value="fcs/roll-left-limit">
+				fcs/fbw-enabled == 1
+			</test>
+		</switch>
+		<switch name="fcs/max-roll">
+			<default value="1.0"/>
+			<test logic="AND" value="fcs/roll-right-limit">
+				fcs/fbw-enabled == 1
+			</test>
+		</switch>
+	</channel>
+
+	<channel name="Thrust Vector Control">
+		<switch name="fcs/tvc-enabled">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				fcs/maneuver gt 0
+				fcs/tvc-failure lt 1
+			</test>
+		</switch>
+		<aerosurface_scale name="Thrust Vector Horizontal CMD">
+			<input>fcs/rudder-cmd-norm</input>
+			<range>
+				<min> -20 </min>
+				<max>  20 </max>
+			</range>
+			<output>fcs/tvc-horz-cmd</output>
+		</aerosurface_scale>
+		<aerosurface_scale name="Thrust Vector Vertical CMD">
+			<input>fcs/elevator-cmd-norm</input>
+			<range>
+				<min> -20 </min>
+				<max>  20 </max>
+			</range>
+			<output>fcs/tvc-vert-cmd</output>
+		</aerosurface_scale>
+		<fcs_function name="fcs/tvc-horz-deg">
+			<function>
+				<description>Thrust Vector Horizontal</description>
+				<product>
+					<property>fcs/tvc-horz-cmd</property>
+					<property>fcs/tvc-enabled</property>
+				</product>
+			</function>
+			<output>fcs/tvc-horz-deg</output>
+		</fcs_function>
+		<fcs_function name="fcs/tvc-vert-deg">
+			<function>
+				<description>Thrust Vector Vertical</description>
+				<product>
+					<property>fcs/tvc-vert-cmd</property>
+					<property>fcs/tvc-enabled</property>
+				</product>
+			</function>
+			<output>fcs/tvc-vert-deg</output>
+		</fcs_function>
+	</channel>
 
 	<channel name="Pitch">
 		<summer name="Pitch Trim Sum">
 			<input>fcs/elevator-cmd-norm</input>
 			<input>fcs/pitch-trim-cmd-norm</input>
 			<clipto>
-				<min> -1 </min>
-				<max>  1 </max>
+				<min>fcs/min-pitch</min>
+				<max>fcs/max-pitch</max>
 			</clipto>
 		</summer>
 		<aerosurface_scale name="Elevator Control">
@@ -47,14 +198,6 @@
 			</range>
 			<output>fcs/elevator-pos-norm</output>
 		</aerosurface_scale>
-		<aerosurface_scale name="Thrust Vector Vertical CMD">
-			<input>fcs/elevator-cmd-norm</input>
-			<range>
-				<min> -20 </min>
-				<max>  20 </max>
-			</range>
-			<output>fcs/tvc-vert-cmd</output>
-		</aerosurface_scale>
 	</channel>
 
 	<channel name="Roll">
@@ -62,8 +205,8 @@
 			<input>fcs/aileron-cmd-norm</input>
 			<input>fcs/roll-trim-cmd-norm</input>
 			<clipto>
-				<min> -1 </min>
-				<max>  1 </max>
+				<min>fcs/min-roll</min>
+				<max>fcs/max-roll</max>
 			</clipto>
 		</summer>
 		<aerosurface_scale name="Left Aileron Control">
@@ -159,14 +302,6 @@
 				<max>  1 </max>
 			</range>
 			<output>fcs/rudder-pos-norm</output>
-		</aerosurface_scale>
-		<aerosurface_scale name="Thrust Vector Horizontal CMD">
-			<input>fcs/rudder-cmd-norm</input>
-			<range>
-				<min> -20 </min>
-				<max>  20 </max>
-			</range>
-			<output>fcs/tvc-horz-cmd</output>
 		</aerosurface_scale>
 	</channel>
 

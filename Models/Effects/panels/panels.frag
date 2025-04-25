@@ -38,6 +38,6 @@ void main()
         emissive = 0.5 * emissive_factor * emissive_color * color;
     }
 
-    gbuffer_pack_pbr_opaque(N, color, 0.0, 1.0, 1.0, emissive);
+    gbuffer_pack_pbr_opaque(N, color, 0.0, 0.5, 1.0, emissive);
     gl_FragDepth = logdepth_encode(fs_in.flogz);
 }
