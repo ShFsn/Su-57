@@ -37,7 +37,7 @@ var canvas_display = {
 	}
 };
 
-mfdListener = setlistener("/sim/signals/fdm-initialized", func () {
+displayListener = setlistener("/sim/signals/fdm-initialized", func () {
 
 	var displayCanvas = canvas.new({
 		"name": "Display",
@@ -49,5 +49,5 @@ mfdListener = setlistener("/sim/signals/fdm-initialized", func () {
 	displayCanvas.addPlacement({"node": "Display.Screen"});
 	DisplayInstance = canvas_display.new(displayCanvas.createGroup());
 
-	removelistener(mfdListener);
+	removelistener(displayListener);
 });

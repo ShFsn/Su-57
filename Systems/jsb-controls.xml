@@ -27,7 +27,7 @@
 				</table>
 			</function>
 		</fcs_function>
-		<fcs_function name="fcs/pitch-up-limit">
+		<fcs_function name="fcs/pitch-up-limit-pre">
 			<function>
 				<description>Pitch Up Limit</description>
 				<product>
@@ -48,7 +48,7 @@
 				</product>
 			</function>
 		</fcs_function>
-		<fcs_function name="fcs/pitch-down-limit">
+		<fcs_function name="fcs/pitch-down-limit-pre">
 			<function>
 				<description>Pitch Up Limit</description>
 				<product>
@@ -69,14 +69,29 @@
 				</product>
 			</function>
 		</fcs_function>
+		<switch name="fcs/pitch-up-limit">
+			<default value="fcs/pitch-up-limit-pre"/>
+			<test logic="AND" value="-0.5">
+				/instrumentation/mk-viii/outputs/discretes/gpws-warning gt 0
+				fcs/pitch-up-limit-pre gt -0.5
+			</test>
+		</switch>
+		<switch name="fcs/pitch-down-limit">
+			<default value="fcs/pitch-down-limit-pre"/>
+			<test logic="AND" value="-0.5">
+				/instrumentation/mk-viii/outputs/discretes/gpws-warning gt 0
+				fcs/pitch-down-limit-pre gt -0.5
+			</test>
+		</switch>
 		<fcs_function name="fcs/roll-left-limit">
 			<function>
 				<description>Roll Left Limit</description>
 				<table>
 					<independentVar lookup="row">attitude/roll-rad</independentVar>
 					<tableData>
-						-0.6  0.5
-						-0.4  0.0
+						-0.8  0.2
+						-0.6  0.0
+						-0.4 -0.8
 						-0.2 -1.0
 						 0.0 -1.0
 					</tableData>
@@ -91,8 +106,9 @@
 					<tableData>
 						 0.0  1.0
 						 0.2  1.0
-						 0.4  0.0
-						 0.6 -0.5
+						 0.4  0.8
+						 0.6  0.0
+						 0.8 -0.2
 					</tableData>
 				</table>
 			</function>

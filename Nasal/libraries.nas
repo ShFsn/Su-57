@@ -86,6 +86,11 @@ var autopilot = func(input = 0) {
     setprop("sim/gui/dialogs/autopilot/heading-active", ap_heading);
     setprop("sim/gui/dialogs/autopilot/altitude-active", ap_altitude);
 }
+setlistener("fdm/jsbsim/fcs/maneuver", func () {
+    if(getprop("fdm/jsbsim/fcs/maneuver") or 0) {
+        autopilot(0);
+    }
+});
 
 # from Sidi Liang
 var Sound = {
