@@ -50,7 +50,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsRight.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Su-57-PanelsRight.xml</path>
 		<offsets>
 			<x-m>-6.045</x-m>
 			<y-m> 0.297</y-m>

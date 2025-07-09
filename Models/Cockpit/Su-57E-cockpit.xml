@@ -31,6 +31,17 @@
 		</offsets>
 	</model>
 	<model>
+		<path>Aircraft/Su-57/Models/Cockpit/Instruments/MFD/mfpi.ac</path>
+		<offsets>
+			<x-m>-6.132</x-m>
+			<y-m> 0.388</y-m>
+			<z-m> 0.580</z-m>
+			<roll-deg>11.4</roll-deg>
+			<pitch-deg>22.0</pitch-deg>
+			<heading-deg>-10.1</heading-deg>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Su-57E-PanelsTop.xml</path>
 		<offsets>
 			<x-m>-6.215</x-m>
@@ -50,7 +61,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Panels/PanelsRight.xml</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Su-57E-PanelsRight.xml</path>
 		<offsets>
 			<x-m>-6.045</x-m>
 			<y-m> 0.297</y-m>
