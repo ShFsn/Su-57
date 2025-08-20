@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system name="electric">
-	<property value="0">electric/switches/battery1</property>
-	<property value="0">electric/switches/battery2</property>
-	<property value="0">electric/switches/apu</property>
-	<property value="0">electric/switches/apu-gen</property>
-	<property value="0">electric/switches/ac-gen1</property>
-	<property value="0">electric/switches/ac-gen2</property>
-	<property value="0">electric/switches/ground-power</property>
+	<property value="0">electric/switches/sources/battery1</property>
+	<property value="0">electric/switches/sources/battery2</property>
+	<property value="0">electric/switches/sources/apu</property>
+	<property value="0">electric/switches/sources/apu-gen</property>
+	<property value="0">electric/switches/sources/ac-gen1</property>
+	<property value="0">electric/switches/sources/ac-gen2</property>
+	<property value="0">electric/switches/sources/ground-power</property>
+	<property value="1">electric/switches/sources/dc-probe</property>
 
-	<property value="1">electric/switches/probe</property>
-	<property value="0">electric/switches/floodlight</property>
-	<property value="0">electric/switches/instrument-lights</property>
-	<property value="0">electric/switches/panel-lights</property>
-	<property value="1">electric/switches/landingLights</property>
-	<property value="1">electric/switches/ins</property>
-	<property value="0">electric/switches/fms</property>
-	<property value="0">electric/switches/hud</property>
-	<property value="1">electric/switches/select-engine</property>
-	<property value="1">electric/switches/select-mode</property>
-	<property value="1">electric/switches/weapon-jettison</property>
+	<property value="1">electric/switches/lights/landing</property>
+	<property value="0">electric/switches/lights/left</property>
+	<property value="0">electric/switches/lights/panels</property>
+	<property value="0">electric/switches/lights/right</property>
+	<property value="0">electric/switches/lights/flood</property>
+
+	<property value="0">electric/switches/avionics/fms</property>
+	<property value="0">electric/switches/avionics/hmd</property>
+	<property value="0">electric/switches/avionics/hud</property>
+	<property value="1">electric/switches/avionics/ins1</property>
+	<property value="1">electric/switches/avionics/ins2</property>
+
+	<property value="1">electric/switches/engines/select</property>
+	<property value="1">electric/switches/engines/mode</property>
+
+	<property value="0">electric/switches/misc/eject1</property>
+	<property value="0">electric/switches/misc/eject2</property>
 
 	<channel name="sources">
 		<fcs_function name="electric/sources/battery1">
 			<function>
 				<product>
-					<property>electric/switches/battery1</property>
+					<property>electric/switches/sources/battery1</property>
 					<value>24</value>
 				</product>
 			</function>
@@ -33,7 +40,7 @@
 		<fcs_function name="electric/sources/battery2">
 			<function>
 				<product>
-					<property>electric/switches/battery2</property>
+					<property>electric/switches/sources/battery2</property>
 					<value>24</value>
 				</product>
 			</function>
@@ -68,7 +75,7 @@
 		<fcs_function name="electric/sources/ac-gen1">
 			<function>
 				<product>
-					<property>electric/switches/ac-gen1</property>
+					<property>electric/switches/sources/ac-gen1</property>
 					<table>
 						<independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
 						<tableData>
@@ -84,7 +91,7 @@
 		<fcs_function name="electric/sources/ac-gen2">
 			<function>
 				<product>
-					<property>electric/switches/ac-gen2</property>
+					<property>electric/switches/sources/ac-gen2</property>
 					<table>
 						<independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
 						<tableData>
@@ -100,8 +107,8 @@
 		<fcs_function name="electric/sources/apu-gen">
 			<function>
 				<product>
-					<property>electric/switches/apu</property>
-					<property>electric/switches/apu-gen</property>
+					<property>electric/switches/sources/apu</property>
+					<property>electric/switches/sources/apu-gen</property>
 					<value>112</value>
 				</product>
 			</function>
@@ -175,101 +182,98 @@
 			</function>
 			<output>electric/sources/ac-bus</output>
 		</fcs_function>
+		<switch name="electric/sources/dc-probe">
+			<default value="0"/>
+			<test logic="AND" value="electric/sources/dc-gen1">
+				electric/switches/sources/dc-probe == 2
+			</test>
+			<test logic="AND" value="electric/sources/dc-gen2">
+				electric/switches/sources/dc-probe == 0
+			</test>
+		</switch>
+		<lag_filter name="electric/sources/voltmeter">
+			<input>electric/sources/dc-probe</input>
+			<c1>7.0</c1>
+			<output>electric/sources/voltmeter</output>
+		</lag_filter>
 	</channel>
 
-	<channel name="output">
-		<fcs_function name="electric/output/floodlight">
+	<channel name="lights">
+		<fcs_function name="electric/output/lights/flood">
 			<function>
 				<min>
 					<property>electric/sources/dc-bus</property>
-					<property>electric/switches/floodlight</property>
+					<property>electric/switches/lights/flood</property>
 				</min>
 			</function>
-			<output>electric/output/floodlight</output>
+			<output>electric/output/lights/flood</output>
 		</fcs_function>
-		<fcs_function name="electric/output/instrument-lights">
-			<function>
-				<min>
-					<property>electric/sources/dc-bus</property>
-					<property>electric/switches/instrument-lights</property>
-				</min>
-			</function>
-			<output>electric/output/instrument-lights</output>
-		</fcs_function>
-		<fcs_function name="electric/output/panel-lights">
+		<fcs_function name="electric/output/lights/panels">
 			<function>
 				<product>
 					<property>electric/sources/dc-bus</property>
-					<property>electric/switches/panel-lights</property>
+					<property>electric/switches/lights/panels</property>
 					<value>1.0</value>
 				</product>
 			</function>
-			<output>electric/output/panel-lights</output>
+			<output>electric/output/lights/panels</output>
 		</fcs_function>
-		<switch name="electric/output/dc-probe">
-			<default value="0"/>
-			<test logic="AND" value="electric/sources/dc-gen1">
-				electric/switches/probe == 2
-			</test>
-			<test logic="AND" value="electric/sources/dc-gen2">
-				electric/switches/probe == 0
-			</test>
-		</switch>
-		<lag_filter name="electric/output/voltmeter">
-			<input>electric/output/dc-probe</input>
-			<c1>7.0</c1>
-			<output>electric/output/voltmeter</output>
-		</lag_filter>
-		<switch name="electric/output/landingLights">
+		<switch name="electric/output/lights/landing">
 			<default value="0"/>
 			<test logic="AND" value="electric/sources/ac-bus">
-				electric/switches/landingLights == 2
+				electric/switches/lights/landing == 2
 			</test>
 		</switch>
-		<switch name="electric/output/taxilight">
+		<switch name="electric/output/lights/taxi">
 			<default value="0"/>
 			<test logic="AND" value="electric/sources/ac-bus">
-				electric/switches/landingLights == 0
+				electric/switches/lights/landing == 0
 			</test>
 		</switch>
-		<switch name="electric/output/fms">
+	</channel>
+
+	<channel name="avionics">
+		<switch name="electric/output/avionics/fms">
 			<default value="0"/>
 			<test logic="AND" value="electric/sources/dc-bus">
-				electric/switches/fms == 1
+				electric/switches/avionics/fms == 1
 			</test>
 		</switch>
-		<switch name="electric/output/hud">
+		<switch name="electric/output/avionics/hud">
 			<default value="0"/>
 			<test logic="AND" value="electric/sources/ac-bus">
-				electric/switches/hud == 1
+				electric/switches/avionics/hud == 1
 			</test>
 		</switch>
+	</channel>
+
+	<channel name="misc">
 		<!-- checklist -->
-		<fcs_function name="electric/output/switches">
+		<fcs_function name="electric/output/misc/checklist1">
 			<function>
 				<max>
-					<property>electric/switches/cfd</property>
-					<property>electric/switches/fms</property>
-					<property>electric/switches/hud</property>
-					<property>electric/switches/hmd</property>
-					<property>electric/switches/ins1</property>
-					<property>electric/switches/ins2</property>
-					<property>electric/switches/jammer</property>
-					<property>electric/switches/radar</property>
-					<property>electric/switches/rwr</property>
-					<property>electric/switches/toilet</property>
+					<property>electric/switches/weapons/cfd</property>
+					<property>electric/switches/avionics/fms</property>
+					<property>electric/switches/avionics/hud</property>
+					<property>electric/switches/avionics/hmd</property>
+					<property>electric/switches/avionics/ins1</property>
+					<property>electric/switches/avionics/ins2</property>
+					<property>electric/switches/radar/jammer</property>
+					<property>electric/switches/radar/radar</property>
+					<property>electric/switches/radar/rwr</property>
+					<property>electric/switches/misc/toilet</property>
 				</max>
 			</function>
-			<output>electric/output/switches</output>
+			<output>electric/output/misc/checklist1</output>
 		</fcs_function>
-		<fcs_function name="electric/output/eject">
+		<fcs_function name="electric/output/misc/eject">
 			<function>
 				<sum>
-					<property>electric/switches/eject1</property>
-					<property>electric/switches/eject2</property>
+					<property>electric/switches/misc/eject1</property>
+					<property>electric/switches/misc/eject2</property>
 				</sum>
 			</function>
-			<output>electric/output/eject</output>
+			<output>electric/output/misc/eject</output>
 		</fcs_function>
 	</channel>
 </system>

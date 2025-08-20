@@ -12,7 +12,7 @@
 				<command>set-tooltip</command>
 				<tooltip-id>ac2-bug</tooltip-id>
 				<label>AC Generator Right %s</label>
-				<property>fdm/jsbsim/electric/switches/ac-gen2</property>
+				<property>fdm/jsbsim/electric/switches/sources/ac-gen2</property>
 				<mapping>nasal</mapping>
 				<script>
 					var modes = ['OFF', 'ON'];
@@ -26,7 +26,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>fdm/jsbsim/electric/switches/ac-gen2</property>
+				<property>fdm/jsbsim/electric/switches/sources/ac-gen2</property>
 			</binding>
 			<binding>
 				<command>property-toggle</command>
@@ -37,7 +37,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>fdm/jsbsim/electric/switches/ac-gen2</property>
+		<property>fdm/jsbsim/electric/switches/sources/ac-gen2</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>-25</dep></entry>
 			<entry><ind>1.0</ind><dep>25</dep></entry>

@@ -7,7 +7,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>fdm/jsbsim/electric/switches/emergency-gear</property>
+		<property>fdm/jsbsim/electric/switches/misc/emergency-gear</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>-25</dep></entry>
 			<entry><ind>1.0</ind><dep>25</dep></entry>

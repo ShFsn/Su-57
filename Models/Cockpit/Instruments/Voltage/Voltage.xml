@@ -9,7 +9,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>v-1_needle</object-name>
-		<property>fdm/jsbsim/electric/output/voltmeter</property>
+		<property>fdm/jsbsim/electric/sources/voltmeter</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>

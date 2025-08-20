@@ -3,7 +3,7 @@
   <name>Effects/display</name>
   <parameters>
     <emissive-color type="vec3d"> 1.0 1.0 1.0 </emissive-color>
-    <emissive-factor type="float"><use>/fdm/jsbsim/electric/output/fms</use></emissive-factor>
+    <emissive-factor type="float"><use>/fdm/jsbsim/electric/output/avionics/fms</use></emissive-factor>
     <emissive-offset type="float">0.0</emissive-offset>
   </parameters>
 

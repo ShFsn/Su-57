@@ -12,7 +12,7 @@
 				<command>set-tooltip</command>
 				<tooltip-id>jamming-typ2-bug</tooltip-id>
 				<label>%s Jamming</label>
-				<property>fdm/jsbsim/electric/switches/jamming-type2</property>
+				<property>fdm/jsbsim/electric/switches/radar/jamming-type2</property>
 				<mapping>nasal</mapping>
 				<script>
 					var modes = ['Passiv', 'Active'];
@@ -26,7 +26,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>fdm/jsbsim/electric/switches/jamming-type2</property>
+				<property>fdm/jsbsim/electric/switches/radar/jamming-type2</property>
 			</binding>
 			<binding>
 				<command>property-toggle</command>
@@ -37,7 +37,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>fdm/jsbsim/electric/switches/jamming-type2</property>
+		<property>fdm/jsbsim/electric/switches/radar/jamming-type2</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>-25</dep></entry>
 			<entry><ind>1.0</ind><dep>25</dep></entry>

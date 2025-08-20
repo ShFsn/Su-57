@@ -1,6 +1,6 @@
 var PanelInstance = {};
 
-var Power = props.globals.getNode("fdm/jsbsim/electric/output/hud", 1);
+var Power = props.globals.getNode("fdm/jsbsim/electric/output/avionics/hud", 1);
 var PageEnum = {
     COM:    0,
     NAV:    1,
@@ -16,7 +16,6 @@ var Panel = {
         m.Pages[PageEnum.COM] = panel_radio.new(group.createChild('group'));
         m.Pages[PageEnum.NAV] = panel_nav.new(group.createChild('group'));
         m.Pages[PageEnum.WPN] = panel_wpn.new(group.createChild('group'));
-        m.Power = props.globals.getNode("fdm/jsbsim/electric/output/mfd", 1);
 
         m.ActivatePage(PageEnum.NAV);
         m.Timer = maketimer(0.05, m, m.Update);

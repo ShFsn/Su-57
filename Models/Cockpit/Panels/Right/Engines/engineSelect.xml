@@ -20,12 +20,12 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/select-engine</property>
+				<property>fdm/jsbsim/electric/switches/engines/select</property>
 				<value>1</value>
 			</binding>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/select-mode</property>
+				<property>fdm/jsbsim/electric/switches/engines/mode</property>
 				<value>1</value>
 			</binding>
 			<binding>
@@ -50,12 +50,12 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/select-engine</property>
+				<property>fdm/jsbsim/electric/switches/engines/select</property>
 				<value>0</value>
 			</binding>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/select-mode</property>
+				<property>fdm/jsbsim/electric/switches/engines/mode</property>
 				<value>0</value>
 			</binding>
 			<binding>
@@ -80,12 +80,12 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/select-engine</property>
+				<property>fdm/jsbsim/electric/switches/engines/select</property>
 				<value>2</value>
 			</binding>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/select-mode</property>
+				<property>fdm/jsbsim/electric/switches/engines/mode</property>
 				<value>0</value>
 			</binding>
 			<binding>
@@ -110,12 +110,12 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/select-engine</property>
+				<property>fdm/jsbsim/electric/switches/engines/select</property>
 				<value>0</value>
 			</binding>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/select-mode</property>
+				<property>fdm/jsbsim/electric/switches/engines/mode</property>
 				<value>2</value>
 			</binding>
 			<binding>
@@ -140,12 +140,12 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/select-engine</property>
+				<property>fdm/jsbsim/electric/switches/engines/select</property>
 				<value>2</value>
 			</binding>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/select-mode</property>
+				<property>fdm/jsbsim/electric/switches/engines/mode</property>
 				<value>2</value>
 			</binding>
 			<binding>
@@ -157,7 +157,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>fdm/jsbsim/electric/switches/select-mode</property>
+		<property>fdm/jsbsim/electric/switches/engines/mode</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>-25</dep></entry>
 			<entry><ind>2.0</ind><dep>25</dep></entry>
@@ -171,7 +171,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>fdm/jsbsim/electric/switches/select-engine</property>
+		<property>fdm/jsbsim/electric/switches/engines/select</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>-25</dep></entry>
 			<entry><ind>2.0</ind><dep>25</dep></entry>

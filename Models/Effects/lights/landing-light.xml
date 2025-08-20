@@ -37,13 +37,13 @@
 			<q>0.0019</q>
 		</attenuation>
 		<color>
-			<r><property>fdm/jsbsim/electric/output/landingLights</property></r>
-			<g><property>fdm/jsbsim/electric/output/landingLights</property></g>
-			<b><property>fdm/jsbsim/electric/output/landingLights</property></b>
+			<r><property>fdm/jsbsim/electric/output/lights/landing</property></r>
+			<g><property>fdm/jsbsim/electric/output/lights/landing</property></g>
+			<b><property>fdm/jsbsim/electric/output/lights/landing</property></b>
 			<a>1</a>
 		</color>
 		<intensity>1</intensity>
-		<dim-factor><property>fdm/jsbsim/electric/output/landingLights</property></dim-factor>
+		<dim-factor><property>fdm/jsbsim/electric/output/lights/landing</property></dim-factor>
 		<spot-exponent>100</spot-exponent>
 		<spot-cutoff>20</spot-cutoff>
 		<range-m>300</range-m>

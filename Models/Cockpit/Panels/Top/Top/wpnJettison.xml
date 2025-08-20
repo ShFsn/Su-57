@@ -12,7 +12,7 @@
 				<command>set-tooltip</command>
 				<tooltip-id>wpn-jettison-bug</tooltip-id>
 				<label>Weapon Emergency %s</label>
-				<property>fdm/jsbsim/electric/switches/weapon-jettison</property>
+				<property>fdm/jsbsim/electric/switches/weapons/jettison</property>
 				<mapping>nasal</mapping>
 				<script>
 					var modes = ['Jettison', 'OFF', 'Fire'];
@@ -26,7 +26,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>fdm/jsbsim/electric/switches/weapon-jettison</property>
+				<property>fdm/jsbsim/electric/switches/weapons/jettison</property>
 				<step>1</step>
 				<min>0</min>
 				<max>3</max>
@@ -42,7 +42,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>fdm/jsbsim/electric/switches/weapon-jettison</property>
+				<property>fdm/jsbsim/electric/switches/weapons/jettison</property>
 				<step>1</step>
 				<min>0</min>
 				<max>3</max>
@@ -58,7 +58,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>fdm/jsbsim/electric/switches/weapon-jettison</property>
+				<property>fdm/jsbsim/electric/switches/weapons/jettison</property>
 				<step>-1</step>
 				<min>0</min>
 				<max>3</max>
@@ -73,7 +73,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>fdm/jsbsim/electric/switches/weapon-jettison</property>
+		<property>fdm/jsbsim/electric/switches/weapons/jettison</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>-25</dep></entry>
 			<entry><ind>2.0</ind><dep>25</dep></entry>

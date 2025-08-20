@@ -12,7 +12,7 @@
 				<command>set-tooltip</command>
 				<tooltip-id>cfd-bug</tooltip-id>
 				<label>CFD %s</label>
-				<property>fdm/jsbsim/electric/switches/cfd</property>
+				<property>fdm/jsbsim/electric/switches/weapons/cfd</property>
 				<mapping>nasal</mapping>
 				<script>
 					var modes = ['OFF', 'ON'];
@@ -26,7 +26,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>fdm/jsbsim/electric/switches/cfd</property>
+				<property>fdm/jsbsim/electric/switches/weapons/cfd</property>
 			</binding>
 			<binding>
 				<command>property-toggle</command>
@@ -37,7 +37,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>fdm/jsbsim/electric/switches/cfd</property>
+		<property>fdm/jsbsim/electric/switches/weapons/cfd</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>-25</dep></entry>
 			<entry><ind>1.0</ind><dep>25</dep></entry>

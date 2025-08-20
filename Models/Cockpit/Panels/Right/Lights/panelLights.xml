@@ -6,7 +6,7 @@
 		<object-name>panelLights</object-name>
 	</effect>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Lights/left.xml</path>
 		<offsets>
 			<x-m> 0.036</x-m>
 			<y-m> 0.045</y-m>
@@ -22,7 +22,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Lights/right.xml</path>
 		<offsets>
 			<x-m> 0.036</x-m>
 			<y-m> 0.130</y-m>

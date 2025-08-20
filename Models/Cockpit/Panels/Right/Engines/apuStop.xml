@@ -8,7 +8,7 @@
 			<button>0</button>
 			<binding>
 				<command>property-assign</command>
-				<property>fdm/jsbsim/electric/switches/apu</property>
+				<property>fdm/jsbsim/electric/switches/sources/apu</property>
 				<value>0</value>
 			</binding>
 		</action>

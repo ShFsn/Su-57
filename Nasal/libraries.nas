@@ -16,36 +16,36 @@ foreach(var name; keys(parameters)) {
 var engineStart = func {
     print("Engine start");
     if( getprop("fdm/jsbsim/electric/sources/ac-bus1") > 100 and
-        getprop("fdm/jsbsim/electric/switches/select-mode") == 2 and
+        getprop("fdm/jsbsim/electric/switches/engines/mode") == 2 and
         getprop("fdm/jsbsim/pneumatics/sources/bus") > 0.5) {
-        if(getprop("fdm/jsbsim/electric/switches/select-engine") == 0) {
+        if(getprop("fdm/jsbsim/electric/switches/engines/select") == 0) {
             setprop("controls/engines/engine[0]/starter", 1);
         }
-        if(getprop("fdm/jsbsim/electric/switches/select-engine") == 2) {
+        if(getprop("fdm/jsbsim/electric/switches/engines/select") == 2) {
             setprop("controls/engines/engine[1]/starter", 1);
         }
     }
 }
 
 var autostart = func {
-    setprop("fdm/jsbsim/electric/switches/battery1", 1);
-    setprop("fdm/jsbsim/electric/switches/battery2", 1);
-    setprop("fdm/jsbsim/electric/switches/fms", 1);
-    setprop("fdm/jsbsim/electric/switches/apu", 1);
-    setprop("fdm/jsbsim/electric/switches/apu-gen", 1);
+    setprop("fdm/jsbsim/electric/switches/sources/battery1", 1);
+    setprop("fdm/jsbsim/electric/switches/sources/battery2", 1);
+    setprop("fdm/jsbsim/electric/switches/avionics/fms", 1);
+    setprop("fdm/jsbsim/electric/switches/sources/apu", 1);
+    setprop("fdm/jsbsim/electric/switches/sources/apu-gen", 1);
     setprop("fdm/jsbsim/pneumatics/switches/master", 1);
     setprop("controls/engines/engine[0]/starter", "true");
     setprop("controls/engines/engine[1]/starter", "true");
     settimer(func {
         setprop("controls/engines/engine[0]/cutoff", "false");
         setprop("controls/engines/engine[1]/cutoff", "false");
-        setprop("fdm/jsbsim/electric/switches/hud", 1);
-        setprop("fdm/jsbsim/electric/switches/ac-gen1", 1);
-        setprop("fdm/jsbsim/electric/switches/ac-gen2", 1);
+        setprop("fdm/jsbsim/electric/switches/avionics/hud", 1);
+        setprop("fdm/jsbsim/electric/switches/sources/ac-gen1", 1);
+        setprop("fdm/jsbsim/electric/switches/sources/ac-gen2", 1);
     }, 5);
     settimer(func {
-        setprop("fdm/jsbsim/electric/switches/apu-gen", 0);
-        setprop("fdm/jsbsim/electric/switches/apu", 0);
+        setprop("fdm/jsbsim/electric/switches/sources/apu-gen", 0);
+        setprop("fdm/jsbsim/electric/switches/sources/apu", 0);
     }, 25);
 }
 

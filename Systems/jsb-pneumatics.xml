@@ -9,7 +9,7 @@
 		<fcs_function name="pneumatics/sources/apu">
 			<function>
 				<product>
-					<property>electric/switches/apu</property>
+					<property>electric/switches/sources/apu</property>
 					<property>pneumatics/switches/apu</property>
 				</product>
 			</function>
