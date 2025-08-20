@@ -11,7 +11,7 @@
 	<property value="1">electric/switches/probe</property>
 	<property value="0">electric/switches/floodlight</property>
 	<property value="0">electric/switches/instrument-lights</property>
-	<property value="0">electric/switches/label-lights</property>
+	<property value="0">electric/switches/panel-lights</property>
 	<property value="1">electric/switches/landingLights</property>
 	<property value="1">electric/switches/ins</property>
 	<property value="0">electric/switches/fms</property>
@@ -196,14 +196,15 @@
 			</function>
 			<output>electric/output/instrument-lights</output>
 		</fcs_function>
-		<fcs_function name="electric/output/label-lights">
+		<fcs_function name="electric/output/panel-lights">
 			<function>
-				<min>
+				<product>
 					<property>electric/sources/dc-bus</property>
-					<property>electric/switches/label-lights</property>
-				</min>
+					<property>electric/switches/panel-lights</property>
+					<value>1.0</value>
+				</product>
 			</function>
-			<output>electric/output/label-lights</output>
+			<output>electric/output/panel-lights</output>
 		</fcs_function>
 		<switch name="electric/output/dc-probe">
 			<default value="0"/>

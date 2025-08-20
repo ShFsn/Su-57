@@ -3,7 +3,7 @@
   <name>Effects/panels</name>
   <parameters>
     <emissive-color type="vec3d"> 1.0 0.8 0.7 </emissive-color>
-    <emissive-factor type="float"><use>/fdm/jsbsim/electric/output/fms</use></emissive-factor>
+    <emissive-factor type="float"><use>/fdm/jsbsim/electric/output/panel-lights</use></emissive-factor>
   </parameters>
 
   <technique n="109">

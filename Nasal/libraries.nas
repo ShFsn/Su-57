@@ -14,6 +14,7 @@ foreach(var name; keys(parameters)) {
 
 # Generic System Libraries
 var engineStart = func {
+    print("Engine start");
     if( getprop("fdm/jsbsim/electric/sources/ac-bus1") > 100 and
         getprop("fdm/jsbsim/electric/switches/select-mode") == 2 and
         getprop("fdm/jsbsim/pneumatics/sources/bus") > 0.5) {

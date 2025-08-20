@@ -6,7 +6,6 @@
 		<object-name>panelLights</object-name>
 	</effect>
 	<model>
-		<name>kn1</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
 		<offsets>
 			<x-m> 0.036</x-m>
@@ -15,8 +14,7 @@
 		</offsets>
 	</model>
 	<model>
-		<name>kn2</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Lights/panels.xml</path>
 		<offsets>
 			<x-m> 0.036</x-m>
 			<y-m> 0.087</y-m>
@@ -24,7 +22,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>kn3</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
 		<offsets>
 			<x-m> 0.036</x-m>
@@ -33,7 +30,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>kn4</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
 		<offsets>
 			<x-m> 0.083</x-m>
@@ -42,8 +38,7 @@
 		</offsets>
 	</model>
 	<model>
-		<name>kn5</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob2.ac</path>
 		<offsets>
 			<x-m> 0.083</x-m>
 			<y-m> 0.112</y-m>
@@ -51,8 +46,7 @@
 		</offsets>
 	</model>
 	<model>
-		<name>kn6</name>
-		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob1.ac</path>
+		<path>Aircraft/Su-57/Models/Cockpit/Parts/knob2.ac</path>
 		<offsets>
 			<x-m> 0.086</x-m>
 			<y-m> 0.185</y-m>
@@ -60,7 +54,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>btn</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/button2.ac</path>
 		<offsets>
 			<x-m> 0.082</x-m>
@@ -77,7 +70,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>mfd</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Panels/Right/Lights/mfd.xml</path>
 		<offsets>
 			<x-m> 0.082</x-m>
@@ -86,7 +78,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>selection</name>
 		<path>Aircraft/Su-57/Models/Cockpit/Parts/switch2.gltf</path>
 		<offsets>
 			<x-m> 0.035</x-m>
