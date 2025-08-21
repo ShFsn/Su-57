@@ -38,7 +38,7 @@
 	</model>
 	<model>
 		<name>landing light</name>
-		<path>Aircraft/Su-57/Models/Effects/lights/landing-light.xml</path>
+		<path>Aircraft/Su-57/Models/Effects/lights/landing.xml</path>
 		<offsets>
 			<x-m>-5.20</x-m>
 			<y-m> 0.00</y-m>

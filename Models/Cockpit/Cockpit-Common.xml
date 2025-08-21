@@ -35,4 +35,22 @@
 			<pitch-deg>3</pitch-deg>
 		</offsets>
 	</model>
+	<model>
+		<name>left spotlight</name>
+		<path>Aircraft/Su-57/Models/Effects/lights/left.xml</path>
+		<offsets>
+			<x-m>-5.700</x-m>
+			<y-m>-0.500</y-m>
+			<z-m> 0.800</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>right spotlight</name>
+		<path>Aircraft/Su-57/Models/Effects/lights/right.xml</path>
+		<offsets>
+			<x-m>-5.700</x-m>
+			<y-m> 0.500</y-m>
+			<z-m> 0.800</z-m>
+		</offsets>
+	</model>
 </PropertyList>

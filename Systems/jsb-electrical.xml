@@ -199,25 +199,6 @@
 	</channel>
 
 	<channel name="lights">
-		<fcs_function name="electric/output/lights/flood">
-			<function>
-				<min>
-					<property>electric/sources/dc-bus</property>
-					<property>electric/switches/lights/flood</property>
-				</min>
-			</function>
-			<output>electric/output/lights/flood</output>
-		</fcs_function>
-		<fcs_function name="electric/output/lights/panels">
-			<function>
-				<product>
-					<property>electric/sources/dc-bus</property>
-					<property>electric/switches/lights/panels</property>
-					<value>1.0</value>
-				</product>
-			</function>
-			<output>electric/output/lights/panels</output>
-		</fcs_function>
 		<switch name="electric/output/lights/landing">
 			<default value="0"/>
 			<test logic="AND" value="electric/sources/ac-bus">
@@ -230,6 +211,44 @@
 				electric/switches/lights/landing == 0
 			</test>
 		</switch>
+		<fcs_function name="electric/output/lights/left">
+			<function>
+				<product>
+					<property>electric/sources/dc-bus</property>
+					<property>electric/switches/lights/left</property>
+					<value>0.1</value>
+				</product>
+			</function>
+			<output>electric/output/lights/left</output>
+		</fcs_function>
+		<fcs_function name="electric/output/lights/panels">
+			<function>
+				<product>
+					<property>electric/sources/dc-bus</property>
+					<property>electric/switches/lights/panels</property>
+				</product>
+			</function>
+			<output>electric/output/lights/panels</output>
+		</fcs_function>
+		<fcs_function name="electric/output/lights/right">
+			<function>
+				<product>
+					<property>electric/sources/dc-bus</property>
+					<property>electric/switches/lights/right</property>
+					<value>0.1</value>
+				</product>
+			</function>
+			<output>electric/output/lights/right</output>
+		</fcs_function>
+		<fcs_function name="electric/output/lights/flood">
+			<function>
+				<min>
+					<property>electric/sources/dc-bus</property>
+					<property>electric/switches/lights/flood</property>
+				</min>
+			</function>
+			<output>electric/output/lights/flood</output>
+		</fcs_function>
 	</channel>
 
 	<channel name="avionics">

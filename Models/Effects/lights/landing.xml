@@ -43,7 +43,6 @@
 			<a>1</a>
 		</color>
 		<intensity>1</intensity>
-		<dim-factor><property>fdm/jsbsim/electric/output/lights/landing</property></dim-factor>
 		<spot-exponent>100</spot-exponent>
 		<spot-cutoff>20</spot-cutoff>
 		<range-m>300</range-m>
