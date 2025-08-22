@@ -6,65 +6,73 @@
     <resizable>true</resizable>
     <layout>vbox</layout>
 
+    <checkbox>
+        <label>Maneuver</label>
+        <halign>fill</halign>
+        <property>fdm/jsbsim/fcs/maneuver</property>
+        <live>true</live>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
+    </checkbox>
+
     <!-- Т УПР -->
-    <button>
-        <pref-width>150</pref-width><pref-height>30</pref-height>
-        <legend>Heading Hold</legend>
+    <checkbox>
+        <label>Heading Hold</label>
+        <halign>fill</halign>
+        <property>sim/gui/dialogs/autopilot/heading-active</property>
+        <live>true</live>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
         <binding>
             <command>nasal</command>
             <script>libraries.autopilot(1)</script>
         </binding>
-    </button>
+    </checkbox>
 
     <!-- АВТ -->
-    <button>
-        <pref-width>150</pref-width><pref-height>30</pref-height>
-        <legend>Automatic</legend>
+    <checkbox>
+        <label>Automatic</label>
+        <halign>fill</halign>
+        <property>sim/gui/dialogs/autopilot/automatic-active</property>
+        <live>true</live>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
         <binding>
             <command>nasal</command>
             <script>libraries.autopilot(2)</script>
         </binding>
-    </button>
+    </checkbox>
 
     <!-- H БАР -->
-    <button>
-        <pref-width>150</pref-width><pref-height>30</pref-height>
-        <legend>Altitude Hold</legend>
+    <checkbox>
+        <label>Altitude Hold</label>
+        <halign>fill</halign>
+        <property>sim/gui/dialogs/autopilot/altitude-active</property>
+        <live>true</live>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
         <binding>
             <command>nasal</command>
             <script>libraries.autopilot(3)</script>
         </binding>
-    </button>
+    </checkbox>
 
     <!-- АУТ -->
-    <button>
-        <pref-width>150</pref-width><pref-height>30</pref-height>
-        <legend>Pitch Hold</legend>
+    <checkbox>
+        <label>Pitch Hold</label>
+        <halign>fill</halign>
+        <property>sim/gui/dialogs/autopilot/pitch-active</property>
+        <live>true</live>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
         <binding>
             <command>nasal</command>
             <script>libraries.autopilot(4)</script>
         </binding>
-    </button>
-
-    <!-- OFF -->
-    <button>
-        <pref-width>150</pref-width><pref-height>30</pref-height>
-        <legend>OFF</legend>
-        <binding>
-            <command>nasal</command>
-            <script>libraries.autopilot(0)</script>
-        </binding>
-    </button>
-
-    <!-- Close -->
-    <button>
-        <pref-width>150</pref-width><pref-height>30</pref-height>
-        <legend>Close</legend>
-        <binding>
-            <command>dialog-close</command>
-        </binding>
-        <binding>
-            <command>dialog-apply</command>
-        </binding>
-    </button>
+    </checkbox>
 </PropertyList>

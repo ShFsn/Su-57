@@ -29,15 +29,8 @@
 		<name>M</name>
 		<desc>Maneuver</desc>
 		<binding>
-			<command>nasal</command>
-			<script><![CDATA[
-				setprop("fdm/jsbsim/fcs/maneuver",!getprop("fdm/jsbsim/fcs/maneuver"));
-				screen.log.write((getprop("fdm/jsbsim/fcs/maneuver")==0?"Fly-by-wire":"Thrust vectoring"), 0.5, 0.5, 1);
-				]]></script>
-		</binding>
-		<binding>
 			<command>property-toggle</command>
-			<property>sim/sound/switch1</property>
+			<property>fdm/jsbsim/fcs/maneuver</property>
 		</binding>
 	</key>
 	<key n="100">
@@ -77,15 +70,8 @@
 		<name>m</name>
 		<desc>Masterarm</desc>
 		<binding>
-			<command>nasal</command>
-			<script><![CDATA[
-				setprop("controls/armament/master-arm",!getprop("controls/armament/master-arm"));
-				screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
-				]]></script>
-		</binding>
-		<binding>
 			<command>property-toggle</command>
-			<property>sim/sound/switch1</property>
+			<property>controls/armament/master-arm</property>
 		</binding>
 	</key>
 	<key n="113">

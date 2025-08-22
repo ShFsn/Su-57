@@ -7,6 +7,10 @@ parameters = {
     ias:    "velocities/airspeed-kt",
     power:  "fdm/jsbsim/electric/sources/dc-bus",
     pullUp: "instrumentation/mk-viii/outputs/discretes/gpws-warning",
+    alt:    "sim/gui/dialogs/autopilot/altitude-active",
+    auto:   "sim/gui/dialogs/autopilot/automatic-active",
+    hdg:    "sim/gui/dialogs/autopilot/heading-active",
+    pitch:  "sim/gui/dialogs/autopilot/pitch-active",
 };
 foreach(var name; keys(parameters)) {
     parameters[name] = props.globals.getNode(parameters[name], 1);
@@ -49,49 +53,52 @@ var autostart = func {
     }, 25);
 }
 
-var ap_heading = 0;
-var ap_auto = 0;
-var ap_pitch = 0;
-var ap_altitude = 0;
 var autopilot = func(input = 0) {
-    if(parameters.power.getValue() > 17 and input > 0) {
+    if( parameters.power.getValue() > 17 and
+        !getprop("fdm/jsbsim/fcs/maneuver") and 
+        input > 0)
+    {
         if(input == 1) {
-            if(ap_heading > 0) {
-                setprop("autopilot/locks/heading", "");
-                ap_heading = 0;
+            if(parameters.hdg.getValue()) {
+                setprop("autopilot/locks/heading", "wing-leveler");
+                parameters.auto.setValue(0);
             }
             else {
-                setprop("autopilot/locks/heading", "wing-leveler");
-                ap_heading = 1;
+                setprop("autopilot/locks/heading", "");
+            }
+        }
+        if(input == 2) {
+            if(parameters.auto.getValue()) {
+                setprop("autopilot/locks/heading", "");
+                parameters.hdg.setValue(0);
             }
         }
         if(input == 3) {
-            if(ap_altitude > 0) {
-                setprop("autopilot/locks/altitude", "");
-                ap_altitude = 0;
-            }
-            else {
+            if(parameters.alt.getValue()) {
                 setprop("autopilot/locks/altitude", "vertical-speed-hold");
                 setprop("autopilot/settings/vertical-speed-fpm", 0);
-                ap_altitude = 1;
+                parameters.pitch.setValue(0);
+            }
+            else {
+                setprop("autopilot/locks/altitude", "");
+            }
+        }
+        if(input == 4) {
+            if(parameters.pitch.getValue()) {
+                setprop("autopilot/locks/altitude", "");
+                parameters.alt.setValue(0);
             }
         }
     }
     else {
         setprop("autopilot/locks/heading", "");
         setprop("autopilot/locks/altitude", "");
-        ap_heading = 0;
-        ap_altitude = 0;
+        parameters.alt.setValue(0);
+        parameters.auto.setValue(0);
+        parameters.hdg.setValue(0);
+        parameters.pitch.setValue(0);
     }
-
-    setprop("sim/gui/dialogs/autopilot/heading-active", ap_heading);
-    setprop("sim/gui/dialogs/autopilot/altitude-active", ap_altitude);
 }
-setlistener("fdm/jsbsim/fcs/maneuver", func () {
-    if(getprop("fdm/jsbsim/fcs/maneuver") or 0) {
-        autopilot(0);
-    }
-});
 
 # from Sidi Liang
 var Sound = {
@@ -112,80 +119,95 @@ var playAudio = func(file, audioVolume=1, audioPath="", queue="followme_fx") { #
     fgcommand("play-audio-sample", Sound.new(filename: file, volume: audioVolume, path: audioPath, queue: queue));
 }
 
+var Click = func {
+    setprop("sim/sound/switch1", !getprop("sim/sound/switch1"));
+}
+
 var aoa = 0;
 var fuel = 0;
 var ground = 0;
 var speed = 0;
+var Warnings = func {
+    if(parameters.fuel.getValue()*3.6 < 1500) {
+        if(fuel == 0) {
+            screen.log.write("1500kg Fuel remaining", 1, 0.8, 0);
+            playAudio("misc/warning.wav");
+            playAudio("misc/1500kg.wav");
+            fuel = 1500;
+        }
+    }
+    else{
+        fuel = 0;
+    }
+
+    if( parameters.ias.getValue() > 40 and
+        parameters.alpha.getValue() > 6 and
+        parameters.gload.getValue() > 3 and
+        aoa == 0)
+    {
+        playAudio("misc/warning.wav");
+        screen.log.write("Critical AOA and G-Load", 1, 0.8, 0);
+        playAudio("misc/aoa.wav");
+        playAudio("misc/g-load.wav");
+        aoa = 7;
+    }
+    if(aoa > 0) {
+        aoa -= 1;
+    }
+
+    if( parameters.ias.getValue() > 40 and
+        parameters.alpha.getValue() > 12 and
+        aoa == 0)
+    {
+        screen.log.write("Critical AOA", 1, 0.8, 0);
+        playAudio("misc/warning.wav");
+        playAudio("misc/aoa.wav");
+        aoa = 7;
+    }
+
+    if( parameters.ias.getValue() > 650 and
+        parameters.alt.getValue() < 9000 and
+        speed == 0)
+    {
+        screen.log.write("Dangerous Speed", 1, 0.8, 0);
+        playAudio("misc/warning.wav");
+        playAudio("misc/speed.wav");
+        speed = 7;
+    }
+    if(speed > 0) {
+        speed -= 1;
+    }
+
+    if(parameters.pullUp.getValue() > 0 and ground == 0) {
+        if(parameters.ias.getValue() > 250) {
+            screen.log.write("Dangerous Altitude", 1, 0.8, 0);
+            playAudio("misc/warning.wav");
+            playAudio("misc/altitude.wav");
+            ground = 7;
+        }
+        else if(parameters.gear.getValue() < 1) {
+            screen.log.write("Extend Gear", 1, 0.8, 0);
+            playAudio("misc/warning.wav");
+            playAudio("misc/gear.wav");
+            ground = 7;
+        }
+    }
+    if(ground > 0) {
+        ground -= 1;
+    }
+}
 
 var EventHandler = func {
     if(parameters.power.getValue() > 17) {
-        if(parameters.fuel.getValue()*3.6 < 1500) {
-            if(fuel == 0) {
-                screen.log.write("1500kg Fuel remaining", 1, 0.8, 0);
-                playAudio("misc/warning.wav");
-                playAudio("misc/1500kg.wav");
-                fuel = 1500;
-            }
-        }
-        else{
-            fuel = 0;
-        }
-
-        if( parameters.ias.getValue() > 40 and
-            parameters.alpha.getValue() > 6 and
-            parameters.gload.getValue() > 3 and
-            aoa == 0)
-        {
-            playAudio("misc/warning.wav");
-            screen.log.write("Critical AOA and G-Load", 1, 0.8, 0);
-            playAudio("misc/aoa.wav");
-            playAudio("misc/g-load.wav");
-            aoa = 7;
-        }
-        if(aoa > 0) {
-            aoa -= 1;
-        }
-
-        if( parameters.ias.getValue() > 40 and
-            parameters.alpha.getValue() > 12 and
-            aoa == 0)
-        {
-            screen.log.write("Critical AOA", 1, 0.8, 0);
-            playAudio("misc/warning.wav");
-            playAudio("misc/aoa.wav");
-            aoa = 7;
-        }
-
-        if( parameters.ias.getValue() > 650 and
-            parameters.alt.getValue() < 9000 and
-            speed == 0)
-        {
-            screen.log.write("Dangerous Speed", 1, 0.8, 0);
-            playAudio("misc/warning.wav");
-            playAudio("misc/speed.wav");
-            speed = 7;
-        }
-        if(speed > 0) {
-            speed -= 1;
-        }
-
-        if(parameters.pullUp.getValue() > 0 and ground == 0) {
-            if(parameters.ias.getValue() > 250) {
-                screen.log.write("Dangerous Altitude", 1, 0.8, 0);
-                playAudio("misc/warning.wav");
-                playAudio("misc/altitude.wav");
-                ground = 7;
-            }
-            else if(parameters.gear.getValue() < 1) {
-                screen.log.write("Extend Gear", 1, 0.8, 0);
-                playAudio("misc/warning.wav");
-                playAudio("misc/gear.wav");
-                ground = 7;
-            }
-        }
-        if(ground > 0) {
-            ground -= 1;
-        }
+        Warnings();
+    }
+    else {
+        setprop("autopilot/locks/altitude", "");
+        setprop("autopilot/locks/heading", "");
+        parameters.alt.setValue(0);
+        parameters.auto.setValue(0);
+        parameters.hdg.setValue(0);
+        parameters.pitch.setValue(0);
     }
 }
 
@@ -193,6 +215,25 @@ var Timer = maketimer(1, EventHandler);
 var eventListener = setlistener("sim/signals/fdm-initialized", func () {
     Timer.start();
     removelistener(eventListener);
+});
+
+setlistener("fdm/jsbsim/fcs/maneuver", func (node) {
+    if(node.getValue()) {
+        screen.log.write("Thrust vectoring", 0.5, 0.5, 1);
+        autopilot(0);
+    }
+    else {
+        screen.log.write("Fly-by-wire", 0.5, 0.5, 1);
+    }
+    Click();
+});
+
+setlistener("controls/armament/master-arm", func (node) {
+    if(node.getValue())
+        screen.log.write("Master-arm ON", 0.5, 0.5, 1);
+    else
+        screen.log.write("Master-arm OFF", 0.5, 0.5, 1);
+    Click();
 });
 
 #var prop = "payload/armament/fire-control";

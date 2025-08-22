@@ -25,15 +25,8 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<command>nasal</command>
-				<script><![CDATA[
-					setprop("controls/armament/master-arm",!getprop("controls/armament/master-arm"));
-					screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
-					]]></script>
-			</binding>
-			<binding>
 				<command>property-toggle</command>
-				<property>sim/sound/switch1</property>
+				<property>controls/armament/master-arm</property>
 			</binding>
 		</action>
 	</animation>
