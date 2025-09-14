@@ -3,7 +3,11 @@ var hud_base = {
 	{
 		var m = { parents: [hud_base] };
 		m.group = canvasGroup;
-		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/hud/screen/hud_base.svg");
+		var font_mapper = func(family, weight)
+		{
+			return "BoeingCDU-Large.ttf";
+		};
+		canvas.parsesvg(canvasGroup, "Aircraft/Su-57/Nasal/hud/screen/hud_base.svg", {'font-mapper': font_mapper});
 		m.tmp = 0;
 		m.kmh = 1;
 
@@ -55,10 +59,10 @@ var hud_base = {
 		# heading
 		me.tmp = me.input.hdg.getValue();
 		if(me.tmp < 180) {
-			me.heading.setTranslation(-me.tmp*2.44,0);
+			me.heading.setTranslation(-me.tmp*8.9,0);
 		}
 		else {
-			me.heading.setTranslation((360-me.tmp)*2.44, 0);
+			me.heading.setTranslation((360-me.tmp)*8.9, 0);
 		}
 
 		# pitch

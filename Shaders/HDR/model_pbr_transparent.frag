@@ -41,6 +41,8 @@ vec3 perturb_normal(vec3 N, vec3 V, vec2 texcoord, sampler2D tex);
 // logarithmic_depth.glsl
 float logdepth_encode(float z);
 
+uniform int NumDivisions = 400;
+
 void main()
 {
     vec4 base_color_texel = texture(base_color_tex, fs_in.texcoord);
@@ -62,6 +64,8 @@ void main()
             discard;
         }
         else {
+            vec2 st = (vec2(ivec2( fs_in.texcoord * float(NumDivisions) ))+0.5)/float(NumDivisions);
+            base_color = textureLod( base_color_tex, st, 0 );
             emissive = -emissive_factor.r*base_color.rgb;
         }
     }
