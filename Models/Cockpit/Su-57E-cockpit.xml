@@ -7,7 +7,7 @@
 	<model>
 		<path>Aircraft/Su-57/Models/Cockpit/Instruments/HUD/Su-57E-HUD.xml</path>
 		<offsets>
-			<x-m>-6.280</x-m>
+			<x-m>-6.230</x-m>
 			<y-m> 0.000</y-m>
 			<z-m> 0.980</z-m>
 			<pitch-deg>-18</pitch-deg>
@@ -18,7 +18,7 @@
 		<offsets>
 			<x-m>-9.000</x-m>
 			<y-m> 0.000</y-m>
-			<z-m> 0.980</z-m>
+			<z-m> 0.950</z-m>
 		</offsets>
 	</model>
 	<model>

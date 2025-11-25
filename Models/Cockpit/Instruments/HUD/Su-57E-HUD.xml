@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>hud2.ac</path>
+	<animation>
+		<type>select</type>
+		<object-name>HUD.Glass</object-name>
+		<condition>
+			<equals>
+				<value>0</value>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
 	<effect>
 		<object-name>HUD.Display</object-name>
 		<inherits-from>Aircraft/Su-57/Models/Effects/display/display</inherits-from>
@@ -18,36 +28,4 @@
 			</binding>
 		</action>
 	</animation>
-	<model>
-		<path>knob.ac</path>
-		<offsets>
-			<x-m> 0.052</x-m>
-			<y-m>-0.104</y-m>
-			<z-m> 0.018</z-m>
-		</offsets>
-	</model>
-	<model>
-		<path>knob.ac</path>
-		<offsets>
-			<x-m> 0.052</x-m>
-			<y-m> 0.104</y-m>
-			<z-m> 0.018</z-m>
-		</offsets>
-	</model>
-	<model>
-		<path>knob.ac</path>
-		<offsets>
-			<x-m> 0.052</x-m>
-			<y-m>-0.104</y-m>
-			<z-m>-0.014</z-m>
-		</offsets>
-	</model>
-	<model>
-		<path>knob.ac</path>
-		<offsets>
-			<x-m> 0.052</x-m>
-			<y-m> 0.104</y-m>
-			<z-m>-0.014</z-m>
-		</offsets>
-	</model>
 </PropertyList>
